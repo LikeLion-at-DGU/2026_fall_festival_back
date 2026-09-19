@@ -64,7 +64,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
-MEDIA_URL = "media/"
+MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -88,3 +88,7 @@ ADMIN_API_TOKEN = env("ADMIN_API_TOKEN", default="")
 
 FESTIVAL_START_DATE = date(2026, 9, 29)
 FESTIVAL_END_DATE = date(2026, 10, 1)
+
+# 분실물 이미지 업로드 설정
+LOST_ITEM_IMAGE_EXTENSIONS = {"jpg", "jpeg", "png", "webp"}
+LOST_ITEM_IMAGE_MAX_BYTES = 5 * 1024 * 1024

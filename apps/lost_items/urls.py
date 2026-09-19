@@ -1,14 +1,18 @@
-"""Lost items API routes (admin, read-only for issue #8)."""
+"""분실물 관리자 API 라우팅."""
 
 from django.urls import path
 
-from .views import AdminLostItemDetailView, AdminLostItemListView
+from .views import (
+    AdminLostItemDetailView,
+    AdminLostItemImageUploadView,
+    AdminLostItemListView,
+)
+
 
 app_name = "admin_lost_items"
 
 urlpatterns = [
-    # 분실물 목록 조회
+    path("images/", AdminLostItemImageUploadView.as_view(), name="image-upload"),
     path("", AdminLostItemListView.as_view(), name="list"),
-    # 분실물 상세 조회
     path("<int:lost_item_id>/", AdminLostItemDetailView.as_view(), name="detail"),
 ]

@@ -117,3 +117,18 @@ def custom_exception_handler(exc, context):
         errors,
         status=response.status_code,
     )
+    
+class FileTooLarge(ApiError):
+    """파일 크기 제한 초과."""
+
+    status_code = http_status.HTTP_413_REQUEST_ENTITY_TOO_LARGE
+    code = "FILE_TOO_LARGE"
+    message = "허용된 파일 용량을 초과했습니다."
+
+
+class UnsupportedFileType(ApiError):
+    """지원하지 않는 파일 형식."""
+
+    status_code = http_status.HTTP_415_UNSUPPORTED_MEDIA_TYPE
+    code = "UNSUPPORTED_FILE_TYPE"
+    message = "지원하지 않는 이미지 형식입니다."

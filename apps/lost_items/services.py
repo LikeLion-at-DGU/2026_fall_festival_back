@@ -1,9 +1,19 @@
-"""분실물 상태를 실제로 바꾸는(등록/수정/삭제) 로직"""
+"""분실물 등록, 수정, 삭제 및 이미지 저장 로직."""
 
+import uuid
+
+from django.conf import settings
+from django.core.files.storage import default_storage
 from django.db import transaction
 from django.utils import timezone
 
+from common.validators import validate_image_upload
+
 from .models import LostItem, LostItemImage, LostItemTag
+
+
+# 업로드 이미지 저장 경로
+IMAGE_UPLOAD_DIR = "lost-items"
 
 
 @transaction.atomic
@@ -57,3 +67,20 @@ def delete_lost_item(lost_item):
     lost_item.deleted_at = now
     lost_item.save(update_fields=["deleted_at"])
     return now
+
+def store_image(uploaded_file):
+    """이미지를 검증하고 저장한 뒤 URL을 반환한다."""
+
+    extension = validate_image_upload(
+        uploaded_file,
+        allowed_extensions=settings.LOST_ITEM_IMAGE_EXTENSIONS,
+        max_bytes=settings.LOST_ITEM_IMAGE_MAX_BYTES,
+    )
+
+    # 파일명 충돌 방지를 위해 UUID 사용
+    filename = f"{uuid.uuid4().hex}.{extension}"
+    relative_path = f"{IMAGE_UPLOAD_DIR}/{filename}"
+
+    saved_path = default_storage.save(relative_path, uploaded_file)
+
+    return default_storage.url(saved_path)

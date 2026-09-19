@@ -227,3 +227,24 @@ class UserLostItemDetailResponseSerializer(serializers.Serializer):
     code = serializers.CharField(default="LOST_ITEM_DETAIL_SUCCESS")
     message = serializers.CharField(default="분실물 상세 정보를 조회했습니다.")
     data = UserLostItemDetailDataSerializer()
+    
+    
+class LostItemImageUploadRequestSerializer(serializers.Serializer):
+    """분실물 이미지 업로드 요청."""
+
+    file = serializers.FileField()
+
+
+class LostItemImageUploadDataSerializer(serializers.Serializer):
+    """업로드 이미지 정보."""
+
+    image_url = serializers.URLField()
+
+
+class LostItemImageUploadResponseSerializer(serializers.Serializer):
+    """분실물 이미지 업로드 성공 응답."""
+
+    success = serializers.BooleanField(default=True)
+    code = serializers.CharField(default="LOST_ITEM_IMAGE_UPLOAD_SUCCESS")
+    message = serializers.CharField(default="이미지를 업로드했습니다.")
+    data = LostItemImageUploadDataSerializer()
