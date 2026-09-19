@@ -140,3 +140,18 @@ def to_admin_notice_detail(notice: Notice) -> dict:
 def to_admin_notice_list_item(notice: Notice) -> dict:
     """Notice 모델 인스턴스를 관리자 목록 아이템 딕셔너리로 변환합니다."""
     return to_admin_notice_detail(notice)
+
+
+class AdminNoticeImageUploadSerializer(serializers.Serializer):
+    """관리자 공지 이미지 업로드 요청 스키마."""
+
+    image = serializers.FileField(
+        required=True,
+        help_text="업로드할 이미지 파일 (JPG, PNG, WebP, 최대 10MB)",
+    )
+
+
+class AdminNoticeImageUploadResponseSerializer(serializers.Serializer):
+    """관리자 공지 이미지 업로드 응답 스키마."""
+
+    image_url = serializers.URLField(help_text="업로드된 이미지의 접근 URL")

@@ -62,6 +62,22 @@ class NotFound(ApiError):
     message = "요청한 리소스를 찾을 수 없습니다."
 
 
+class FileSizeExceeded(ApiError):
+    """업로드 파일 크기가 제한을 초과할 때 사용하는 에러입니다."""
+
+    status_code = http_status.HTTP_413_REQUEST_ENTITY_TOO_LARGE
+    code = "FILE_SIZE_EXCEEDED"
+    message = "파일 크기는 10MB를 초과할 수 없습니다."
+
+
+class InvalidImageFile(ApiError):
+    """지원하지 않는 파일 형식이거나 파일이 손상되었을 때 사용하는 에러입니다."""
+
+    status_code = http_status.HTTP_400_BAD_REQUEST
+    code = "INVALID_IMAGE_FILE"
+    message = "지원하지 않는 파일 형식이거나 파일이 손상되었습니다."
+
+
 def custom_exception_handler(exc, context):
     """발생한 에러를 프로젝트의 공통 에러 응답 형식으로 변환합니다."""
 
