@@ -1,5 +1,6 @@
 """Read-only booths queries."""
 
+from django.core.cache import cache
 from django.db.models import (
     Case,
     Exists,
@@ -107,17 +108,37 @@ def booth_search(keyword, festival_date=None, time_slot=None, user=None):
     return queryset.distinct().order_by("match_rank", "name")
 
 
+# 부스 랭킹은 홈 화면에서 자주 조회되는 값이라 짧은 TTL로 캐싱한다.
+# 등불 등록/삭제 시점에 캐시를 직접 무효화하지 않고 TTL 만료로만 갱신하므로,
+# 최대 RANKING_CACHE_TTL초 동안은 방금 등록/삭제된 등불이 랭킹에 반영되지 않을 수 있다.
+RANKING_CACHE_TTL = 5
+
+
 def booth_ranking(limit):
+    cache_key = f"booth_ranking:{limit}"
+    cached = cache.get(cache_key)
+    if cached is not None:
+        return cached
+
     # 등불 달기 대상(place_type=BOOTH)만 랭킹에 포함
-    return list(
+    result = list(
         Booth.objects.filter(place_type=Booth.PlaceType.BOOTH, deleted_at__isnull=True).order_by(
             "-lantern_count", "name"
         )[:limit]
     )
+    cache.set(cache_key, result, timeout=RANKING_CACHE_TTL)
+    return result
 
 
 def total_lantern_count():
+    cache_key = "booth_total_lantern_count"
+    cached = cache.get(cache_key)
+    if cached is not None:
+        return cached
+
     result = Booth.objects.filter(
         place_type=Booth.PlaceType.BOOTH, deleted_at__isnull=True
     ).aggregate(total=Sum("lantern_count"))
-    return result["total"] or 0
+    total = result["total"] or 0
+    cache.set(cache_key, total, timeout=RANKING_CACHE_TTL)
+    return total

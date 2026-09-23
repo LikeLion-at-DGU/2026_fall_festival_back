@@ -3,6 +3,7 @@
 from datetime import date, time
 
 import pytest
+from django.core.cache import cache
 from rest_framework.test import APIClient
 
 from apps.booths.models import Booth, BoothMenu, BoothOperation
@@ -177,6 +178,34 @@ def test_ranking_rejects_invalid_limit(client, ranking_booths):
         response = client.get("/api/booths/ranking/", {"limit": bad})
         assert response.status_code == 400
         assert response.json()["errors"]["limit"] == "1~20 사이의 정수로 입력해주세요."
+
+
+@pytest.mark.django_db
+def test_ranking_caches_query_between_requests(client, ranking_booths, django_assert_num_queries):
+    first = client.get("/api/booths/ranking/")
+    assert first.status_code == 200
+
+    # 두 번째 요청은 booth_ranking()/total_lantern_count() 둘 다 캐시 히트라 DB 쿼리가 없어야 한다.
+    with django_assert_num_queries(0):
+        second = client.get("/api/booths/ranking/")
+    assert second.status_code == 200
+    assert second.json()["data"] == first.json()["data"]
+
+
+@pytest.mark.django_db
+def test_ranking_reflects_db_change_only_after_cache_cleared(client, ranking_booths):
+    first = client.get("/api/booths/ranking/", {"limit": "1"})
+    assert first.json()["data"]["ranking"][0]["name"] == "가온 주점"
+
+    # 캐시가 살아있는 동안은 DB가 바뀌어도 랭킹에 반영되지 않는다 (TTL 동안의 지연).
+    Booth.objects.filter(name="다솜 부스").update(lantern_count=999)
+    stale = client.get("/api/booths/ranking/", {"limit": "1"})
+    assert stale.json()["data"]["ranking"][0]["name"] == "가온 주점"
+
+    # 캐시가 비워지면(TTL 만료를 흉내냄) 그제서야 최신 값이 반영된다.
+    cache.clear()
+    fresh = client.get("/api/booths/ranking/", {"limit": "1"})
+    assert fresh.json()["data"]["ranking"][0]["name"] == "다솜 부스"
 
 
 @pytest.mark.django_db
