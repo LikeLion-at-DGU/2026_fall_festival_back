@@ -128,11 +128,8 @@ class CouponScratchView(APIView):
                 status=status.HTTP_404_NOT_FOUND,
             )
 
-        # 이미 긁은 쿠폰은 기존 결과 반환
-        if coupon.status in [
-            Coupon.Status.WIN,
-            Coupon.Status.LOSE,
-        ]:
+        # 미긁음 상태가 아니면 기존 상태와 결과를 그대로 반환
+        if coupon.status != Coupon.Status.UNSCRATCHED:
             return Response(
                 CouponSerializer(coupon).data,
                 status=status.HTTP_200_OK,
