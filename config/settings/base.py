@@ -12,6 +12,8 @@ env = environ.Env(
     DJANGO_ALLOWED_HOSTS=(list, []),
     CORS_ALLOWED_ORIGINS=(list, []),
     ADMIN_HOSTS=(list, ["admin.localhost"]),
+    REDIS_URL=(str, "redis://127.0.0.1:6379/1"),
+    R2_ENABLED=(bool, False),
 )
 environ.Env.read_env(BASE_DIR / ".env")
 
@@ -32,6 +34,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "drf_spectacular",
+    "storages",
     "apps.accounts.apps.AccountsConfig",
     "apps.admins.apps.AdminsConfig",
     "apps.booths.apps.BoothsConfig",
@@ -72,6 +75,15 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+R2_ENABLED = env.bool("R2_ENABLED")
+
+# Redis 연결만 준비한다. 실제 캐시 읽기/쓰기와 DRF throttle 적용은 기능별로 추가한다.
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": env("REDIS_URL"),
+    }
+}
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 

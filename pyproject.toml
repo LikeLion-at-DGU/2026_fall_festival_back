@@ -20,6 +20,8 @@ dependencies = [
     "korcen>=1.0.3,<2.0",
     "requests>=2.34,<3.0",
     "PyJWT>=2.14,<3.0",
+    "redis>=6,<9",
+    "django-storages[s3]>=1.14.6,<2.0",
 ]
 
 [project.optional-dependencies]
@@ -43,4 +45,3 @@ line-length = 100
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
-
