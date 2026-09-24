@@ -24,6 +24,7 @@ class BoothListItemSerializer(serializers.Serializer):
     map_y = serializers.FloatField(source="booth.map_y")
     map_elevation = serializers.FloatField(source="booth.map_elevation")
     rotation = serializers.FloatField(source="booth.rotation")
+    placements = serializers.SerializerMethodField()
     thumbnail_url = serializers.CharField(source="booth.thumbnail_url")
     lantern_count = serializers.IntegerField(source="booth.lantern_count")
     has_my_lantern = serializers.SerializerMethodField()
@@ -32,6 +33,9 @@ class BoothListItemSerializer(serializers.Serializer):
     def get_has_my_lantern(self, obj):
         # selectors에서 annotate된 값. 비로그인 요청은 annotate가 없으므로 False
         return getattr(obj, "has_my_lantern", False)
+
+    def get_placements(self, obj):
+        return obj.placements or []
 
     def get_operation(self, obj):
         return {
@@ -43,10 +47,20 @@ class BoothListItemSerializer(serializers.Serializer):
 class BoothOperationSerializer(serializers.ModelSerializer):
     open_at = serializers.TimeField(format="%H:%M")
     close_at = serializers.TimeField(format="%H:%M")
+    placements = serializers.SerializerMethodField()
 
     class Meta:
         model = BoothOperation
-        fields = ["festival_date", "time_slot", "open_at", "close_at"]
+        fields = [
+            "festival_date",
+            "time_slot",
+            "open_at",
+            "close_at",
+            "placements",
+        ]
+
+    def get_placements(self, obj):
+        return obj.placements or []
 
 
 class BoothMenuSerializer(serializers.ModelSerializer):

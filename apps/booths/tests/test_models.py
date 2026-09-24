@@ -51,3 +51,16 @@ def test_booth_menu_ordering(booth):
     BoothMenu.objects.create(booth=booth, name="제육볶음", price=12000, sort_order=1)
     names = list(booth.menus.values_list("name", flat=True))
     assert names == ["제육볶음", "소주"]
+
+
+@pytest.mark.django_db
+def test_booth_operation_placements_defaults_to_none(booth):
+    operation = BoothOperation.objects.create(
+        booth=booth,
+        festival_date=date(2026, 9, 29),
+        time_slot=BoothOperation.TimeSlot.NIGHT,
+        open_at=time(17, 30),
+        close_at=time(22, 0),
+    )
+
+    assert operation.placements is None

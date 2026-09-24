@@ -73,6 +73,7 @@ class BoothOperation(models.Model):
     time_slot = models.CharField(max_length=10, choices=TimeSlot.choices)
     open_at = models.TimeField()
     close_at = models.TimeField()
+    placements = models.JSONField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     deleted_at = models.DateTimeField(null=True, blank=True)
