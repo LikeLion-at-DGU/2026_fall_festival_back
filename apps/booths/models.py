@@ -19,10 +19,21 @@ class Booth(models.Model):
         SMALL = "SMALL", "작은 천막"
         BIG = "BIG", "큰 천막"
 
+    class RestroomType(models.TextChoices):
+        MALE = "MALE", "남자 화장실"
+        FEMALE = "FEMALE", "여자 화장실"
+        BOTH = "BOTH", "남녀 화장실"
+
     name = models.CharField(max_length=100)
     subtitle = models.CharField(max_length=100, null=True, blank=True)
     place_type = models.CharField(max_length=20, choices=PlaceType.choices)
     category = models.CharField(max_length=20, choices=Category.choices)
+    restroom_type = models.CharField(
+        max_length=10,
+        choices=RestroomType.choices,
+        null=True,
+        blank=True,
+    )
     booth_size = models.CharField(
         max_length=10,
         choices=BoothSize.choices,

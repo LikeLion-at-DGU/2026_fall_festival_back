@@ -74,6 +74,7 @@ def booths(db):
         name="명진관 화장실",
         place_type=Booth.PlaceType.FACILITY,
         category=Booth.Category.TOILET,
+        restroom_type=Booth.RestroomType.BOTH,
         directions="명진관 1층 동쪽 출입구에서 50m 직진",
     )
     for booth in [popular, normal, collab, alcohol, toilet]:
@@ -143,12 +144,15 @@ def test_booth_chip_groups_collab_first_in_name_order(client, booths):
 @pytest.mark.django_db
 def test_booth_list_filters_by_category(client, booths):
     response = client.get(
-        "/api/booths/", {"date": "2026-09-29", "time_slot": "NIGHT", "category": "TOILET"}
+        "/api/booths/",
+        {"date": "2026-09-29", "time_slot": "NIGHT", "category": "TOILET"},
     )
     items = response.json()["data"]["booths"]
+
     assert [item["name"] for item in items] == ["명진관 화장실"]
     assert items[0]["directions"] == "명진관 1층 동쪽 출입구에서 50m 직진"
     assert items[0]["booth_size"] is None
+    assert items[0]["restroom_type"] == "BOTH"
 
 
 @pytest.mark.django_db
@@ -302,3 +306,13 @@ def test_booth_detail_includes_operation_placements(client, booths):
 
     operations = response.json()["data"]["operations"]
     assert operations[0]["placements"] == PLACEMENTS
+
+
+@pytest.mark.django_db
+def test_booth_detail_includes_restroom_type(client, booths):
+    toilet = booths["toilet"]
+
+    response = client.get(f"/api/booths/{toilet.id}/")
+
+    assert response.status_code == 200
+    assert response.json()["data"]["restroom_type"] == "BOTH"

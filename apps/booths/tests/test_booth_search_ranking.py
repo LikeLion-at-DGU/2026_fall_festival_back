@@ -224,3 +224,21 @@ def test_search_marks_my_lantern(auth_client, me, search_booths):
     flags = {item["name"]: item["has_my_lantern"] for item in response.json()["data"]["booths"]}
     assert flags["멋사 주점"] is True
     assert flags["멋사"] is False
+
+
+@pytest.mark.django_db
+def test_search_includes_restroom_type(client):
+    Booth.objects.create(
+        name="명진관 1층 화장실",
+        place_type=Booth.PlaceType.FACILITY,
+        category=Booth.Category.TOILET,
+        restroom_type=Booth.RestroomType.FEMALE,
+    )
+
+    response = client.get("/api/booths/search/", {"keyword": "명진관"})
+
+    assert response.status_code == 200
+
+    items = response.json()["data"]["booths"]
+    assert len(items) == 1
+    assert items[0]["restroom_type"] == "FEMALE"
