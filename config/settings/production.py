@@ -15,6 +15,14 @@ if not database_url:
 
 DATABASES = {"default": env.db_url("DATABASE_URL")}  # noqa: F405
 
+# 운영에서 가상 시간이 실수로 켜진 채 배포되지 않도록 명시적 확인값을 요구한다.
+if FESTIVAL_TIME_ENABLED and not env.bool(  # noqa: F405
+    "FESTIVAL_TIME_PRODUCTION_ACK", default=False
+):
+    raise ImproperlyConfigured(
+        "FESTIVAL_TIME_ENABLED=True in production requires FESTIVAL_TIME_PRODUCTION_ACK=True."
+    )
+
 # 운영 업로드 파일은 Cloudflare R2의 S3 호환 API에 저장한다.
 # R2를 명시적으로 끄지 않는 한 필수 환경변수가 없으면 시작 단계에서 실패한다.
 R2_ENABLED = env.bool("R2_ENABLED", default=True)  # noqa: F405

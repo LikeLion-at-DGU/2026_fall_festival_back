@@ -7,6 +7,7 @@ from django.utils import timezone
 from rest_framework import serializers, status
 
 from apps.booths.models import Booth
+from common.clock import festival_localdate
 from common.exceptions import ApiError, InvalidInput, NotFound
 from common.pagination import DEFAULT_PAGE_SIZE, MAX_PAGE_SIZE
 
@@ -55,7 +56,7 @@ class LanternCreateSerializer(ForbiddenWordValidationMixin, serializers.ModelSer
         return getattr(self, "_is_first_today", False)
 
     def validate(self, attrs):
-        today = timezone.localdate()
+        today = festival_localdate()
 
         self._today = today
 

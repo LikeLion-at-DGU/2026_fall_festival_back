@@ -1,12 +1,12 @@
 """공연 조회 API."""
 
-from django.utils import timezone
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import never_cache
 from drf_spectacular.utils import extend_schema
 from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 
+from common.clock import festival_now
 from common.exceptions import InvalidInput, NotFound, custom_exception_handler
 from common.responses import success_response
 from common.schema import ErrorResponseSerializer
@@ -57,7 +57,7 @@ class PerformanceListView(PerformanceAPIView):
                 errors={key: str(value[0]) for key, value in query.errors.items()},
             )
 
-        now = timezone.localtime()
+        now = festival_now()
 
         festival_date = services.resolve_festival_date(
             query.validated_data.get("date"),
@@ -95,7 +95,7 @@ class PerformanceNowView(PerformanceAPIView):
         },
     )
     def get(self, request):
-        now = timezone.localtime()
+        now = festival_now()
         performances = services.now_playing_performances(now)
 
         return success_response(
