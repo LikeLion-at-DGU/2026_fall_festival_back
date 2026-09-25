@@ -21,6 +21,7 @@ def booth(db):
 @pytest.mark.django_db
 def test_booth_defaults(booth):
     assert booth.booth_size is None
+    assert booth.restroom_type is None
     assert booth.lantern_count == 0
     assert booth.has_reusable_container is True
     assert booth.deleted_at is None

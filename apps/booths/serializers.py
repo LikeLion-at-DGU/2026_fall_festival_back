@@ -12,6 +12,11 @@ class BoothListItemSerializer(serializers.Serializer):
     subtitle = serializers.CharField(source="booth.subtitle")
     place_type = serializers.CharField(source="booth.place_type")
     category = serializers.CharField(source="booth.category")
+    restroom_type = serializers.ChoiceField(
+        source="booth.restroom_type",
+        choices=Booth.RestroomType.choices,
+        allow_null=True,
+    )
     booth_size = serializers.ChoiceField(
         source="booth.booth_size",
         choices=Booth.BoothSize.choices,
@@ -89,6 +94,7 @@ class BoothDetailSerializer(serializers.ModelSerializer):
             "subtitle",
             "place_type",
             "category",
+            "restroom_type",
             "booth_size",
             "description",
             "zone",
@@ -132,6 +138,7 @@ class BoothSearchItemSerializer(serializers.ModelSerializer):
             "subtitle",
             "place_type",
             "category",
+            "restroom_type",
             "booth_size",
             "location_detail",
             "directions",
