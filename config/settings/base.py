@@ -120,6 +120,11 @@ ADMIN_API_TOKEN = env("ADMIN_API_TOKEN", default="")
 FESTIVAL_START_DATE = date(2026, 9, 29)
 FESTIVAL_END_DATE = date(2026, 10, 1)
 
+# 축제 비즈니스 가상 시간 (common.clock). 공연·부스·등불·쿠폰 날짜 판정에만 적용되고
+# JWT, created_at 등 보안·기록용 시간은 항상 실제 시간을 사용한다.
+FESTIVAL_TIME_ENABLED = env.bool("FESTIVAL_TIME_ENABLED", default=False)
+FESTIVAL_TIME_OFFSET_SECONDS = env.int("FESTIVAL_TIME_OFFSET_SECONDS", default=0)
+
 # 분실물 이미지 업로드 설정
 LOST_ITEM_IMAGE_EXTENSIONS = {"jpg", "jpeg", "png", "webp"}
 LOST_ITEM_IMAGE_MAX_BYTES = 5 * 1024 * 1024

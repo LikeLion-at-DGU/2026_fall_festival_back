@@ -2,7 +2,6 @@
 
 from datetime import datetime
 
-from django.utils import timezone
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import never_cache
 from rest_framework import status
@@ -10,6 +9,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 
 from apps.accounts.authentication import OptionalJWTAuthentication
+from common.clock import festival_now
 from common.responses import error_response, success_response
 
 from .constants import (
@@ -38,7 +38,7 @@ class BoothListView(APIView):
     authentication_classes = [OptionalJWTAuthentication]
 
     def get(self, request):
-        now = timezone.localtime()
+        now = festival_now()
 
         # 날짜 탭 — 미지정 시 서버 오늘, 축제 기간 외면 첫날
         date_param = request.query_params.get("date")

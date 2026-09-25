@@ -11,6 +11,7 @@ from rest_framework.views import APIView
 
 from apps.accounts.authentication import JWTAuthentication
 from apps.booths.models import Booth
+from common.clock import festival_localdate
 from common.exceptions import (
     ApiError,
     InvalidInput,
@@ -142,7 +143,7 @@ class LanternViewSet(
         partial = kwargs.pop("partial", False)
         instance = self.get_object()
 
-        if instance.festival_date != timezone.localdate():
+        if instance.festival_date != festival_localdate():
             raise ApiError(
                 code="NOT_TODAY_LANTERN",
                 message="지난 등불은 수정할 수 없어요.",
