@@ -61,3 +61,17 @@ class JWTAuthentication(BaseAuthentication):
 
     def authenticate_header(self, request):
         return "Bearer"
+
+
+class OptionalJWTAuthentication(JWTAuthentication):
+    """공개 API의 개인화에만 사용하는 선택적 JWT 인증기.
+
+    토큰이 없거나 유효하지 않아도 공개 데이터 조회 자체는 허용한다. 유효한 토큰일 때만
+    ``request.user``를 채워 사용자별 필드를 계산한다. 인증이 필수인 API에는 사용하지 않는다.
+    """
+
+    def authenticate(self, request):
+        try:
+            return super().authenticate(request)
+        except AuthenticationFailed:
+            return None

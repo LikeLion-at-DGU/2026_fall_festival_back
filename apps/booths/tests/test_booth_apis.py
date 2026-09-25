@@ -183,6 +183,27 @@ def test_booth_detail_returns_404_for_missing_booth(client, booths):
 
 
 @pytest.mark.django_db
+def test_public_booth_reads_ignore_stale_access_token(client, booths):
+    # 공개 조회의 선택 인증은 브라우저에 남은 만료·폐기 토큰 때문에 전체 요청을 막지 않는다.
+    client.credentials(HTTP_AUTHORIZATION="Bearer stale-access-token")
+    requests = [
+        ("/api/booths/", {"date": "2026-09-29", "time_slot": "NIGHT"}),
+        (f"/api/booths/{booths['popular'].id}/", {}),
+        ("/api/booths/search/", {"keyword": "멋쟁이사자처럼"}),
+    ]
+
+    for url, params in requests:
+        response = client.get(url, params)
+        assert response.status_code == 200
+        assert response.json()["success"] is True
+
+    list_item = client.get("/api/booths/", {"date": "2026-09-29", "time_slot": "NIGHT"}).json()[
+        "data"
+    ]["booths"][0]
+    assert list_item["has_my_lantern"] is False
+
+
+@pytest.mark.django_db
 def test_booth_list_marks_booths_with_my_lantern(auth_client, me, booths):
     Lantern.objects.create(user=me, booth=booths["popular"], message="화이팅", festival_date=DATE_1)
     # 삭제한 등불은 표시하지 않는다

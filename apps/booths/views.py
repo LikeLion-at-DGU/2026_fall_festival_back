@@ -6,7 +6,7 @@ from django.utils import timezone
 from rest_framework import status
 from rest_framework.views import APIView
 
-from apps.accounts.authentication import JWTAuthentication
+from apps.accounts.authentication import OptionalJWTAuthentication
 from common.responses import error_response, success_response
 
 from .constants import (
@@ -32,7 +32,7 @@ from .serializers import (
 
 # 장소 목록 조회 (지도 핀 + 카드 리스트)
 class BoothListView(APIView):
-    authentication_classes = [JWTAuthentication]
+    authentication_classes = [OptionalJWTAuthentication]
 
     def get(self, request):
         now = timezone.localtime()
@@ -101,7 +101,7 @@ class BoothListView(APIView):
 
 # 장소 상세 조회 (부스 설명 바텀시트)
 class BoothDetailView(APIView):
-    authentication_classes = [JWTAuthentication]
+    authentication_classes = [OptionalJWTAuthentication]
 
     def get(self, request, booth_id):
         booth = booth_detail(booth_id, user=request.user)
@@ -122,7 +122,7 @@ class BoothDetailView(APIView):
 
 # 장소 검색 (검색 모달)
 class BoothSearchView(APIView):
-    authentication_classes = [JWTAuthentication]
+    authentication_classes = [OptionalJWTAuthentication]
 
     def get(self, request):
         keyword = (request.query_params.get("keyword") or "").strip()
