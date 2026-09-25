@@ -8,6 +8,7 @@ from rest_framework.views import APIView
 
 from apps.accounts.authentication import JWTAuthentication
 from apps.accounts.models import User
+from common.clock import festival_localdate
 
 from .models import (
     BoothVerifyCode,
@@ -48,7 +49,7 @@ class CouponIssueView(APIView):
         # JWT 인증을 통해 얻은 실제 로그인 유저
         user = User.objects.select_for_update().get(pk=request.user.pk)
 
-        today = timezone.localdate()
+        today = festival_localdate()
 
         # 오늘 이미 쿠폰을 받은 적 있는지 확인
         already_issued = Coupon.objects.filter(
@@ -136,7 +137,7 @@ class CouponScratchView(APIView):
             )
 
         # 당일 쿠폰만 스크래치 가능
-        if coupon.issued_date != timezone.localdate():
+        if coupon.issued_date != festival_localdate():
             coupon.status = Coupon.Status.EXPIRED
 
             coupon.save(
@@ -304,7 +305,7 @@ class CouponUseView(APIView):
         # 기간 만료 (발급일 포함 COUPON_VALID_DAYS일 이내만 사용 가능)
         if (
             coupon.status == Coupon.Status.EXPIRED
-            or (timezone.localdate() - coupon.issued_date).days >= COUPON_VALID_DAYS
+            or (festival_localdate() - coupon.issued_date).days >= COUPON_VALID_DAYS
         ):
             return Response(
                 {
