@@ -11,6 +11,25 @@ from apps.lanterns.models import Lantern
 
 DATE_1 = date(2026, 9, 29)
 
+PLACEMENTS = [
+    {
+        "unit_no": 1,
+        "map_x": 14.0,
+        "map_y": 36.0,
+        "map_elevation": 2.5,
+        "rotation": 0.0,
+        "booth_size": "BIG",
+    },
+    {
+        "unit_no": 2,
+        "map_x": 21.0,
+        "map_y": 36.0,
+        "map_elevation": 2.5,
+        "rotation": 0.0,
+        "booth_size": "BIG",
+    },
+]
+
 
 @pytest.fixture
 def client():
@@ -228,3 +247,58 @@ def test_booth_detail_marks_my_lantern(auth_client, me, booths):
     Lantern.objects.create(user=me, booth=booth, message="화이팅", festival_date=DATE_1)
     response = auth_client.get(f"/api/booths/{booth.id}/")
     assert response.json()["data"]["has_my_lantern"] is True
+
+
+@pytest.mark.django_db
+def test_booth_list_returns_all_placements(client, booths):
+    operation = BoothOperation.objects.get(
+        booth=booths["popular"],
+        festival_date=DATE_1,
+        time_slot=BoothOperation.TimeSlot.NIGHT,
+    )
+    operation.placements = PLACEMENTS
+    operation.save(update_fields=["placements"])
+
+    response = client.get(
+        "/api/booths/",
+        {"date": "2026-09-29", "time_slot": "NIGHT"},
+    )
+
+    assert response.status_code == 200
+
+    items = response.json()["data"]["booths"]
+    popular = next(item for item in items if item["name"] == "멋쟁이사자처럼 주점")
+
+    assert popular["placements"] == PLACEMENTS
+    assert len(popular["placements"]) == 2
+
+
+@pytest.mark.django_db
+def test_booth_list_returns_empty_placements_when_not_registered(client, booths):
+    response = client.get(
+        "/api/booths/",
+        {"date": "2026-09-29", "time_slot": "NIGHT"},
+    )
+
+    items = response.json()["data"]["booths"]
+    normal = next(item for item in items if item["name"] == "가나다 부스")
+
+    assert normal["placements"] == []
+
+
+@pytest.mark.django_db
+def test_booth_detail_includes_operation_placements(client, booths):
+    operation = BoothOperation.objects.get(
+        booth=booths["popular"],
+        festival_date=DATE_1,
+        time_slot=BoothOperation.TimeSlot.NIGHT,
+    )
+    operation.placements = PLACEMENTS
+    operation.save(update_fields=["placements"])
+
+    response = client.get(f"/api/booths/{booths['popular'].id}/")
+
+    assert response.status_code == 200
+
+    operations = response.json()["data"]["operations"]
+    assert operations[0]["placements"] == PLACEMENTS
