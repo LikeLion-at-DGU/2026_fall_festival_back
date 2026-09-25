@@ -3,7 +3,10 @@
 from datetime import datetime
 
 from django.utils import timezone
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import never_cache
 from rest_framework import status
+from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 
 from apps.accounts.authentication import OptionalJWTAuthentication
@@ -185,7 +188,12 @@ class BoothSearchView(APIView):
 
 
 # 부스 등불 랭킹 (홈 화면)
+@method_decorator(never_cache, name="dispatch")
 class BoothRankingView(APIView):
+    # 모든 사용자에게 같은 공개 집계값이다. 향후 기본 인증 설정이 바뀌어도 토큰을 검사하지 않는다.
+    authentication_classes = []
+    permission_classes = [AllowAny]
+
     def get(self, request):
         limit_param = request.query_params.get("limit", "5")
         try:
