@@ -1,6 +1,8 @@
 """공연 조회 API."""
 
 from django.utils import timezone
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import never_cache
 from drf_spectacular.utils import extend_schema
 from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
@@ -21,9 +23,11 @@ from .serializers import (
 )
 
 
+@method_decorator(never_cache, name="dispatch")
 class PerformanceAPIView(APIView):
     """공연 API 공통 설정."""
 
+    authentication_classes = []
     permission_classes = [AllowAny]
 
     def get_exception_handler(self):
