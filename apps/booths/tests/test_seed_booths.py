@@ -103,3 +103,17 @@ def test_seed_booths_dry_run_does_not_write():
     _seed("--dry-run")
 
     assert Booth.objects.count() == 0
+
+
+@pytest.mark.django_db
+def test_seed_booths_food_truck_runs_every_slot():
+    _seed()
+
+    truck = Booth.objects.get(name="푸드트럭")
+    assert truck.zone == "만해광장"
+    assert truck.booth_size is None
+    operations = truck.operations.all()
+    assert operations.count() == 6
+    for operation in operations:
+        assert len(operation.placements) == 11
+        assert {p["structure"] for p in operation.placements} == {"TRUCK"}

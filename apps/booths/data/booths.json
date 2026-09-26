@@ -1,5 +1,5 @@
 {
-  "source": "축제부스_전체정리_v7.xlsx",
+  "source": "축제부스_전체정리_v7.xlsx + 푸드트럭(2026-09-26)",
   "booths": [
     {
       "key": "N01",
@@ -3899,6 +3899,604 @@
               "map_elevation": 0.1,
               "rotation": 90,
               "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X13",
+      "name": "푸드트럭",
+      "subtitle": "푸드트럭 존",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": null,
+      "zone": "만해광장",
+      "location_detail": "만해광장 (관람석 앞 · 광장 서쪽)",
+      "map_x": 3.5,
+      "map_y": -8,
+      "map_elevation": 0.08,
+      "rotation": 0,
+      "description": "만해광장 푸드트럭 존에서 만날 수 있는 메뉴입니다.\n\n· 불초밥\n· 팟타이\n· 아츄/ 츄러스/ 아이스크림\n· 닭강정(중/대)\n· 에그와플/ 마카롱/ 오레오 아이스크림\n· 떡볶이/ 순대/ 어묵 3p/ 떡튀순set\n· 닭꼬치\n· 야채곱창(소/중)/ 곱창덮밥\n· 더블치즈 피자/ 페퍼로니 피자/ 까르보불닭 피자\n· 타코야끼/ 치즈스틱/ 소떡소떡\n· 흑돼지 덮밥/ 흑돼지 스테이크",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 3.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -16,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -9.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -3,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 5,
+              "map_x": 10,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 6,
+              "map_x": 16.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 7,
+              "map_x": 23,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 8,
+              "map_x": -22,
+              "map_y": -1,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 9,
+              "map_x": -22,
+              "map_y": 5.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 10,
+              "map_x": -22,
+              "map_y": 12,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 11,
+              "map_x": -22,
+              "map_y": 18.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 3.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -16,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -9.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -3,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 5,
+              "map_x": 10,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 6,
+              "map_x": 16.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 7,
+              "map_x": 23,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 8,
+              "map_x": -22,
+              "map_y": -1,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 9,
+              "map_x": -22,
+              "map_y": 5.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 10,
+              "map_x": -22,
+              "map_y": 12,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 11,
+              "map_x": -22,
+              "map_y": 18.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 3.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -16,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -9.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -3,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 5,
+              "map_x": 10,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 6,
+              "map_x": 16.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 7,
+              "map_x": 23,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 8,
+              "map_x": -22,
+              "map_y": -1,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 9,
+              "map_x": -22,
+              "map_y": 5.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 10,
+              "map_x": -22,
+              "map_y": 12,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 11,
+              "map_x": -22,
+              "map_y": 18.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 3.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -16,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -9.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -3,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 5,
+              "map_x": 10,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 6,
+              "map_x": 16.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 7,
+              "map_x": 23,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 8,
+              "map_x": -22,
+              "map_y": -1,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 9,
+              "map_x": -22,
+              "map_y": 5.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 10,
+              "map_x": -22,
+              "map_y": 12,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 11,
+              "map_x": -22,
+              "map_y": 18.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 3.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -16,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -9.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -3,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 5,
+              "map_x": 10,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 6,
+              "map_x": 16.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 7,
+              "map_x": 23,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 8,
+              "map_x": -22,
+              "map_y": -1,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 9,
+              "map_x": -22,
+              "map_y": 5.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 10,
+              "map_x": -22,
+              "map_y": 12,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 11,
+              "map_x": -22,
+              "map_y": 18.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 3.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -16,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -9.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -3,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 5,
+              "map_x": 10,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 6,
+              "map_x": 16.5,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 7,
+              "map_x": 23,
+              "map_y": -8,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 8,
+              "map_x": -22,
+              "map_y": -1,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 9,
+              "map_x": -22,
+              "map_y": 5.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 10,
+              "map_x": -22,
+              "map_y": 12,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
+            },
+            {
+              "unit_no": 11,
+              "map_x": -22,
+              "map_y": 18.5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "structure": "TRUCK"
             }
           ]
         }
