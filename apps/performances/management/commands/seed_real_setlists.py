@@ -20,6 +20,43 @@ from apps.performances.models import Performance, Song
 
 KST = ZoneInfo("Asia/Seoul")
 
+#동아리 정보 추가 
+CLUB_INFO = {
+    "피어리스던": {
+        "affiliation": "중앙 락메탈밴드 동아리",
+    },
+    "AJAX": {
+        "affiliation": "중앙 힙합 동아리",
+    },
+    "뭉게구름": {
+        "affiliation": "중앙 창작음악밴드 동아리",
+    },
+    "백상응원단": {
+        "affiliation": None,
+    },
+    "두둠칫": {
+        "affiliation": "중앙 커버댄스 동아리",
+    },
+    "잼잼": {
+        "affiliation": "중앙 뮤지컬 동아리",
+    },
+    "목멱성": {
+        "affiliation": "중앙 음악콘텐츠 동아리",
+    },
+    "아리랑": {
+        "affiliation": "중앙 밴드 동아리",
+    },
+    "ODC": {
+        "affiliation": "중앙 스트릿댄스 동아리",
+    },
+    "음샘": {
+        "affiliation": "중앙 밴드 동아리",
+    },
+    "렛츠무드": {
+        "affiliation": "중앙 락밴드 동아리",
+    },
+}
+
 # 확정된 실제 셋리스트. (title, artist) — artist가 None이면 팀 자작곡.
 REAL_SETLISTS = {
     "피어리스던": [
@@ -108,7 +145,7 @@ LINEUP_2026_09_30 = [
     ("피어리스던", "15:30", "16:00", True),
     ("AJAX", "16:00", "16:30", True),
     ("뭉게구름", "16:30", "17:00", True),
-    ("백상응원단", "17:00", "18:30", False),
+    ("백상응원단", "17:00", "18:30", True),
     ("연예인 1", "18:30", "19:05", False),
     ("두둠칫", "19:05", "19:35", True),
     ("연예인 2", "19:35", "20:20", False),
@@ -149,6 +186,7 @@ class Command(BaseCommand):
             (date(2026, 10, 1), LINEUP_2026_10_01),
         ):
             for team_name, start_hhmm, end_hhmm, has_setlist in lineup:
+                club_info = CLUB_INFO.get(team_name, {})
                 start_at = _to_dt(festival_date, start_hhmm)
                 end_at = _to_dt(festival_date, end_hhmm)
                 if end_at <= start_at:
@@ -158,19 +196,21 @@ class Command(BaseCommand):
                     team_name=team_name,
                     festival_date=festival_date,
                     defaults={
-                        "description": "(목업 데이터)",
+                        "affiliation": club_info.get("affiliation"),
+                        "image_url": None,
                         "start_at": start_at,
                         "end_at": end_at,
                         "has_setlist": has_setlist,
                     },
                 )
                 if not created:
+                    performance.affiliation = club_info.get("affiliation")
                     performance.start_at = start_at
                     performance.end_at = end_at
                     performance.has_setlist = has_setlist
                     performance.deleted_at = None
                     performance.save(
-                        update_fields=["start_at", "end_at", "has_setlist", "deleted_at"]
+                        update_fields=["affiliation","start_at", "end_at", "has_setlist", "deleted_at"]
                     )
 
                 Song.objects.filter(performance=performance).delete()
