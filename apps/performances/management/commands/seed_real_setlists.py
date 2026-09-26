@@ -1,15 +1,13 @@
 """9/30, 10/1 라인업을 통째로 반영한다.
 
-피어리스던·AJAX·뭉게구름·두둠칫·목멱성·잼잼은 확정된 실제 셋리스트, 나머지는 아직 셋리스트가
-안 나와서 목업 곡으로 채운다 (제목에 "목업곡"이 들어가서 실수로 실제인
-척 쓰이지 않게 표시). '연예인 N'과 백상응원단은 셋리스트 화면 자체가
-없는 공연이라 has_setlist=False로 두고 곡도 안 넣는다.
-
-쟁쟁(10/1)은 원본 시트 이미지 글자가 뭉개져서 정확히 못 읽어 목업으로
-채웠다. 실제 셋리스트가 확정되면 REAL_SETLISTS에 추가해서 재실행하면 된다.
+동아리 공연은 전부 확정된 실제 셋리스트다. '연예인 N'과 백상응원단은
+셋리스트 화면 자체가 없는 공연이라 has_setlist=False로 두고 곡도 안 넣는다.
 
 팀명 + festival_date로 기존 Performance를 찾고, 없으면 새로 만든다
 (get_or_create). 여러 번 실행해도 안전하다 (멱등).
+
+라인업에서 빠진 팀(예: 이름이 '음생' → '음샘'으로 바로잡힌 경우)은 그 날짜에서
+soft delete한다. 라인업 목록이 그 날짜 공연의 정답이다.
 """
 
 from datetime import date, datetime, timedelta
@@ -65,7 +63,6 @@ REAL_SETLISTS = {
         ("항해", "유다빈밴드"),
         ("불", "유다빈밴드"),
         ("뜨거운안녕", "싸이(Feat. 성시경)"),
-    
     ],
     "잼잼": [
         ("Seasons of love", "뮤지컬 렌트"),
@@ -74,6 +71,35 @@ REAL_SETLISTS = {
         ("steal your rock n roll", "뮤지컬 멤피스"),
         ("Land of Lola", "뮤지컬 킹키부츠"),
         ("Raise you up", "뮤지컬 킹키부츠"),
+    ],
+    "아리랑": [
+        ("왜, 왜, 왜", "SUMIN, slom"),
+        ("어른아이", "거미"),
+        ("Violet", "The Volunteers"),
+        ("Electra", "검정치마"),
+        ("Wanli万里 + Citizen Kane", "혁오"),
+    ],
+    # 댄스 동아리라 곡 대신 장르별 무대. [장르]를 제목에 남겨 둔다.
+    "ODC": [
+        ("[하우스] keep me satisfied + you are the universe", None),
+        ("[브레이킹] Body to Body + Madmax", None),
+        ("[걸스힙합] 1 thing", None),
+        ("[힙합] Can I Kick it? + J Dilla Life + 쌔끈해", None),
+        ("[팝핑] Dangerous + Nobody Freakin'", None),
+        ("[락킹] Treasure", None),
+    ],
+    "음샘": [
+        ("This Love", "Maroon5"),
+        ("Last night on earth", "Green day"),
+        ("끼부리지마", "위너"),
+        ("오르트구름", "윤하"),
+    ],
+    "렛츠무드": [
+        ("불꽃놀이", "공원"),
+        ("이상비행", "한로로"),
+        ("해초", "한로로"),
+        ("Basket Case", "Green Day"),
+        ("알루미늄", "브로큰 발렌타인"),
     ],
 }
 
@@ -95,17 +121,15 @@ LINEUP_2026_10_01 = [
     ("목멱성", "16:00", "16:30", True),
     ("아리랑", "16:30", "17:00", True),
     ("ODC", "17:00", "17:30", True),
-    ("음생", "17:30", "18:00", True),
+    ("음샘", "17:30", "18:00", True),
     ("렛츠무드", "18:00", "18:30", True),
-    ("연예인 5", "18:30", "19:35", False),
-    ("연예인 6", "19:35", "20:05", False),
-    ("연예인 7", "20:05", "21:00", False),
-    ("연예인 8", "21:00", "21:35", False),
+    ("연예인 5", "18:30", "19:00", False),
+    ("연예인 6", "19:00", "20:05", False),
+    ("연예인 7", "20:05", "20:35", False),
+    ("연예인 8", "20:35", "21:55", False),
+    # 원본 시트는 '21:55~10:25'인데 30분 공연이라 22:25의 오타로 본다.
+    ("연예인 9", "21:55", "22:25", False),
 ]
-
-
-def _mock_songs(team_name, count=2):
-    return [(f"{team_name} 목업곡 {i}", "목업 아티스트") for i in range(1, count + 1)]
 
 
 def _to_dt(festival_date, hhmm):
@@ -116,7 +140,7 @@ def _to_dt(festival_date, hhmm):
 
 
 class Command(BaseCommand):
-    help = "9/30·10/1 라인업 전체를 반영한다 (확정 팀 실제 셋리스트 + 나머지 목업)."
+    help = "9/30·10/1 라인업 전체를 반영한다 (실제 셋리스트)."
 
     @transaction.atomic
     def handle(self, *args, **options):
@@ -144,17 +168,30 @@ class Command(BaseCommand):
                     performance.start_at = start_at
                     performance.end_at = end_at
                     performance.has_setlist = has_setlist
-                    performance.save(update_fields=["start_at", "end_at", "has_setlist"])
+                    performance.deleted_at = None
+                    performance.save(
+                        update_fields=["start_at", "end_at", "has_setlist", "deleted_at"]
+                    )
 
                 Song.objects.filter(performance=performance).delete()
                 if has_setlist:
-                    songs = REAL_SETLISTS.get(team_name) or _mock_songs(team_name)
+                    songs = REAL_SETLISTS.get(team_name, [])
                     Song.objects.bulk_create(
                         Song(performance=performance, title=title, artist=artist, sort_order=idx)
                         for idx, (title, artist) in enumerate(songs, start=1)
                     )
 
-                tag = "실제" if team_name in REAL_SETLISTS else ("목업" if has_setlist else "셋리스트없음")
+                tag = f"{len(songs)}곡" if has_setlist else "셋리스트없음"
                 self.stdout.write(
                     self.style.SUCCESS(f"[{festival_date}] '{team_name}' 반영 완료 ({tag})")
                 )
+
+            removed = (
+                Performance.objects.alive()
+                .filter(festival_date=festival_date)
+                .exclude(team_name__in=[team_name for team_name, *_ in lineup])
+            )
+            for performance in removed:
+                message = f"[{festival_date}] '{performance.team_name}' 라인업에서 제외"
+                self.stdout.write(self.style.WARNING(message))
+            removed.soft_delete()
