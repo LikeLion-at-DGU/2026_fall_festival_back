@@ -1,6 +1,6 @@
 """9/30, 10/1 라인업을 통째로 반영한다.
 
-AJAX·두둠칫·목멱성은 확정된 실제 셋리스트, 나머지는 아직 셋리스트가
+피어리스던·AJAX·뭉게구름·두둠칫·목멱성·잼잼은 확정된 실제 셋리스트, 나머지는 아직 셋리스트가
 안 나와서 목업 곡으로 채운다 (제목에 "목업곡"이 들어가서 실수로 실제인
 척 쓰이지 않게 표시). '연예인 N'과 백상응원단은 셋리스트 화면 자체가
 없는 공연이라 has_setlist=False로 두고 곡도 안 넣는다.
@@ -24,6 +24,13 @@ KST = ZoneInfo("Asia/Seoul")
 
 # 확정된 실제 셋리스트. (title, artist) — artist가 None이면 팀 자작곡.
 REAL_SETLISTS = {
+    "피어리스던": [
+        ("My Hero", "Foo Fighters"),
+        ("룩셈부르크", "크라잉넛"),
+        ("Baby Baby", "銀杏BOYZ"),
+        ("Skool Kill", "銀杏BOYZ"),
+        ("한 겨울밤의 꿈", "초록불꽃소년단"),
+    ],
     "AJAX": [
         ("Money back", None),
         ("복권", None),
@@ -34,6 +41,13 @@ REAL_SETLISTS = {
         ("BAD 놀이", None),
         ("차광배", None),
         ("AJAX", None),
+    ],
+    "뭉게구름": [
+        ("비행소녀", "김마리"),
+        ("괴물", "YOASOBI"),
+        ("ダンス・デカダンス", "Chevon"),
+        ("아윌다이포유❤️x3", "잔나비"),
+        ("너와 나", "한로로"),
     ],
     "두둠칫": [
         ("걸스네버다이", "트리플에스"),
@@ -102,7 +116,7 @@ def _to_dt(festival_date, hhmm):
 
 
 class Command(BaseCommand):
-    help = "9/30·10/1 라인업 전체를 반영한다 (확정 3팀 실제 셋리스트 + 나머지 목업)."
+    help = "9/30·10/1 라인업 전체를 반영한다 (확정 팀 실제 셋리스트 + 나머지 목업)."
 
     @transaction.atomic
     def handle(self, *args, **options):
