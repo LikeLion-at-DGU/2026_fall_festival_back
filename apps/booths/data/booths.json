@@ -1,0 +1,3909 @@
+{
+  "source": "축제부스_전체정리_v7.xlsx",
+  "booths": [
+    {
+      "key": "N01",
+      "name": "경영학과",
+      "subtitle": "강철상사 할로윈 파티",
+      "place_type": "BOOTH",
+      "category": "COLLAB",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": "혜화별관 앞",
+      "map_x": -30,
+      "map_y": -72,
+      "map_elevation": 3.1,
+      "rotation": 90,
+      "description": "👻강철상사 x 오뚜기 진라면 서포터즈👻\n\n오뚜기 진라면 서포터즈와 함께하는 강철상사 할로윈 파티에 여러분을 초대합니다.\n다양한 분장을 한 임직원들과 오뚜기의 라면들을 만나보세요 ! 🎃🧙🏻‍♀️",
+      "event_description": null,
+      "instagram_id": "dongguk_biz",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -30,
+              "map_y": -72,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -30,
+              "map_y": -65,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -30,
+              "map_y": -58,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "Set1. 무뼈닭발 + 치즈볶이 or 주먹밥",
+          "price": 23000
+        },
+        {
+          "name": "Set2. 불족발 + 치즈볶이 or 주먹밥",
+          "price": 23000
+        }
+      ]
+    },
+    {
+      "key": "N02",
+      "name": "공과대학",
+      "subtitle": "공과대학",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "원흥관",
+      "location_detail": null,
+      "map_x": 16,
+      "map_y": 27,
+      "map_elevation": -0.04,
+      "rotation": 90,
+      "description": "동국대학교 제 48대 공과대학 학생회<CONNECT>",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 16,
+              "map_y": 27,
+              "map_elevation": -0.04,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 16,
+              "map_y": 19,
+              "map_elevation": -0.04,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": 11,
+              "map_y": 27,
+              "map_elevation": -0.04,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": 11,
+              "map_y": 19,
+              "map_elevation": -0.04,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "N03",
+      "name": "문과대학",
+      "subtitle": "오르樂 내리樂 : 청춘을 피우다!",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "명진관 앞 법학관 쪽",
+      "map_x": 28,
+      "map_y": 37,
+      "map_elevation": 2.5,
+      "rotation": 0,
+      "description": "🏔️ 문과대학 야간부스 「오르樂 내리樂 : 청춘을 피우다!」🏔️\n\n안녕하십니까, 동국대 등산객 여러분!\n이번 가을 대동제에서는 산을 오르듯 설레고, 산을 내려오듯 신나는 하루를 함께 만들어보고자 합니다.\n\n문과대학 야간부스 「오르樂 내리樂 : 청춘을 피우다!」에서\n맛있는 음식과 달콤한 디저트, 그리고 뜨거운 청춘을 마음껏 즐겨보세요! \n\n오늘만큼은 일상이라는 산을 잠시 내려놓고,\n친구들과 함께 청춘의 정상을 향해 올라가 봅시다.🥾\n\n정상에서 만나요, 등산객 여러분!\n오르樂! 내리樂! 청춘을 피우자🌱",
+      "event_description": null,
+      "instagram_id": "donggukmoon",
+      "entrance_fee": 4000,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 28,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 21,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": 14,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "오봉 모둠전",
+          "price": 14000
+        },
+        {
+          "name": "열정열정열정! 골뱅이",
+          "price": 17000
+        },
+        {
+          "name": "오리 묵자 했쨔나!",
+          "price": 16000
+        },
+        {
+          "name": "조지아 가래떡",
+          "price": 5000
+        },
+        {
+          "name": "황도 달달~허이",
+          "price": 6000
+        },
+        {
+          "name": "콜라/사이다",
+          "price": 2000
+        }
+      ]
+    },
+    {
+      "key": "N04",
+      "name": "국어국문문예창작학부",
+      "subtitle": "마님은 왜 돌쇠에게만 쌀밥을 주었을까",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "명진관 앞",
+      "map_x": -28,
+      "map_y": 37,
+      "map_elevation": 2.5,
+      "rotation": 0,
+      "description": "안녕하세요, 국어국문문예창작학부입니다. \n저희는 한국 문학 츤데레 컨셉으로 돌쇠, 점순이, 제비 등 특별한 캐릭터와 함께하는 주점을 즐기실 수 있습니다. \n맛있는 음식과 미니게임 이벤트가 준비되어 있으니 많은 관심 부탁드립니다!!",
+      "event_description": "미니게임 이벤트",
+      "instagram_id": "dgu_korcre",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -28,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -21,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -14,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -28,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -21,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -14,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "김치우동",
+          "price": 8000
+        },
+        {
+          "name": "오뎅탕",
+          "price": 10000
+        },
+        {
+          "name": "감자전",
+          "price": 7000
+        },
+        {
+          "name": "제육덮밥",
+          "price": 8000
+        },
+        {
+          "name": "닭꼬치",
+          "price": 13000
+        }
+      ]
+    },
+    {
+      "key": "N05",
+      "name": "철학과",
+      "subtitle": "철학관(아님)",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "명진관 앞, 4",
+      "map_x": -21,
+      "map_y": 37,
+      "map_elevation": 2.5,
+      "rotation": 0,
+      "description": "‘사주, 타로, 신수, 궁합, 작명, 묘터, 운세, 부적, 방패, 연애운, 결혼운, 취직운, 사업운, 재물운‘을 물어보셔도 저희보다 gpt에 물어보는게 빠르고 신속하고 정확합니다.",
+      "event_description": null,
+      "instagram_id": "dgu_philosophy",
+      "entrance_fee": 4000,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -21,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -28,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "돼지불고기",
+          "price": 15000
+        },
+        {
+          "name": "국물닭발",
+          "price": 15000
+        },
+        {
+          "name": "떡만둣국",
+          "price": 12000
+        },
+        {
+          "name": "묵사발",
+          "price": 7000
+        },
+        {
+          "name": "설탕토마토",
+          "price": 7000
+        },
+        {
+          "name": "전메뉴 세트",
+          "price": 48000
+        }
+      ]
+    },
+    {
+      "key": "N06",
+      "name": "식품바이오융합공학과",
+      "subtitle": "식공리 마을회관",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": "혜화별관 앞(대운동장 방면)",
+      "map_x": -40,
+      "map_y": -72,
+      "map_elevation": 3.1,
+      "rotation": 90,
+      "description": "식공리 이장님 몰래 영업 중...\nㄴ어서들 와서 숟가락 들어~",
+      "event_description": "이벤트별 상품 상이\n(참여 조건: <썩은감자줄까 황금감자줄까>\n- 모자 착용한 사람 / 생일이 9월인 사람 / 농촌에서 찍은 사진이 있는 사람에게 뽑기 기회 제공!\n<허수아비를 이겨라>, <농작물 찾기>, <감자 개수 맞히기> 등 다양한 현장 이벤트 진행 중!)",
+      "instagram_id": "dgu_foodtech",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -40,
+              "map_y": -72,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -40,
+              "map_y": -65,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -40,
+              "map_y": -58,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "잔치국수",
+          "price": 10000
+        },
+        {
+          "name": "치즈계란말이",
+          "price": 10000
+        },
+        {
+          "name": "해물김치전",
+          "price": 13000
+        },
+        {
+          "name": "편육",
+          "price": 13000
+        },
+        {
+          "name": "골뱅이소면",
+          "price": 10000
+        },
+        {
+          "name": "가래떡구이",
+          "price": 8000
+        }
+      ]
+    },
+    {
+      "key": "N07",
+      "name": "법과대학",
+      "subtitle": "런닝LAW (야간부스)",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "법학관 앞 다향관 방면",
+      "map_x": 28,
+      "map_y": -21,
+      "map_elevation": 0.08,
+      "rotation": 90,
+      "description": "걷지말고 뛰어라, 런닝LAW",
+      "event_description": "럭키드로우\n(참여 조건: 첫주문 4만원 이상)",
+      "instagram_id": "dgulaw_official",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 28,
+              "map_y": -21,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 28,
+              "map_y": -14,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 28,
+              "map_y": -21,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 28,
+              "map_y": -14,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "월요묵은지❤️닭 (묵은지찜닭)",
+          "price": 24000
+        },
+        {
+          "name": "김치!부추!크로스 (김치부추반반전)",
+          "price": 15000
+        },
+        {
+          "name": "숭숭 롤롤 어묵어묵(어묵탕)",
+          "price": 15000
+        },
+        {
+          "name": "스파르타불닭 (치즈불닭볶음변)",
+          "price": 8000
+        },
+        {
+          "name": "런닝볼팝(치즈볼&치킨팝콘)",
+          "price": 9000
+        },
+        {
+          "name": "음료수(콜라&사이다)",
+          "price": 2000
+        },
+        {
+          "name": "생수",
+          "price": 3000
+        }
+      ]
+    },
+    {
+      "key": "N08",
+      "name": "불교대학",
+      "subtitle": "인연그라운드",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "법학만해관 앞",
+      "map_x": 28,
+      "map_y": 19,
+      "map_elevation": 0.08,
+      "rotation": 90,
+      "description": "불교대학 야간 부스 '인연그라운드'에서 새로운 인연을 만나보자! 오늘 저녁은 솔로탈출이닭!",
+      "event_description": null,
+      "instagram_id": "dgu_buddhism",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 28,
+              "map_y": 19,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 28,
+              "map_y": 12,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": 28,
+              "map_y": 5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "양념치킨",
+          "price": 19000
+        },
+        {
+          "name": "어묵탕",
+          "price": 13000
+        },
+        {
+          "name": "군만두",
+          "price": 7000
+        },
+        {
+          "name": "주먹밥",
+          "price": 5000
+        },
+        {
+          "name": "나쵸",
+          "price": 6000
+        }
+      ]
+    },
+    {
+      "key": "N09",
+      "name": "불교학부",
+      "subtitle": "불~교~ (부처님톤으로)",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "만해관 앞",
+      "map_x": 28,
+      "map_y": 19,
+      "map_elevation": 0.08,
+      "rotation": 90,
+      "description": "✨밈천지✨\n운영시에 여러가지 밈을 직원들이 구사합니다!!\n단체 리액션 옵션 추가 주문시에 직원 전체가 하던일을 모두 멈추고 주문자를 대상으로 음악에 맞춰 춤을 춰드립니다><",
+      "event_description": null,
+      "instagram_id": "dgu_buddhist_emergency",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 28,
+              "map_y": 19,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 28,
+              "map_y": 12,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": 28,
+              "map_y": 5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 28,
+              "map_y": 19,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 28,
+              "map_y": 12,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": 28,
+              "map_y": 5,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "오돌뼈",
+          "price": 20000
+        },
+        {
+          "name": "홍합탕",
+          "price": 20000
+        },
+        {
+          "name": "꿀가래떡",
+          "price": 15000
+        },
+        {
+          "name": "주먹밥",
+          "price": 6000
+        }
+      ]
+    },
+    {
+      "key": "N10",
+      "name": "사범대학",
+      "subtitle": "주(酒)간자율학습",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": 20,
+      "map_y": -29,
+      "map_elevation": 0.08,
+      "rotation": 0,
+      "description": "가을 대동제에 사범대 야간부스의 등장이란..⭐️",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 20,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 13,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": 6,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -1,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 5,
+              "map_x": -8,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 6,
+              "map_x": -15,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "N11",
+      "name": "체육교육과",
+      "subtitle": "일취월장",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "다향관 앞",
+      "map_x": 20,
+      "map_y": -29,
+      "map_elevation": 0.08,
+      "rotation": 0,
+      "description": "일에 치인 수요일 저녁\n취향 저격 안주에 \n월등한 분위기까지 \n장소는 체육교육과 부스",
+      "event_description": null,
+      "instagram_id": "pe_dgu",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 20,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 13,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": 6,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -1,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 5,
+              "map_x": -8,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 6,
+              "map_x": -15,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "대패삼겹",
+          "price": 19900
+        },
+        {
+          "name": "소세지",
+          "price": 19900
+        }
+      ]
+    },
+    {
+      "key": "N12",
+      "name": "광고홍보학과",
+      "subtitle": "광홍띵구스",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": "사회과학대학 3층 주차장 앞",
+      "map_x": -30,
+      "map_y": -20,
+      "map_elevation": 3.18,
+      "rotation": 0,
+      "description": "가을은 짧고, 광홍 띵구스에서의 밤은 길다 🔥⚾️",
+      "event_description": "입장 시 컨디션 증정\n+입장비 룰렛 진행",
+      "instagram_id": "dgu_adpr_official",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -30,
+              "map_y": -20,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 2,
+              "map_y": -36,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -5,
+              "map_y": -22,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -18,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -18,
+              "map_y": 3,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "삼구삼진어묵탕",
+          "price": 10000
+        },
+        {
+          "name": "홈플레이트 두부김치",
+          "price": 13000
+        },
+        {
+          "name": "불같이 닭려온 강속치즈볼",
+          "price": 12000
+        },
+        {
+          "name": "버갈튀어도루",
+          "price": 8000
+        },
+        {
+          "name": "만루홈런처럼 시원한 묵사발",
+          "price": 6000
+        },
+        {
+          "name": "골든글러브 (황도)",
+          "price": 4000
+        }
+      ]
+    },
+    {
+      "key": "N13",
+      "name": "북한학전공",
+      "subtitle": "남남남녀 짝찾기 부-쓰",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": 2,
+      "map_y": -36,
+      "map_elevation": 3.18,
+      "rotation": 0,
+      "description": "사과관 앞에 혁명적 만남의 장이 마련됐습네다.\n그 이름도 당찬 남남남녀!\n바로 짝찾기 부-쓰라요.",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 2,
+              "map_y": -36,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -5,
+              "map_y": -22,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "N14",
+      "name": "식품산업관리학과",
+      "subtitle": "식산24시사우나",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": "혜화관 앞 왼쪽(혜화관 바라보는 기준)",
+      "map_x": -12,
+      "map_y": -36,
+      "map_elevation": 3.18,
+      "rotation": 0,
+      "description": "식품산업관리학과 야간부스",
+      "event_description": null,
+      "instagram_id": "dongguk_siksan",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -12,
+              "map_y": -36,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -5,
+              "map_y": -36,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "스팸부대찌개",
+          "price": 12000
+        },
+        {
+          "name": "대패삼겹숙주볶음",
+          "price": 12000
+        },
+        {
+          "name": "떡볶이",
+          "price": 10000
+        }
+      ]
+    },
+    {
+      "key": "N15",
+      "name": "정치외교학전공",
+      "subtitle": "정외마블",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": "사회과학관 3층 앞",
+      "map_x": 22,
+      "map_y": -22,
+      "map_elevation": 3.18,
+      "rotation": 0,
+      "description": "🗺️정외마블 야간부스 오픈!🗺️\n\n안녕하세요!\n동국대학교 정치외교학과 학생회 Pium입니다🌷 2026 가을 대동제 정치외교학과 야간부스를 소개합니다!\n\n정외마블은, 부루마블 컨셉으로 운영되는 부스로, 각 나라별 컨셉으로 주점 메뉴를 선정했습니다! 주사위 이벤트도 있으니 많은 관심 부탁드립니다:)\n\n불닭게티 1.5\n어묵탕 1.8\n소세지 1.8\n주먹밥 0.8\n만두 0.8\n나쵸 0.5\n꿀호떡아이스크림 0.8\n\n*사이트를 보고 야간부스에 방문해주신 후 인증해주시면, 음료수 한 캔을 서비스로 드리겠습니다!",
+      "event_description": "주사위 2개를 굴려 같은 숫자가 나올시 서비스!\n(1,1) (2,2) (3,3) -> 음료수 서비스\n(4,4) (5,5) -> 사이드 메뉴 서비스\n(6,6) -> 메인 메뉴 서비스",
+      "instagram_id": "dgu_pnd",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 22,
+              "map_y": -22,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 15,
+              "map_y": -22,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 22,
+              "map_y": -22,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 15,
+              "map_y": -22,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -9,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -9,
+              "map_y": 3,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "불닭게티",
+          "price": 15000
+        },
+        {
+          "name": "어묵탕",
+          "price": 18000
+        },
+        {
+          "name": "소세지",
+          "price": 18000
+        },
+        {
+          "name": "주먹밥",
+          "price": 8000
+        },
+        {
+          "name": "만두",
+          "price": 8000
+        },
+        {
+          "name": "나쵸",
+          "price": 5000
+        },
+        {
+          "name": "꿀호떡아이스크림",
+          "price": 8000
+        }
+      ]
+    },
+    {
+      "key": "N16",
+      "name": "행정학전공",
+      "subtitle": "PAjama PArty",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": "29-카페 ING / 30-혜화관 앞",
+      "map_x": -20,
+      "map_y": -45,
+      "map_elevation": 3,
+      "rotation": 0,
+      "description": "행정학과 파자마 파티에 여러분을 초대합니다!!",
+      "event_description": null,
+      "instagram_id": "donggukpublic",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -20,
+              "map_y": -45,
+              "map_elevation": 3,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 9,
+              "map_y": -36,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 16,
+              "map_y": -36,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -9,
+              "map_y": 10,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -14,
+              "map_y": 12,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "모둠전(감자&부추)",
+          "price": 22000
+        },
+        {
+          "name": "비빔국수",
+          "price": 16000
+        },
+        {
+          "name": "순두부 열라면",
+          "price": 17000
+        }
+      ]
+    },
+    {
+      "key": "N17",
+      "name": "열린전공학부",
+      "subtitle": "열린전공학부 주점",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": "혜화관 앞, 부스번호 6",
+      "map_x": -12,
+      "map_y": -36,
+      "map_elevation": 3.18,
+      "rotation": 0,
+      "description": "가을 축제에는 흑백요리사 컨셉으로 돌아온 열린전공학부 주점!\n이번 축제에는 열린전공학부의 특징을 살려서 각 단과대의 이름들이 붙혀진 메뉴들이 준비되어있습니다!!\n해당 메뉴에 적혀있는 단과대와 본인 소속이 일치하다면 메뉴 할인을 진행하고 있으니 저희 주점 많은 관심부탁드립니다!",
+      "event_description": "열린전공학부: 메인 메뉴 1개당 4,000원 할인 (테이블당 최대 2회)\n그 외 학부: 소속 대학 메뉴 1개당 2,000원 할인 (테이블당 최대 1회)",
+      "instagram_id": "dgu_open",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "14:00",
+          "close_at": "23:59",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -12,
+              "map_y": -36,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -5,
+              "map_y": -36,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": 2,
+              "map_y": -36,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": 9,
+              "map_y": -36,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "문학밤샘 어묵우동",
+          "price": 14000
+        },
+        {
+          "name": "알리오올리오 짜파게티",
+          "price": 12000
+        },
+        {
+          "name": "유죄판결 두부김치",
+          "price": 14000
+        },
+        {
+          "name": "자본주의 볶음밥",
+          "price": 15000
+        },
+        {
+          "name": "임용고시 합격황도",
+          "price": 6000
+        },
+        {
+          "name": "당의 법칙 설탕토마토",
+          "price": 6000
+        },
+        {
+          "name": "미디어 속설 전전남친토스트",
+          "price": 9000
+        },
+        {
+          "name": "가래떡 검거구이",
+          "price": 7000
+        }
+      ]
+    },
+    {
+      "key": "N18",
+      "name": "의료인공지능학과",
+      "subtitle": "의디세인",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "법학관 앞",
+      "map_x": 28,
+      "map_y": -21,
+      "map_elevation": 0.08,
+      "rotation": 90,
+      "description": "오늘 밤, 신들의 연회에 당신을 초대합니다.",
+      "event_description": "첨단융합대학 소속 인증 시 황금사과 1개 제공",
+      "instagram_id": "dgu_medai",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 28,
+              "map_y": -21,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 28,
+              "map_y": -14,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "제우스의 벼락구이",
+          "price": 19000
+        },
+        {
+          "name": "포세이돈의 삼지창",
+          "price": 19000
+        },
+        {
+          "name": "하데스의 지옥불",
+          "price": 17000
+        }
+      ]
+    },
+    {
+      "key": "N19",
+      "name": "축구부 프런트 DGUFF",
+      "subtitle": "축구부 심야식당",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "원흥관",
+      "location_detail": "원흥관 앞",
+      "map_x": 5,
+      "map_y": 5,
+      "map_elevation": -0.56,
+      "rotation": 150,
+      "description": "축구부 선수들이 직접 서빙하는 심야식당! 놀러오세요 ~",
+      "event_description": null,
+      "instagram_id": "dgu_football",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 5,
+              "map_y": 5,
+              "map_elevation": -0.56,
+              "rotation": 150,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "N20",
+      "name": "디프",
+      "subtitle": "디프",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": "9/29(화)- 사과관 주차장 앞, 9/30(수)·10/1(목)- 혜화별관 앞",
+      "map_x": -30,
+      "map_y": -20,
+      "map_elevation": 3.18,
+      "rotation": 0,
+      "description": null,
+      "event_description": null,
+      "instagram_id": "diff_identity",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "17:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -30,
+              "map_y": -20,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "17:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -30,
+              "map_y": -72,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -30,
+              "map_y": -65,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -30,
+              "map_y": -58,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -25,
+              "map_y": -45,
+              "map_elevation": 3,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "17:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -40,
+              "map_y": -72,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -40,
+              "map_y": -65,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -40,
+              "map_y": -58,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -30,
+              "map_y": -72,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 5,
+              "map_x": -30,
+              "map_y": -65,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 6,
+              "map_x": -30,
+              "map_y": -58,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 7,
+              "map_x": -25,
+              "map_y": -45,
+              "map_elevation": 3,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "N21",
+      "name": "FC 엘레펜테",
+      "subtitle": "FC 엘레펜테",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": "9/29(화)- 사회과학/경영관 앞 (메가커피 앞), 9/30(수)- 혜화별관 앞",
+      "map_x": -18,
+      "map_y": -4,
+      "map_elevation": 0.1,
+      "rotation": 90,
+      "description": "가을엔 야장!!\n진짜 야장을 학교 안에서….?!\n\n개강 스트레스 풀고싶은 사람들 지금 바로 엘펜 부스로!",
+      "event_description": "싸인 존 / 벽 낙서 존",
+      "instagram_id": "fc_elephente",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -18,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -18,
+              "map_y": 3,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -40,
+              "map_y": -72,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -40,
+              "map_y": -65,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -40,
+              "map_y": -58,
+              "map_elevation": 3.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "베이컨 김치전 (+ 치즈)",
+          "price": 14900
+        },
+        {
+          "name": "불닭냉면",
+          "price": 12900
+        },
+        {
+          "name": "닭강정",
+          "price": 11900
+        },
+        {
+          "name": "새우볶음밥",
+          "price": 7900
+        },
+        {
+          "name": "아이스 황도",
+          "price": 5900
+        },
+        {
+          "name": "나쵸치즈",
+          "price": 6900
+        }
+      ]
+    },
+    {
+      "key": "N22",
+      "name": "프론티어",
+      "subtitle": "프론티어 부스",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": 2,
+      "map_y": -36,
+      "map_elevation": 3.18,
+      "rotation": 0,
+      "description": "동국대학교 중앙 창업동아리 프론티어입니다",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 2,
+              "map_y": -36,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -5,
+              "map_y": -22,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": 22,
+              "map_y": -22,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": 15,
+              "map_y": -22,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "N23",
+      "name": "E.L.F",
+      "subtitle": "E.L.F 국민학교 야간 주점",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "다향관 앞",
+      "map_x": -3,
+      "map_y": -29,
+      "map_elevation": 0.08,
+      "rotation": 0,
+      "description": "<입장료 없는> 가성비 최고의 레트로 주점, E.L.F. 국민학교로 여러분을 초대합니다! \n떡볶이와 어묵탕부터 스트레스를 날려줄 불닭냉면, 매운맛을 달래줄 시원한 샤베트까지\n찰떡궁합 메뉴들이 완벽하게 준비되어 있습니다! \n많이 놀러 오세요~!",
+      "event_description": "랜덤 캡슐 뽑기 이벤트\n(참여 조건: 방문자 전원 참여 기회 제공!)",
+      "instagram_id": "dgu_elf",
+      "entrance_fee": 0,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "17:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -3,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -10,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": -17,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "떡볶이",
+          "price": 15000
+        },
+        {
+          "name": "어묵탕",
+          "price": 15000
+        },
+        {
+          "name": "불닭냉면",
+          "price": 10000
+        },
+        {
+          "name": "두부 고기김치",
+          "price": 15000
+        },
+        {
+          "name": "주먹밥",
+          "price": 7000
+        },
+        {
+          "name": "닭꼬치",
+          "price": 7000
+        },
+        {
+          "name": "쿨피스",
+          "price": 2500
+        }
+      ]
+    },
+    {
+      "key": "N24",
+      "name": "푸름누리",
+      "subtitle": "푸름누리 대잔치",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "명진관 앞",
+      "map_x": -7,
+      "map_y": 37,
+      "map_elevation": 2.5,
+      "rotation": 0,
+      "description": "정겨운 농촌 감성 한 스푼, 맛있는 안주 한가득!",
+      "event_description": null,
+      "instagram_id": "dgu_punu",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -7,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -14,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "제육볶음",
+          "price": 12000
+        },
+        {
+          "name": "고기 김치전",
+          "price": 12000
+        },
+        {
+          "name": "두부김치",
+          "price": 11000
+        },
+        {
+          "name": "치즈 김치볶음밥",
+          "price": 12000
+        },
+        {
+          "name": "오뎅탕",
+          "price": 10000
+        },
+        {
+          "name": "고기 숙주라면",
+          "price": 8000
+        },
+        {
+          "name": "A. 세트 (제육볶음 + 주먹밥 + 뚱캔)",
+          "price": 19000
+        },
+        {
+          "name": "B. 세트 (고기 김치전 + 오뎅탕 + 뚱캔)",
+          "price": 23000
+        }
+      ]
+    },
+    {
+      "key": "N25",
+      "name": "참사람봉사단",
+      "subtitle": "참사람봉사단 부스",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "다향관 앞",
+      "map_x": 20,
+      "map_y": -29,
+      "map_elevation": 0.08,
+      "rotation": 0,
+      "description": "오늘 밤, 여러분의 행복을 '봉사'하러 왔습니다.\n맛있는 안주, 시원한 음료, 그리고 완벽한 분위기까지.\n참사람의 주점은 멈추지 않습니다!",
+      "event_description": "몬스터 1캔 무료제공, 자리비용 할인\n(참여 조건: 선착순 100명)",
+      "instagram_id": "dongguk_chamsaram",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "17:30",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 20,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 13,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": 6,
+              "map_y": -29,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "대패삼겹 숙주 볶음",
+          "price": 25000
+        }
+      ]
+    },
+    {
+      "key": "N26",
+      "name": "부지run",
+      "subtitle": "동국시그널",
+      "place_type": "BOOTH",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "명진관 앞(법학관 방면)",
+      "map_x": 28,
+      "map_y": 37,
+      "map_elevation": 2.5,
+      "rotation": 0,
+      "description": "💗 동국시그널 💗\n\n맛있는 음식과 함께, 새로운 인연을 만나는 특별한 밤\n친구들과 편하게 놀러 와도 좋고, 새로운 사람들과 자연스럽게 어울려도 좋아요.\n\n🥓 인당 15,000원 무한리필으로 푸짐하게 즐겨보세요!\n대패삼겹살, 두부김치, 떡볶이, 어묵탕, 프렌치토스트, 과자까지 맛있는 메뉴를 준비했습니다.\n🥤 콜라 / 사이다 3,000원\n\n📅 2026.09.30.(수)\n⏰ 18:00 ~ 23:00\n📍 명진관 (법학관 방면)\n\n평범한 하루가 새로운 만남으로 특별해지는 순간.\n맛있는 음식도 먹고, 이야기 나누고, 웃다 보면\n생각지도 못한 새로운 인연이 시작될지도 몰라요. 💕\n\n9월 30일, 동국시그널에서 만나요!",
+      "event_description": null,
+      "instagram_id": "dongguk_signal",
+      "entrance_fee": 15000,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 28,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 21,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 3,
+              "map_x": 14,
+              "map_y": 37,
+              "map_elevation": 2.5,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "콜라 / 사이다",
+          "price": 3000
+        }
+      ]
+    },
+    {
+      "key": "D01",
+      "name": "동국 108리더스",
+      "subtitle": "백팔철학관",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "SMALL",
+      "zone": "팔정도",
+      "location_detail": "팔정도 내부, 4번 아래쪽",
+      "map_x": 7,
+      "map_y": 5.5,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "108리더스 주간부스 [백팔철학관]✨️\n\n지나가는 학우 분,\n잠시 앉았다 가시지요\n\n🔮 2027년이 궁금하지 않으십니까 🔮\n\n축제의 첫 날, 백팔철학관이 단 하루 문을 엽니다\n사주를 보고, 부족한 오행을 짚고,\n그 기운을 팔찌에 담아 드립니다🧙\n\n풀이 값은 받지 않습니다.\n다만 108리더스 21기가 될 인연 하나,\n그것만을 기다리고 있습니다🙏\n\n┈┈┈┈┈┈┈┈┈┈\n🗓 2026. 9. 29 (화) 11:00 ~ 16:30\n📍 동국대학교 팔정도\n┈┈┈┈┈┈┈┈┈┈",
+      "event_description": "1. 오행 팔찌 제작\n2. 미니 간식(복)주머니 제작\n(참여 조건: 1. 부스 기본 체험\n2. 108리더스 공식 인스타그램 계정 팔로우)",
+      "instagram_id": "108_leaders",
+      "entrance_fee": 0,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7,
+              "map_y": 5.5,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "D02",
+      "name": "그리고 그림",
+      "subtitle": "그림 플리마켓 & 캐리커쳐",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "SMALL",
+      "zone": "팔정도",
+      "location_detail": "법학관 앞 4번",
+      "map_x": 7,
+      "map_y": 2,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "🎨 그림동아리와 함께하는 특별한 하루!\n\n직접 그린 다양한 작품들을 만나보고, 마음에 드는 그림은 소장해보세요!\n나만의 모습을 담은 캐리커쳐도 직접 그려드립니다.\n축제에서만 만날 수 있는 특별한 그림과 추억을 함께 만들어보세요 💗\n\n🖼️ 그림 작품 판매 | ✏️ 캐리커쳐 | 🎨 다양한 그림 전시\n\n여러분의 많은 관심과 방문 부탁드립니다!",
+      "event_description": null,
+      "instagram_id": "grigogrim_dgu",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7,
+              "map_y": 2,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "캐리커쳐",
+          "price": 4000
+        }
+      ]
+    },
+    {
+      "key": "D03",
+      "name": "한국화과",
+      "subtitle": "망구냉이 부스",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "불상 옆 7번 부스",
+      "map_x": -6,
+      "map_y": 10,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "더운 날씨에 시원한 레몬에이드 한 잔과 달달한 디저트 한 입으로 잠시 쉬어가세요! 🍋 타투 스티커와 행운거북이 등 다양한 굿즈도 챙기고, 상큼한 행운과 함께 축제를 더욱 즐겁고 특별하게 보내봐요! 🐢✨",
+      "event_description": null,
+      "instagram_id": "Manggunaengi_lemon",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -6,
+              "map_y": 10,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "레몬에이드",
+          "price": 1500
+        },
+        {
+          "name": "쿠키",
+          "price": 1000
+        },
+        {
+          "name": "행운 거북이 1마리",
+          "price": 100
+        },
+        {
+          "name": "타투스티커",
+          "price": 5000
+        },
+        {
+          "name": "이어폰 줄감개",
+          "price": 1000
+        }
+      ]
+    },
+    {
+      "key": "D04",
+      "name": "오뚜기 진라면 서포터즈 진앤지니",
+      "subtitle": "오뚜기 school in DIRVANA",
+      "place_type": "BOOTH",
+      "category": "COLLAB",
+      "booth_size": "SMALL",
+      "zone": "팔정도",
+      "location_detail": "팔정도 5번",
+      "map_x": 7,
+      "map_y": -2,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "오뚜기가 동국대에 나타났다! 오뚜기 중간고사 풀고 무료 라면 선물, 경영학과 야간 주점 서비스까지 받아가세요!",
+      "event_description": "경영학과 야간부스 서비스 메뉴 제공, 부스 내 게임 참가자 원하는 라면 1팩 무료 선물 제공\n(참여 조건: 오뚜기 중간고사, 라면땅 부수기 대회 등 오뚜기 부스를 방문하여 게임에 참여한\n오뚜기 라면을 사랑하는! 모든 동국대 재,휴학 및 졸업생 \n(준비된 라면 수량이 끝나면 이벤트도 종료됩니다.))",
+      "instagram_id": "jjineu_otoki",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7,
+              "map_y": -2,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "D05",
+      "name": "상록수커피클럽",
+      "subtitle": "상록수커피클럽",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "SMALL",
+      "zone": "팔정도",
+      "location_detail": "코끼리상 옆, 5번",
+      "map_x": 7,
+      "map_y": -5.5,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "동국대 유일 스페셜티 커피 동아리 \n상록수커피클럽이 운영하는 부스입니다.\n여러 원두의 핸드드립 커피를 판매합니다. ☕️",
+      "event_description": null,
+      "instagram_id": "scc_dgu",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7,
+              "map_y": -5.5,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7,
+              "map_y": -5.5,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "드립 커피",
+          "price": 4000
+        },
+        {
+          "name": "아인슈페너",
+          "price": 5000
+        },
+        {
+          "name": "쿠키",
+          "price": 2000
+        }
+      ]
+    },
+    {
+      "key": "D06",
+      "name": "동국대학교 야구부 프런트",
+      "subtitle": "동국대 야구부 굿즈 부스",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "SMALL",
+      "zone": "팔정도",
+      "location_detail": "팔정도 내부 6번",
+      "map_x": 4,
+      "map_y": 10,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "동국대학교를 대표하는 엘리트 선수들이 있는 대학 야구팀으로, 뜨거운 열정과 패기로 매 순간 그라운드를 누비고 있습니다!\n\n이번 주간부스에서 동국대 야구부 굿즈를 만나보세요!",
+      "event_description": "1. 선수단 포토카드 증정\n2. 부채 1장 증정\n(참여 조건: 1. 굿즈 20,000원 이상 구매 시\n2. 모든 구매자에게 기본 1장 증정 or 동국대 야구부 인스타 팔로우 인증 시)",
+      "instagram_id": "dgu_baseball_official",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 4,
+              "map_y": 10,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 4,
+              "map_y": 10,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "키캡 키링(2구)",
+          "price": 7000
+        },
+        {
+          "name": "키캡 스티커(A6)",
+          "price": 4000
+        },
+        {
+          "name": "야구부 스티커(A5)",
+          "price": 5000
+        },
+        {
+          "name": "동국 반다나",
+          "price": 6500
+        },
+        {
+          "name": "타투 스티커",
+          "price": 3000
+        },
+        {
+          "name": "말랑키링&행운부적",
+          "price": 1000
+        },
+        {
+          "name": "부채(추가 구매 시)",
+          "price": 1000
+        }
+      ]
+    },
+    {
+      "key": "D07",
+      "name": "Lotus",
+      "subtitle": "Lotus 마술&타로",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "8번",
+      "map_x": 20,
+      "map_y": -29,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "Live Only for The Utmost Show\n최고의 쇼를 위해서 살아라",
+      "event_description": null,
+      "instagram_id": "lotus_dgu_official",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 20,
+              "map_y": -29,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 20,
+              "map_y": -29,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "타로",
+          "price": 5000
+        },
+        {
+          "name": "마술",
+          "price": 0
+        }
+      ]
+    },
+    {
+      "key": "D08",
+      "name": "글로벌 홍보대사 디그램",
+      "subtitle": "DGLAM ARCADE 디그램 오락실",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "팔정도 코끼리상 앞",
+      "map_x": 0,
+      "map_y": -8,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "DGLAM ARCADE는 동국대학교 글로벌 홍보대사 DGLAM이 운영하는 체험형 게임 부스입니다.\n\n기존의 단순 판매형 축제 부스에서 벗어나 참가자가 직접 여러 게임에 참여하고 점수를 기록하며 경쟁할 수 있는 오락실 형식의 참여형 부스로 운영합니다.\n\n누구나 쉽게 참여할 수 있는 간단한 게임을 준비하고, 각 게임에서 획득한 점수를 합산하여 상품을 받을 수 있도록 구성합니다. 또한 높은 점수를 기록한 참가자는 랭킹에 이름을 올릴 수 있어 게임의 재미와 경쟁 요소를 함께 느낄 수 있습니다.",
+      "event_description": "인스타 팔로우 시 참가비 할인 (3,000원 → 2,000원)",
+      "instagram_id": "dongguk_dglam",
+      "entrance_fee": 3000,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 0,
+              "map_y": -8,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 0,
+              "map_y": -8,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "D09",
+      "name": "만화얼",
+      "subtitle": "만화얼 부스",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "SMALL",
+      "zone": "팔정도",
+      "location_detail": "팔정도내부 6번",
+      "map_x": 7.5,
+      "map_y": 10,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "동아리 부원들이 직접 그린 애니,게임 아크릴 굿즈를 판매합니다",
+      "event_description": null,
+      "instagram_id": "comicspirit0523",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7.5,
+              "map_y": 10,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7.5,
+              "map_y": 10,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 6,
+              "map_y": 10,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "D10",
+      "name": "인액터스",
+      "subtitle": "굽굽",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "SMALL",
+      "zone": "팔정도",
+      "location_detail": "5번 윗쪽 천막",
+      "map_x": 7,
+      "map_y": -2,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "일감이 감소하는 구두수선대 장인들에게 새로운 일거리를 제공하고, 사라져가는 장인의 기술을 지속시키는 프로젝트 굽굽입니다.",
+      "event_description": null,
+      "instagram_id": "gubgub.kr",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7,
+              "map_y": -2,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        }
+      ],
+      "menus": [
+        {
+          "name": "가죽공예품",
+          "price": 6500
+        }
+      ]
+    },
+    {
+      "key": "D11",
+      "name": "애드러쉬",
+      "subtitle": "컨디션 x 애드러쉬: 챙기자 같이 놀 컨디션!",
+      "place_type": "BOOTH",
+      "category": "COLLAB",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "팔정도 내부 4번",
+      "map_x": 7,
+      "map_y": 4,
+      "map_elevation": 0.1,
+      "rotation": 90,
+      "description": "동국대학교 유일 중앙 광고/마케팅 동아리 애드러쉬와 숙취해소제 브랜드 '컨디션'이 산학협력 부스를 운영합니다. 다양한 게임이 준비되어 있으니, 부스에 방문하셔서 컨디션 스틱도 무료로 받아가세요!",
+      "event_description": "컨디션 스틱 무료 제공\n(참여 조건: 16:30 이전 방문 인원)",
+      "instagram_id": "dguxadrush",
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7,
+              "map_y": 4,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "D12",
+      "name": "서리내",
+      "subtitle": "서리내",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": 7,
+      "map_y": -4,
+      "map_elevation": 0.1,
+      "rotation": 90,
+      "description": "민감한 피부를 위한 선택, 서리내",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X01",
+      "name": "사회복지상담학과",
+      "subtitle": "사회복지상담학과 부스",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": -30,
+      "map_y": -20,
+      "map_elevation": 3.18,
+      "rotation": 0,
+      "description": "동국대학교 제8대 사회복지상담학과 학생회 '이음'",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -30,
+              "map_y": -20,
+              "map_elevation": 3.18,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X02",
+      "name": "축기단",
+      "subtitle": "축제기획단 부스",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": 14,
+      "map_y": 15,
+      "map_elevation": 0.1,
+      "rotation": 315,
+      "description": "동국대학교 2026 가을 대동제 축제기획단",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 14,
+              "map_y": 15,
+              "map_elevation": 0.1,
+              "rotation": 315,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7,
+              "map_y": 4,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 0,
+              "map_y": -8,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X03",
+      "name": "카운셀러",
+      "subtitle": "카운셀러 부스",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "만해광장",
+      "location_detail": null,
+      "map_x": 15,
+      "map_y": 11,
+      "map_elevation": 0.08,
+      "rotation": 90,
+      "description": "카운셀러 부스입니다",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 15,
+              "map_y": 11,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 15,
+              "map_y": 4,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 15,
+              "map_y": 11,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 15,
+              "map_y": 4,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 15,
+              "map_y": 11,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 15,
+              "map_y": 4,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X04",
+      "name": "빗썸",
+      "subtitle": "빗썸 부스",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "만해광장",
+      "location_detail": null,
+      "map_x": 23,
+      "map_y": 11,
+      "map_elevation": 0.08,
+      "rotation": 90,
+      "description": "빗썸 부스입니다",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 23,
+              "map_y": 11,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 23,
+              "map_y": 4,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 23,
+              "map_y": 11,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 23,
+              "map_y": 4,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 23,
+              "map_y": 11,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 23,
+              "map_y": 4,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X05",
+      "name": "상쾌환",
+      "subtitle": "상쾌환 부스",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "만해광장",
+      "location_detail": null,
+      "map_x": 11,
+      "map_y": 11,
+      "map_elevation": 0.08,
+      "rotation": 90,
+      "description": "상쾌환 부스입니다",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 11,
+              "map_y": 11,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": 11,
+              "map_y": 4,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X06",
+      "name": "씽글벙글 서포터즈",
+      "subtitle": "씽글벙글 서포터스 부스",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": -17,
+      "map_y": -29,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "서울시 1인가구 지원사업 씽글벙글 서포터스입니다",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -17,
+              "map_y": -29,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X07",
+      "name": "인캐쳐",
+      "subtitle": "인캐쳐",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": 0,
+      "map_y": -29,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "대학 복지플랫폼 인캐쳐입니다",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 0,
+              "map_y": -29,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -17,
+              "map_y": -29,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X08",
+      "name": "한국언론진흥재단",
+      "subtitle": "한국언론진흥재단 부스",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": 10,
+      "map_y": -29,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "\"언론 곁에서 국민 속으로\"",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 10,
+              "map_y": -29,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "F01",
+      "name": "포토부스",
+      "subtitle": "포토부스",
+      "place_type": "FACILITY",
+      "category": "ETC",
+      "booth_size": "SMALL",
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": -7,
+      "map_y": 4,
+      "map_elevation": 0.1,
+      "rotation": 0,
+      "description": "포토부스",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -7,
+              "map_y": 4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -7,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -7,
+              "map_y": 4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -7,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -7,
+              "map_y": 4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -7,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -7,
+              "map_y": 4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -7,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -7,
+              "map_y": 4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -7,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -7,
+              "map_y": 4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -7,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 0,
+              "booth_size": "SMALL"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "F02",
+      "name": "포토부스",
+      "subtitle": "포토부스",
+      "place_type": "FACILITY",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "만해광장",
+      "location_detail": null,
+      "map_x": 14,
+      "map_y": 22,
+      "map_elevation": 0.08,
+      "rotation": 0,
+      "description": "포토부스",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 3,
+              "map_x": 14,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": 21,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 3,
+              "map_x": 14,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": 21,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 3,
+              "map_x": 14,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": 21,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 3,
+              "map_x": 14,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": 21,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 3,
+              "map_x": 14,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": 21,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 3,
+              "map_x": 14,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": 21,
+              "map_y": 22,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X09",
+      "name": "다회용기 부스",
+      "subtitle": "다회용기 부스",
+      "place_type": "BOOTH",
+      "category": "ECO",
+      "booth_size": "BIG",
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": -9,
+      "map_y": -4,
+      "map_elevation": 0.1,
+      "rotation": 90,
+      "description": "다회용기 부스",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -9,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -9,
+              "map_y": 3,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -9,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -9,
+              "map_y": 3,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X10",
+      "name": "다회용기 부스",
+      "subtitle": "다회용기 부스",
+      "place_type": "BOOTH",
+      "category": "ECO",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": -34,
+      "map_y": 40,
+      "map_elevation": 0.08,
+      "rotation": 90,
+      "description": "다회용기 부스",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 3,
+              "map_x": -34,
+              "map_y": 40,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -34,
+              "map_y": 47,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 3,
+              "map_x": -34,
+              "map_y": 40,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 4,
+              "map_x": -34,
+              "map_y": 47,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -34,
+              "map_y": 40,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG"
+            },
+            {
+              "unit_no": 2,
+              "map_x": -34,
+              "map_y": 47,
+              "map_elevation": 0.08,
+              "rotation": 0,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X11",
+      "name": "플리마켓",
+      "subtitle": "플리마켓",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "만해광장",
+      "location_detail": null,
+      "map_x": -10,
+      "map_y": 7,
+      "map_elevation": 0.08,
+      "rotation": 90,
+      "description": "플리마켓",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -10,
+              "map_y": 7,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG",
+              "structure": "MARKET",
+              "width": 21,
+              "depth": 12
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -10,
+              "map_y": 7,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG",
+              "structure": "MARKET",
+              "width": 21,
+              "depth": 12
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -10,
+              "map_y": 7,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG",
+              "structure": "MARKET",
+              "width": 21,
+              "depth": 12
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -10,
+              "map_y": 7,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG",
+              "structure": "MARKET",
+              "width": 21,
+              "depth": 12
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -10,
+              "map_y": 7,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG",
+              "structure": "MARKET",
+              "width": 21,
+              "depth": 12
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "11:00",
+          "close_at": "23:30",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": -10,
+              "map_y": 7,
+              "map_elevation": 0.08,
+              "rotation": 90,
+              "booth_size": "BIG",
+              "structure": "MARKET",
+              "width": 21,
+              "depth": 12
+            }
+          ]
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X12",
+      "name": "카운셀러",
+      "subtitle": "카운셀러",
+      "place_type": "BOOTH",
+      "category": "ETC",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": 7,
+      "map_y": -4,
+      "map_elevation": 0.1,
+      "rotation": 90,
+      "description": "카운셀러 부스입니다",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": [
+            {
+              "unit_no": 1,
+              "map_x": 7,
+              "map_y": -4,
+              "map_elevation": 0.1,
+              "rotation": 90,
+              "booth_size": "BIG"
+            }
+          ]
+        }
+      ],
+      "menus": []
+    }
+  ]
+}
