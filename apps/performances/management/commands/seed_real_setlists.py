@@ -7,7 +7,7 @@
 (get_or_create). 여러 번 실행해도 안전하다 (멱등).
 
 라인업에서 빠진 팀(예: 이름이 '음생' → '음샘'으로 바로잡힌 경우)은 그 날짜에서
-soft delete한다. 라인업 목록이 그 날짜 공연의 정답이다.
+soft delete한다. 라인업 목록이 그 날짜 공연의 정답이다. 
 """
 
 from datetime import date, datetime, timedelta
