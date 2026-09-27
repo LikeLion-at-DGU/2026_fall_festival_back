@@ -292,6 +292,15 @@ def test_booth_list_lantern_count_is_scoped_to_selected_date(client, booths):
 
 
 @pytest.mark.django_db
+def test_booth_list_lantern_count_is_zero_when_no_lanterns_on_date(client, booths):
+    # "가나다 부스"는 Booth.lantern_count(누적) 필드가 5로 설정돼 있지만,
+    # 이 날짜엔 등불을 하나도 안 달았으므로 0이 나와야 한다.
+    response = client.get("/api/booths/", {"date": "2026-09-29", "time_slot": "NIGHT"})
+    item = next(item for item in response.json()["data"]["booths"] if item["name"] == "가나다 부스")
+    assert item["lantern_count"] == 0
+
+
+@pytest.mark.django_db
 def test_booth_list_has_my_lantern_is_scoped_to_selected_date(auth_client, me, booths):
     popular = booths["popular"]
     BoothOperation.objects.create(
