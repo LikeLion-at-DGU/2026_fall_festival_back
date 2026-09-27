@@ -3553,7 +3553,7 @@
     },
     {
       "key": "X09",
-      "name": "다회용기 부스",
+      "name": "다회용기 부스 (혜화관)",
       "subtitle": "다회용기 부스",
       "place_type": "BOOTH",
       "category": "ECO",
@@ -3623,7 +3623,7 @@
     },
     {
       "key": "X10",
-      "name": "다회용기 부스",
+      "name": "다회용기 부스 (팔정도)",
       "subtitle": "다회용기 부스",
       "place_type": "BOOTH",
       "category": "ECO",

@@ -1,14 +1,16 @@
 """Read-only booths queries."""
 
+import unicodedata
+
 from django.core.cache import cache
 from django.db.models import (
     Case,
+    Count,
     Exists,
     IntegerField,
     OuterRef,
     Prefetch,
     Q,
-    Sum,
     Value,
     When,
 )
@@ -17,6 +19,10 @@ from apps.lanterns.models import Lantern
 
 from .constants import BOOTH_CHIP, BOOTH_CHIP_CATEGORIES
 from .models import Booth, BoothMenu, BoothOperation
+
+
+def _name_sort_key(name: str) -> str:
+    return unicodedata.normalize("NFC", name).casefold()
 
 
 def _my_lantern_exists(user, booth_ref):
@@ -56,7 +62,26 @@ def booth_operations_on(festival_date, time_slot, category=None, user=None):
 
     if user is not None:
         queryset = queryset.annotate(has_my_lantern=_my_lantern_exists(user, "booth_id"))
-    return queryset
+
+    operations = list(queryset)
+
+    if category == BOOTH_CHIP:
+        return sorted(
+            operations,
+            key=lambda operation: (
+                operation.collab_order,
+                _name_sort_key(operation.booth.name),
+                operation.booth_id,
+            ),
+        )
+
+    return sorted(
+        operations,
+        key=lambda operation: (
+            _name_sort_key(operation.booth.name),
+            operation.booth_id,
+        ),
+    )
 
 
 def booth_detail(booth_id, user=None):
@@ -105,7 +130,17 @@ def booth_search(keyword, festival_date=None, time_slot=None, user=None):
     )
     if user is not None:
         queryset = queryset.annotate(has_my_lantern=_my_lantern_exists(user, "pk"))
-    return queryset.distinct().order_by("match_rank", "name")
+
+    booths = list(queryset.distinct())
+
+    return sorted(
+        booths,
+        key=lambda booth: (
+            booth.match_rank,
+            _name_sort_key(booth.name),
+            booth.id,
+        ),
+    )
 
 
 # 부스 랭킹은 홈 화면에서 자주 조회되는 값이라 짧은 TTL로 캐싱한다.
@@ -114,31 +149,52 @@ def booth_search(keyword, festival_date=None, time_slot=None, user=None):
 RANKING_CACHE_TTL = 5
 
 
-def booth_ranking(limit):
-    cache_key = f"booth_ranking:{limit}"
+def booth_ranking(festival_date, limit):
+    cache_key = f"booth_ranking:{festival_date.isoformat()}:{limit}"
     cached = cache.get(cache_key)
     if cached is not None:
         return cached
 
-    # 등불 달기 대상(place_type=BOOTH)만 랭킹에 포함
-    result = list(
-        Booth.objects.filter(place_type=Booth.PlaceType.BOOTH, deleted_at__isnull=True).order_by(
-            "-lantern_count", "name"
-        )[:limit]
+    booths = list(
+        Booth.objects.filter(
+            place_type=Booth.PlaceType.BOOTH,
+            deleted_at__isnull=True,
+        ).annotate(
+            daily_lantern_count=Count(
+                "lanterns",
+                filter=Q(
+                    lanterns__festival_date=festival_date,
+                    lanterns__deleted_at__isnull=True,
+                ),
+            )
+        )
     )
+
+    result = sorted(
+        booths,
+        key=lambda booth: (
+            -booth.daily_lantern_count,
+            _name_sort_key(booth.name),
+            booth.id,
+        ),
+    )[:limit]
+
     cache.set(cache_key, result, timeout=RANKING_CACHE_TTL)
     return result
 
 
-def total_lantern_count():
-    cache_key = "booth_total_lantern_count"
+def total_lantern_count(festival_date):
+    cache_key = f"booth_total_lantern_count:{festival_date.isoformat()}"
     cached = cache.get(cache_key)
     if cached is not None:
         return cached
 
-    result = Booth.objects.filter(
-        place_type=Booth.PlaceType.BOOTH, deleted_at__isnull=True
-    ).aggregate(total=Sum("lantern_count"))
-    total = result["total"] or 0
+    total = Lantern.objects.filter(
+        festival_date=festival_date,
+        deleted_at__isnull=True,
+        booth__place_type=Booth.PlaceType.BOOTH,
+        booth__deleted_at__isnull=True,
+    ).count()
+
     cache.set(cache_key, total, timeout=RANKING_CACHE_TTL)
     return total

@@ -127,3 +127,21 @@ def test_seed_booths_keeps_night_pubs_as_alcohol():
     assert Booth.objects.get(name="문과대학").category == Booth.Category.ALCOHOL
     assert Booth.objects.get(name="경영학과").category == Booth.Category.COLLAB
     assert not Booth.objects.filter(category=Booth.Category.TOILET).exists()
+
+
+@pytest.mark.django_db
+def test_seed_booths_distinguishes_reusable_container_booths():
+    _seed()
+
+    hyehwa = Booth.objects.get(
+        name="다회용기 부스 (혜화관)",
+        zone="혜화관",
+    )
+    paljeongdo = Booth.objects.get(
+        name="다회용기 부스 (팔정도)",
+        zone="팔정도",
+    )
+
+    assert hyehwa.pk != paljeongdo.pk
+    assert hyehwa.category == Booth.Category.ECO
+    assert paljeongdo.category == Booth.Category.ECO
