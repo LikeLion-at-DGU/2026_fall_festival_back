@@ -138,7 +138,12 @@ def test_booth_chip_groups_collab_first_in_name_order(client, booths):
         "/api/booths/", {"date": "2026-09-29", "time_slot": "NIGHT", "category": "BOOTH"}
     )
     names = [item["name"] for item in response.json()["data"]["booths"]]
-    assert names == ["총학생회 협업 부스", "가나다 부스", "멋쟁이사자처럼 주점"]
+    assert names == [
+        "총학생회 협업 부스",
+        "가나다 부스",
+        "건축공학과 주점",
+        "멋쟁이사자처럼 주점",
+    ]
 
 
 @pytest.mark.django_db
@@ -371,3 +376,156 @@ def test_booth_chip_uses_deterministic_name_order(client):
         "인캐쳐",
         "축기단",
     ]
+
+
+@pytest.mark.django_db
+def test_booth_chip_changes_by_time_and_includes_photo_booth(client):
+    day_booth = Booth.objects.create(
+        name="주간 체험 부스",
+        place_type=Booth.PlaceType.BOOTH,
+        category=Booth.Category.ETC,
+    )
+    night_pub = Booth.objects.create(
+        name="야간 학과 주점",
+        place_type=Booth.PlaceType.BOOTH,
+        category=Booth.Category.ALCOHOL,
+    )
+    night_collab = Booth.objects.create(
+        name="야간 협업 부스",
+        place_type=Booth.PlaceType.BOOTH,
+        category=Booth.Category.COLLAB,
+    )
+    photo_booth = Booth.objects.create(
+        name="포토부스",
+        place_type=Booth.PlaceType.FACILITY,
+        category=Booth.Category.ETC,
+    )
+    alcohol_facility = Booth.objects.create(
+        name="지정 주류 판매소",
+        place_type=Booth.PlaceType.FACILITY,
+        category=Booth.Category.ALCOHOL,
+    )
+
+    for booth in [day_booth, photo_booth]:
+        BoothOperation.objects.create(
+            booth=booth,
+            festival_date=DATE_1,
+            time_slot=BoothOperation.TimeSlot.DAY,
+            open_at=time(11, 0),
+            close_at=time(16, 30),
+        )
+
+    for booth in [night_pub, night_collab, photo_booth, alcohol_facility]:
+        BoothOperation.objects.create(
+            booth=booth,
+            festival_date=DATE_1,
+            time_slot=BoothOperation.TimeSlot.NIGHT,
+            open_at=time(17, 30),
+            close_at=time(22, 0),
+        )
+
+    day_response = client.get(
+        "/api/booths/",
+        {"date": "2026-09-29", "time_slot": "DAY", "category": "BOOTH"},
+    )
+    night_response = client.get(
+        "/api/booths/",
+        {"date": "2026-09-29", "time_slot": "NIGHT", "category": "BOOTH"},
+    )
+
+    assert [item["name"] for item in day_response.json()["data"]["booths"]] == [
+        "주간 체험 부스",
+        "포토부스",
+    ]
+    assert [item["name"] for item in night_response.json()["data"]["booths"]] == [
+        "야간 협업 부스",
+        "야간 학과 주점",
+        "포토부스",
+    ]
+
+
+@pytest.mark.django_db
+@pytest.mark.parametrize(
+    ("category", "place_type"),
+    [
+        (Booth.Category.ALCOHOL, Booth.PlaceType.FACILITY),
+        (Booth.Category.TOILET, Booth.PlaceType.FACILITY),
+        (Booth.Category.ECO, Booth.PlaceType.BOOTH),
+    ],
+)
+def test_fixed_category_ignores_time_slot_and_deduplicates(
+    client,
+    category,
+    place_type,
+):
+    fixed_booth = Booth.objects.create(
+        name=f"고정 카테고리 {category}",
+        place_type=place_type,
+        category=category,
+    )
+    BoothOperation.objects.create(
+        booth=fixed_booth,
+        festival_date=DATE_1,
+        time_slot=BoothOperation.TimeSlot.DAY,
+        open_at=time(11, 0),
+        close_at=time(16, 30),
+    )
+    BoothOperation.objects.create(
+        booth=fixed_booth,
+        festival_date=DATE_1,
+        time_slot=BoothOperation.TimeSlot.NIGHT,
+        open_at=time(17, 30),
+        close_at=time(22, 0),
+    )
+
+    response = client.get(
+        "/api/booths/",
+        {"date": "2026-09-29", "time_slot": "DAY", "category": category},
+    )
+
+    items = response.json()["data"]["booths"]
+
+    assert len(items) == 1
+    assert items[0]["name"] == fixed_booth.name
+    assert items[0]["operation"]["open_at"] == "11:00"
+
+    other_date_response = client.get(
+        "/api/booths/",
+        {"date": "2026-09-30", "time_slot": "DAY", "category": category},
+    )
+
+    assert other_date_response.json()["data"]["booths"] == []
+
+
+@pytest.mark.django_db
+def test_alcohol_chip_excludes_department_pubs(client):
+    facility = Booth.objects.create(
+        name="지정 주류 판매소",
+        place_type=Booth.PlaceType.FACILITY,
+        category=Booth.Category.ALCOHOL,
+    )
+    pub = Booth.objects.create(
+        name="학과 주점",
+        place_type=Booth.PlaceType.BOOTH,
+        category=Booth.Category.ALCOHOL,
+    )
+
+    for booth in [facility, pub]:
+        BoothOperation.objects.create(
+            booth=booth,
+            festival_date=DATE_1,
+            time_slot=BoothOperation.TimeSlot.NIGHT,
+            open_at=time(17, 30),
+            close_at=time(22, 0),
+        )
+
+    response = client.get(
+        "/api/booths/",
+        {
+            "date": "2026-09-29",
+            "time_slot": "DAY",
+            "category": "ALCOHOL",
+        },
+    )
+
+    assert [item["name"] for item in response.json()["data"]["booths"]] == ["지정 주류 판매소"]
