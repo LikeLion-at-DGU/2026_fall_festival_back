@@ -316,3 +316,58 @@ def test_booth_detail_includes_restroom_type(client, booths):
 
     assert response.status_code == 200
     assert response.json()["data"]["restroom_type"] == "BOTH"
+
+
+@pytest.mark.django_db
+def test_booth_chip_uses_deterministic_name_order(client):
+    names = [
+        "빗썸",
+        "만화얼",
+        "상쾌환",
+        "인캐쳐",
+        "축기단",
+        "글로벌 홍보대사 디그램",
+        "인액터스",
+        "Lotus",
+    ]
+
+    for name in names:
+        booth = Booth.objects.create(
+            name=name,
+            place_type=Booth.PlaceType.BOOTH,
+            category=Booth.Category.ETC,
+        )
+        BoothOperation.objects.create(
+            booth=booth,
+            festival_date=DATE_1,
+            time_slot=BoothOperation.TimeSlot.NIGHT,
+            open_at=time(17, 30),
+            close_at=time(22, 0),
+        )
+
+    response = client.get(
+        "/api/booths/",
+        {
+            "date": "2026-09-29",
+            "time_slot": "NIGHT",
+            "category": "BOOTH",
+        },
+    )
+
+    assert response.status_code == 200
+
+    created_names = set(names)
+    returned_names = [
+        item["name"] for item in response.json()["data"]["booths"] if item["name"] in created_names
+    ]
+
+    assert returned_names == [
+        "Lotus",
+        "글로벌 홍보대사 디그램",
+        "만화얼",
+        "빗썸",
+        "상쾌환",
+        "인액터스",
+        "인캐쳐",
+        "축기단",
+    ]
