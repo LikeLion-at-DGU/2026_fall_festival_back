@@ -11,9 +11,11 @@ from django.db.models import (
     OuterRef,
     Prefetch,
     Q,
+    Subquery,
     Value,
     When,
 )
+from django.db.models.functions import Coalesce
 
 from apps.lanterns.models import Lantern
 
@@ -25,10 +27,34 @@ def _name_sort_key(name: str) -> str:
     return unicodedata.normalize("NFC", name).casefold()
 
 
-def _my_lantern_exists(user, booth_ref):
+def _my_lantern_exists(user, booth_ref, festival_date=None):
     # 해당 부스에 로그인 사용자의 삭제되지 않은 등불이 있는지 (서브쿼리)
-    return Exists(
-        Lantern.objects.filter(booth_id=OuterRef(booth_ref), user=user, deleted_at__isnull=True)
+    # festival_date를 주면 그 날짜 기준, 안 주면 기간 전체 기준으로 판단한다.
+    lantern_filter = {
+        "booth_id": OuterRef(booth_ref),
+        "user": user,
+        "deleted_at__isnull": True,
+    }
+    if festival_date is not None:
+        lantern_filter["festival_date"] = festival_date
+    return Exists(Lantern.objects.filter(**lantern_filter))
+
+
+def _lantern_count_on(booth_ref, festival_date):
+    # 특정 날짜 기준 해당 부스의 삭제되지 않은 등불 개수 (상관 서브쿼리)
+    return Coalesce(
+        Subquery(
+            Lantern.objects.filter(
+                booth_id=OuterRef(booth_ref),
+                festival_date=festival_date,
+                deleted_at__isnull=True,
+            )
+            .values("booth_id")
+            .annotate(count=Count("id"))
+            .values("count"),
+            output_field=IntegerField(),
+        ),
+        0,
     )
 
 
@@ -86,7 +112,10 @@ def booth_operations_on(festival_date, time_slot, category=None, user=None):
         queryset = queryset.filter(time_slot=time_slot)
 
     if user is not None:
-        queryset = queryset.annotate(has_my_lantern=_my_lantern_exists(user, "booth_id"))
+        queryset = queryset.annotate(
+            has_my_lantern=_my_lantern_exists(user, "booth_id", festival_date=festival_date)
+        )
+    queryset = queryset.annotate(daily_lantern_count=_lantern_count_on("booth_id", festival_date))
 
     operations = list(queryset)
 
@@ -124,7 +153,7 @@ def booth_operations_on(festival_date, time_slot, category=None, user=None):
     )
 
 
-def booth_detail(booth_id, user=None):
+def booth_detail(booth_id, user=None, festival_date=None):
     queryset = Booth.objects.filter(pk=booth_id, deleted_at__isnull=True).prefetch_related(
         Prefetch(
             "operations",
@@ -138,12 +167,20 @@ def booth_detail(booth_id, user=None):
         ),
     )
     if user is not None:
-        queryset = queryset.annotate(has_my_lantern=_my_lantern_exists(user, "pk"))
+        queryset = queryset.annotate(
+            has_my_lantern=_my_lantern_exists(user, "pk", festival_date=festival_date)
+        )
     return queryset.first()
 
 
-def booth_search(keyword, festival_date=None, time_slot=None, user=None):
-    # 부스명/소속/위치/소개/메뉴명 부분 일치 OR 검색. 메뉴 매칭은 중복 제거
+def booth_search(
+    keyword, operation_filter_date=None, time_slot=None, user=None, *, lantern_scope_date
+):
+    # operation_filter_date: 검색 결과 범위(어떤 부스를 보여줄지)에만 쓰인다.
+    # None이면 날짜 무관 전체.
+    # lantern_scope_date: lantern_count/has_my_lantern 계산 기준 날짜.
+    # 호출부(뷰)가 항상 실제 날짜로 확정해서 넘긴다
+    # (date 미지정 요청이어도 서버 기본 날짜로 계산되어야 하기 때문).
     match = (
         Q(name__icontains=keyword)
         | Q(subtitle__icontains=keyword)
@@ -153,8 +190,10 @@ def booth_search(keyword, festival_date=None, time_slot=None, user=None):
     )
     queryset = Booth.objects.filter(match, deleted_at__isnull=True)
 
-    if festival_date:
-        operating = Q(operations__festival_date=festival_date, operations__deleted_at__isnull=True)
+    if operation_filter_date:
+        operating = Q(
+            operations__festival_date=operation_filter_date, operations__deleted_at__isnull=True
+        )
         if time_slot:
             operating &= Q(operations__time_slot=time_slot)
         queryset = queryset.filter(operating)
@@ -169,7 +208,10 @@ def booth_search(keyword, festival_date=None, time_slot=None, user=None):
         )
     )
     if user is not None:
-        queryset = queryset.annotate(has_my_lantern=_my_lantern_exists(user, "pk"))
+        queryset = queryset.annotate(
+            has_my_lantern=_my_lantern_exists(user, "pk", festival_date=lantern_scope_date)
+        )
+    queryset = queryset.annotate(daily_lantern_count=_lantern_count_on("pk", lantern_scope_date))
 
     booths = list(queryset.distinct())
 

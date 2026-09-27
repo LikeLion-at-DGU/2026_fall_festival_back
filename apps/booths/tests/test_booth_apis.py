@@ -6,10 +6,12 @@ import pytest
 from django.utils import timezone
 from rest_framework.test import APIClient
 
+from apps.accounts.models import User
 from apps.booths.models import Booth, BoothMenu, BoothOperation
 from apps.lanterns.models import Lantern
 
 DATE_1 = date(2026, 9, 29)
+DATE_2 = date(2026, 9, 30)
 
 PLACEMENTS = [
     {
@@ -256,6 +258,97 @@ def test_booth_detail_marks_my_lantern(auth_client, me, booths):
     Lantern.objects.create(user=me, booth=booth, message="화이팅", festival_date=DATE_1)
     response = auth_client.get(f"/api/booths/{booth.id}/")
     assert response.json()["data"]["has_my_lantern"] is True
+
+
+@pytest.mark.django_db
+def test_booth_list_lantern_count_is_scoped_to_selected_date(client, booths):
+    popular = booths["popular"]
+    # 목록 API가 DATE_2에도 이 부스를 보여주도록 운영 정보 추가
+    BoothOperation.objects.create(
+        booth=popular,
+        festival_date=DATE_2,
+        time_slot=BoothOperation.TimeSlot.NIGHT,
+        open_at=time(17, 30),
+        close_at=time(22, 0),
+    )
+    watchers = [User.objects.create(kakao_id=900001 + i, nickname=f"관람객{i}") for i in range(3)]
+    Lantern.objects.create(
+        user=watchers[0], booth=popular, message="9/29 등불0", festival_date=DATE_1
+    )
+    Lantern.objects.create(
+        user=watchers[1], booth=popular, message="9/29 등불1", festival_date=DATE_1
+    )
+    Lantern.objects.create(
+        user=watchers[2], booth=popular, message="9/30 등불", festival_date=DATE_2
+    )
+
+    def lantern_count_on(target_date):
+        response = client.get("/api/booths/", {"date": target_date, "time_slot": "NIGHT"})
+        item = next(
+            item
+            for item in response.json()["data"]["booths"]
+            if item["name"] == "멋쟁이사자처럼 주점"
+        )
+        return item["lantern_count"]
+
+    # Booth.lantern_count(누적) 필드값(32)이 아니라 날짜별 실제 등불 개수가 나와야 한다
+    assert lantern_count_on("2026-09-29") == 2
+    assert lantern_count_on("2026-09-30") == 1
+
+
+@pytest.mark.django_db
+def test_booth_list_lantern_count_is_zero_when_no_lanterns_on_date(client, booths):
+    # "가나다 부스"는 Booth.lantern_count(누적) 필드가 5로 설정돼 있지만,
+    # 이 날짜엔 등불을 하나도 안 달았으므로 0이 나와야 한다.
+    response = client.get("/api/booths/", {"date": "2026-09-29", "time_slot": "NIGHT"})
+    item = next(item for item in response.json()["data"]["booths"] if item["name"] == "가나다 부스")
+    assert item["lantern_count"] == 0
+
+
+@pytest.mark.django_db
+def test_booth_list_has_my_lantern_is_scoped_to_selected_date(auth_client, me, booths):
+    popular = booths["popular"]
+    BoothOperation.objects.create(
+        booth=popular,
+        festival_date=DATE_2,
+        time_slot=BoothOperation.TimeSlot.NIGHT,
+        open_at=time(17, 30),
+        close_at=time(22, 0),
+    )
+    Lantern.objects.create(user=me, booth=popular, message="9/29에만 달음", festival_date=DATE_1)
+
+    def has_my_lantern_on(target_date):
+        response = auth_client.get("/api/booths/", {"date": target_date, "time_slot": "NIGHT"})
+        item = next(
+            item
+            for item in response.json()["data"]["booths"]
+            if item["name"] == "멋쟁이사자처럼 주점"
+        )
+        return item["has_my_lantern"]
+
+    assert has_my_lantern_on("2026-09-29") is True
+    # 다른 날짜(DATE_2)를 보고 있을 땐, 그날 안 달았으니 False여야 한다
+    assert has_my_lantern_on("2026-09-30") is False
+
+
+@pytest.mark.django_db
+def test_booth_detail_has_my_lantern_is_scoped_to_selected_date(auth_client, me, booths):
+    booth = booths["popular"]
+    Lantern.objects.create(user=me, booth=booth, message="9/29에만 달음", festival_date=DATE_1)
+
+    same_day = auth_client.get(f"/api/booths/{booth.id}/", {"date": "2026-09-29"})
+    other_day = auth_client.get(f"/api/booths/{booth.id}/", {"date": "2026-09-30"})
+
+    assert same_day.json()["data"]["has_my_lantern"] is True
+    assert other_day.json()["data"]["has_my_lantern"] is False
+
+
+@pytest.mark.django_db
+def test_booth_detail_rejects_out_of_range_date(client, booths):
+    booth = booths["popular"]
+    response = client.get(f"/api/booths/{booth.id}/", {"date": "2026-10-05"})
+    assert response.status_code == 400
+    assert response.json()["code"] == "INVALID_FESTIVAL_DATE"
 
 
 @pytest.mark.django_db
