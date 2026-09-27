@@ -17,7 +17,7 @@ from django.db.models import (
 
 from apps.lanterns.models import Lantern
 
-from .constants import BOOTH_CHIP, BOOTH_CHIP_CATEGORIES
+from .constants import BOOTH_CHIP
 from .models import Booth, BoothMenu, BoothOperation
 
 
@@ -33,18 +33,35 @@ def _my_lantern_exists(user, booth_ref):
 
 
 def booth_operations_on(festival_date, time_slot, category=None, user=None):
-    # UNIQUE(booth, festival_date, time_slot) 제약으로 부스당 최대 1행 보장
     queryset = BoothOperation.objects.filter(
         festival_date=festival_date,
-        time_slot=time_slot,
         deleted_at__isnull=True,
         booth__deleted_at__isnull=True,
     ).select_related("booth")
 
-    # '부스' 칩 — 협업 부스(ㄱㄴㄷ순) 먼저, 그 아래 일반 부스(ㄱㄴㄷ순)
+    fixed_category = category in {
+        Booth.Category.ALCOHOL,
+        Booth.Category.TOILET,
+        Booth.Category.ECO,
+    }
+
     if category == BOOTH_CHIP:
+        booth_categories = [Booth.Category.ETC, Booth.Category.COLLAB]
+        if time_slot == BoothOperation.TimeSlot.NIGHT:
+            booth_categories.append(Booth.Category.ALCOHOL)
+
         queryset = (
-            queryset.filter(booth__category__in=BOOTH_CHIP_CATEGORIES)
+            queryset.filter(time_slot=time_slot)
+            .filter(
+                Q(
+                    booth__place_type=Booth.PlaceType.BOOTH,
+                    booth__category__in=booth_categories,
+                )
+                | Q(
+                    booth__place_type=Booth.PlaceType.FACILITY,
+                    booth__category=Booth.Category.ETC,
+                )
+            )
             .annotate(
                 collab_order=Case(
                     When(booth__category=Booth.Category.COLLAB, then=Value(0)),
@@ -52,18 +69,41 @@ def booth_operations_on(festival_date, time_slot, category=None, user=None):
                     output_field=IntegerField(),
                 )
             )
-            .order_by("collab_order", "booth__name")
         )
+    elif category == Booth.Category.ALCOHOL:
+        queryset = queryset.filter(
+            booth__place_type=Booth.PlaceType.FACILITY,
+            booth__category=Booth.Category.ALCOHOL,
+        )
+    elif category == Booth.Category.TOILET:
+        queryset = queryset.filter(
+            booth__place_type=Booth.PlaceType.FACILITY,
+            booth__category=Booth.Category.TOILET,
+        )
+    elif category == Booth.Category.ECO:
+        queryset = queryset.filter(booth__category=Booth.Category.ECO)
     else:
-        # 그 외 — 이름 ㄱㄴㄷ순 (등불 인기 정렬은 부스 랭킹 API가 담당)
-        if category:
-            queryset = queryset.filter(booth__category=category)
-        queryset = queryset.order_by("booth__name")
+        queryset = queryset.filter(time_slot=time_slot)
 
     if user is not None:
         queryset = queryset.annotate(has_my_lantern=_my_lantern_exists(user, "booth_id"))
 
     operations = list(queryset)
+
+    if fixed_category:
+        operations.sort(
+            key=lambda operation: (
+                operation.booth_id,
+                operation.time_slot != time_slot,
+                operation.id,
+            )
+        )
+
+        unique_operations = {}
+        for operation in operations:
+            unique_operations.setdefault(operation.booth_id, operation)
+
+        operations = list(unique_operations.values())
 
     if category == BOOTH_CHIP:
         return sorted(
