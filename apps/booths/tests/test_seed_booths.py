@@ -120,11 +120,13 @@ def test_seed_booths_food_truck_runs_every_slot():
 
 
 @pytest.mark.django_db
-def test_seed_booths_keeps_night_pubs_as_alcohol():
-    """프론트 지도 '주류' 필터가 ALCOHOL 값을 쓰므로 야간 주점은 ALCOHOL로 남아야 한다."""
+def test_seed_booths_only_liquor_facility_is_alcohol():
+    """'주류' 칩은 주류 판매 시설만, 주·야간 부스(주점 포함)는 '부스' 칩(COLLAB·ETC)에 모인다."""
     _seed()
 
-    assert Booth.objects.get(name="문과대학").category == Booth.Category.ALCOHOL
+    alcohol = Booth.objects.filter(category=Booth.Category.ALCOHOL)
+    assert list(alcohol.values_list("name", "place_type")) == [("주류 판매 부스", "FACILITY")]
+    assert Booth.objects.get(name="문과대학").category == Booth.Category.ETC
     assert Booth.objects.get(name="경영학과").category == Booth.Category.COLLAB
     assert not Booth.objects.filter(category=Booth.Category.TOILET).exists()
 
