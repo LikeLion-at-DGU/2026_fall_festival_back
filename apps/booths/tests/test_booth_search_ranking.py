@@ -6,10 +6,12 @@ import pytest
 from django.core.cache import cache
 from rest_framework.test import APIClient
 
+from apps.accounts.models import User
 from apps.booths.models import Booth, BoothMenu, BoothOperation
 from apps.lanterns.models import Lantern
 
 DATE_1 = date(2026, 9, 29)
+DATE_2 = date(2026, 9, 30)
 
 
 @pytest.fixture
@@ -224,6 +226,61 @@ def test_search_marks_my_lantern(auth_client, me, search_booths):
     flags = {item["name"]: item["has_my_lantern"] for item in response.json()["data"]["booths"]}
     assert flags["멋사 주점"] is True
     assert flags["멋사"] is False
+
+
+@pytest.mark.django_db
+def test_search_has_my_lantern_scoped_to_date_when_date_given(auth_client, me, search_booths):
+    partial = search_booths["partial"]
+    # partial 부스는 DATE_1에만 운영하므로, date 지정 검색에서도 걸리도록 DATE_2 운영 정보 추가
+    BoothOperation.objects.create(
+        booth=partial,
+        festival_date=DATE_2,
+        time_slot=BoothOperation.TimeSlot.NIGHT,
+        open_at=time(17, 30),
+        close_at=time(22, 0),
+    )
+    Lantern.objects.create(user=me, booth=partial, message="9/29에만 달음", festival_date=DATE_1)
+
+    same_day = auth_client.get(
+        "/api/booths/search/", {"keyword": "멋사 주점", "date": "2026-09-29"}
+    )
+    other_day = auth_client.get(
+        "/api/booths/search/", {"keyword": "멋사 주점", "date": "2026-09-30"}
+    )
+
+    assert same_day.json()["data"]["booths"][0]["has_my_lantern"] is True
+    assert other_day.json()["data"]["booths"][0]["has_my_lantern"] is False
+
+
+@pytest.mark.django_db
+def test_search_lantern_count_falls_back_to_cumulative_without_date(client, search_booths):
+    # date 미지정 검색은 날짜 무관 전체이므로 Booth.lantern_count 누적값을 그대로 보여준다
+    exact = search_booths["exact"]
+    Booth.objects.filter(pk=exact.pk).update(lantern_count=7)
+
+    response = client.get("/api/booths/search/", {"keyword": "멋사"})
+    item = next(item for item in response.json()["data"]["booths"] if item["name"] == "멋사")
+    assert item["lantern_count"] == 7
+
+
+@pytest.mark.django_db
+def test_search_lantern_count_scoped_to_date_when_date_given(client, search_booths):
+    partial = search_booths["partial"]
+    Booth.objects.filter(pk=partial.pk).update(lantern_count=999)  # 누적값은 무시돼야 함
+    watchers = [User.objects.create(kakao_id=910001 + i, nickname=f"관람객{i}") for i in range(2)]
+    Lantern.objects.create(
+        user=watchers[0], booth=partial, message="9/29 등불0", festival_date=DATE_1
+    )
+    Lantern.objects.create(
+        user=watchers[1], booth=partial, message="9/29 등불1", festival_date=DATE_1
+    )
+
+    response = client.get(
+        "/api/booths/search/",
+        {"keyword": "멋사", "date": "2026-09-29", "time_slot": "NIGHT"},
+    )
+    item = next(item for item in response.json()["data"]["booths"] if item["name"] == "멋사 주점")
+    assert item["lantern_count"] == 2
 
 
 @pytest.mark.django_db

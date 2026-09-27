@@ -3,15 +3,18 @@
 from django.core.cache import cache
 from django.db.models import (
     Case,
+    Count,
     Exists,
     IntegerField,
     OuterRef,
     Prefetch,
     Q,
+    Subquery,
     Sum,
     Value,
     When,
 )
+from django.db.models.functions import Coalesce
 
 from apps.lanterns.models import Lantern
 
@@ -19,10 +22,34 @@ from .constants import BOOTH_CHIP, BOOTH_CHIP_CATEGORIES
 from .models import Booth, BoothMenu, BoothOperation
 
 
-def _my_lantern_exists(user, booth_ref):
+def _my_lantern_exists(user, booth_ref, festival_date=None):
     # 해당 부스에 로그인 사용자의 삭제되지 않은 등불이 있는지 (서브쿼리)
-    return Exists(
-        Lantern.objects.filter(booth_id=OuterRef(booth_ref), user=user, deleted_at__isnull=True)
+    # festival_date를 주면 그 날짜 기준, 안 주면 기간 전체 기준으로 판단한다.
+    lantern_filter = {
+        "booth_id": OuterRef(booth_ref),
+        "user": user,
+        "deleted_at__isnull": True,
+    }
+    if festival_date is not None:
+        lantern_filter["festival_date"] = festival_date
+    return Exists(Lantern.objects.filter(**lantern_filter))
+
+
+def _lantern_count_on(booth_ref, festival_date):
+    # 특정 날짜 기준 해당 부스의 삭제되지 않은 등불 개수 (상관 서브쿼리)
+    return Coalesce(
+        Subquery(
+            Lantern.objects.filter(
+                booth_id=OuterRef(booth_ref),
+                festival_date=festival_date,
+                deleted_at__isnull=True,
+            )
+            .values("booth_id")
+            .annotate(count=Count("id"))
+            .values("count"),
+            output_field=IntegerField(),
+        ),
+        0,
     )
 
 
@@ -55,11 +82,14 @@ def booth_operations_on(festival_date, time_slot, category=None, user=None):
         queryset = queryset.order_by("booth__name")
 
     if user is not None:
-        queryset = queryset.annotate(has_my_lantern=_my_lantern_exists(user, "booth_id"))
+        queryset = queryset.annotate(
+            has_my_lantern=_my_lantern_exists(user, "booth_id", festival_date=festival_date)
+        )
+    queryset = queryset.annotate(daily_lantern_count=_lantern_count_on("booth_id", festival_date))
     return queryset
 
 
-def booth_detail(booth_id, user=None):
+def booth_detail(booth_id, user=None, festival_date=None):
     queryset = Booth.objects.filter(pk=booth_id, deleted_at__isnull=True).prefetch_related(
         Prefetch(
             "operations",
@@ -73,7 +103,9 @@ def booth_detail(booth_id, user=None):
         ),
     )
     if user is not None:
-        queryset = queryset.annotate(has_my_lantern=_my_lantern_exists(user, "pk"))
+        queryset = queryset.annotate(
+            has_my_lantern=_my_lantern_exists(user, "pk", festival_date=festival_date)
+        )
     return queryset.first()
 
 
@@ -104,7 +136,13 @@ def booth_search(keyword, festival_date=None, time_slot=None, user=None):
         )
     )
     if user is not None:
-        queryset = queryset.annotate(has_my_lantern=_my_lantern_exists(user, "pk"))
+        queryset = queryset.annotate(
+            has_my_lantern=_my_lantern_exists(user, "pk", festival_date=festival_date)
+        )
+    # date 미지정 검색은 날짜 무관 전체이므로, 이때는 lantern_count를 누적값으로 둔다
+    # (BoothSearchItemSerializer가 daily_lantern_count 미존재 시 booth.lantern_count로 대체)
+    if festival_date:
+        queryset = queryset.annotate(daily_lantern_count=_lantern_count_on("pk", festival_date))
     return queryset.distinct().order_by("match_rank", "name")
 
 

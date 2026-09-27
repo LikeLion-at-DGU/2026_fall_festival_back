@@ -107,7 +107,30 @@ class BoothDetailView(APIView):
     authentication_classes = [OptionalJWTAuthentication]
 
     def get(self, request, booth_id):
-        booth = booth_detail(booth_id, user=request.user)
+        now = festival_now()
+
+        # has_my_lantern 계산 기준 날짜 — 미지정 시 서버 오늘, 축제 기간 외면 첫날
+        date_param = request.query_params.get("date")
+        if date_param:
+            try:
+                festival_date = datetime.strptime(date_param, "%Y-%m-%d").date()
+            except ValueError:
+                return error_response(
+                    "INVALID_INPUT",
+                    "잘못된 요청값입니다.",
+                    {"date": "YYYY-MM-DD 형식으로 입력해주세요."},
+                )
+            if festival_date not in FESTIVAL_DATES:
+                return error_response(
+                    "INVALID_FESTIVAL_DATE",
+                    "축제 기간 내의 날짜가 아닙니다.",
+                    {"date": "2026-09-29 ~ 2026-10-01 중에서 선택해주세요."},
+                )
+        else:
+            today = now.date()
+            festival_date = today if today in FESTIVAL_DATES else DEFAULT_FESTIVAL_DATE
+
+        booth = booth_detail(booth_id, user=request.user, festival_date=festival_date)
 
         if booth is None:
             return error_response(

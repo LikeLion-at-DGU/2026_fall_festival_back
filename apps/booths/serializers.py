@@ -31,7 +31,7 @@ class BoothListItemSerializer(serializers.Serializer):
     rotation = serializers.FloatField(source="booth.rotation")
     placements = serializers.SerializerMethodField()
     thumbnail_url = serializers.CharField(source="booth.thumbnail_url")
-    lantern_count = serializers.IntegerField(source="booth.lantern_count")
+    lantern_count = serializers.IntegerField(source="daily_lantern_count")
     has_my_lantern = serializers.SerializerMethodField()
     operation = serializers.SerializerMethodField()
 
@@ -129,6 +129,7 @@ class BoothSearchItemSerializer(serializers.ModelSerializer):
     map_elevation = serializers.FloatField()
     rotation = serializers.FloatField()
     has_my_lantern = serializers.SerializerMethodField()
+    lantern_count = serializers.SerializerMethodField()
 
     class Meta:
         model = Booth
@@ -155,3 +156,9 @@ class BoothSearchItemSerializer(serializers.ModelSerializer):
     def get_has_my_lantern(self, obj):
         # selectors에서 annotate된 값. 비로그인 요청은 annotate가 없으므로 False
         return getattr(obj, "has_my_lantern", False)
+
+    def get_lantern_count(self, obj):
+        # date 지정 검색은 selectors가 daily_lantern_count를 annotate한다.
+        # date 미지정(날짜 무관 전체 검색)일 땐 annotate가 없으므로 누적값으로 대체한다.
+        daily_count = getattr(obj, "daily_lantern_count", None)
+        return daily_count if daily_count is not None else obj.lantern_count
