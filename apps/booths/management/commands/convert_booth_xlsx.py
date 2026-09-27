@@ -131,15 +131,29 @@ class Command(BaseCommand):
             )
 
         booths = []
+        skipped_booths = []
         for row in _sheet_rows(workbook, "부스"):
             key = row["임시키"]
+            # 좌표가 없으면 지도에 그릴 수 없으므로 좌표를 받을 때까지 넣지 않는다.
+            if row["map_x"] is None or row["map_y"] is None:
+                skipped_booths.append(f"{key} {_text(row['name'])}")
+                operations.pop(key, None)
+                menus.pop(key, None)
+                continue
+
+            category = row["category"]
+            # 총학 야간 주점은 지도 '주류' 필터 칩 값이라 ALCOHOL로 고정한다.
+            # 엑셀 v8부터 ETC로 제안됐지만 ETC로 바꾸면 프론트 필터가 깨진다.
+            if row["구분"] == "야간" and row["분류"] == "총학표" and category == "ETC":
+                category = "ALCOHOL"
+
             booths.append(
                 {
                     "key": key,
                     "name": _text(row["name"]),
                     "subtitle": _text(row["subtitle"]),
                     "place_type": row["place_type"],
-                    "category": row["category"],
+                    "category": category,
                     "booth_size": row["booth_size"],
                     "zone": _text(row["zone"]),
                     "location_detail": _text(row["location_detail"]),
@@ -164,7 +178,7 @@ class Command(BaseCommand):
         output.parent.mkdir(parents=True, exist_ok=True)
         payload = {"source": xlsx_path.name, "booths": booths}
         content = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
-        output.write_text(content, encoding="utf-8")
+        output.write_text(content, encoding="utf-8", newline="\n")
 
         self.stdout.write(
             self.style.SUCCESS(
@@ -173,3 +187,9 @@ class Command(BaseCommand):
                 f"메뉴 {sum(len(b['menus']) for b in booths)} (가격 미수령 {skipped_menus}개 제외)"
             )
         )
+        if skipped_booths:
+            self.stdout.write(
+                self.style.WARNING(
+                    f"좌표가 없어 제외한 장소 {len(skipped_booths)}곳: {', '.join(skipped_booths)}"
+                )
+            )

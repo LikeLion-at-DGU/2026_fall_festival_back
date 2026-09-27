@@ -115,5 +115,33 @@ def test_seed_booths_food_truck_runs_every_slot():
     operations = truck.operations.all()
     assert operations.count() == 6
     for operation in operations:
-        assert len(operation.placements) == 11
+        assert len(operation.placements) == 6
         assert {p["structure"] for p in operation.placements} == {"TRUCK"}
+
+
+@pytest.mark.django_db
+def test_seed_booths_keeps_night_pubs_as_alcohol():
+    """프론트 지도 '주류' 필터가 ALCOHOL 값을 쓰므로 야간 주점은 ALCOHOL로 남아야 한다."""
+    _seed()
+
+    assert Booth.objects.get(name="문과대학").category == Booth.Category.ALCOHOL
+    assert Booth.objects.get(name="경영학과").category == Booth.Category.COLLAB
+    assert not Booth.objects.filter(category=Booth.Category.TOILET).exists()
+
+
+@pytest.mark.django_db
+def test_seed_booths_distinguishes_reusable_container_booths():
+    _seed()
+
+    hyehwa = Booth.objects.get(
+        name="다회용기 부스 (혜화관)",
+        zone="혜화관",
+    )
+    paljeongdo = Booth.objects.get(
+        name="다회용기 부스 (팔정도)",
+        zone="팔정도",
+    )
+
+    assert hyehwa.pk != paljeongdo.pk
+    assert hyehwa.category == Booth.Category.ECO
+    assert paljeongdo.category == Booth.Category.ECO

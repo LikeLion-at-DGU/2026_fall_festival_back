@@ -1,5 +1,5 @@
 {
-  "source": "축제부스_전체정리_v7.xlsx + 푸드트럭(2026-09-26)",
+  "source": "축제부스_전체정리_v9.xlsx",
   "booths": [
     {
       "key": "N01",
@@ -320,7 +320,7 @@
       "category": "ALCOHOL",
       "booth_size": "BIG",
       "zone": "팔정도",
-      "location_detail": "명진관 앞, 4",
+      "location_detail": "명진관 앞 4번",
       "map_x": -21,
       "map_y": 37,
       "map_elevation": 2.5,
@@ -569,7 +569,7 @@
       "category": "ALCOHOL",
       "booth_size": "BIG",
       "zone": "팔정도",
-      "location_detail": "법학만해관 앞",
+      "location_detail": "법학/만해관 앞",
       "map_x": 28,
       "map_y": 19,
       "map_elevation": 0.08,
@@ -1676,7 +1676,7 @@
       "category": "ALCOHOL",
       "booth_size": "BIG",
       "zone": "혜화관",
-      "location_detail": "9/29(화)- 사회과학/경영관 앞 (메가커피 앞), 9/30(수)- 혜화별관 앞",
+      "location_detail": "9/29(화)- 사회과학/경영관 앞(메가커피 앞), 9/30(수)- 혜화별관 앞",
       "map_x": -18,
       "map_y": -4,
       "map_elevation": 0.1,
@@ -2566,7 +2566,7 @@
       "category": "ETC",
       "booth_size": "SMALL",
       "zone": "팔정도",
-      "location_detail": "팔정도내부 6번",
+      "location_detail": "팔정도 내부 6번",
       "map_x": 7.5,
       "map_y": 10,
       "map_elevation": 0.1,
@@ -2636,7 +2636,7 @@
       "category": "ETC",
       "booth_size": "SMALL",
       "zone": "팔정도",
-      "location_detail": "5번 윗쪽 천막",
+      "location_detail": "5번 위쪽 천막",
       "map_x": 7,
       "map_y": -2,
       "map_elevation": 0.1,
@@ -2717,7 +2717,7 @@
       "category": "ETC",
       "booth_size": "BIG",
       "zone": "팔정도",
-      "location_detail": null,
+      "location_detail": "팔정도",
       "map_x": 7,
       "map_y": -4,
       "map_elevation": 0.1,
@@ -3553,7 +3553,7 @@
     },
     {
       "key": "X09",
-      "name": "다회용기 부스",
+      "name": "다회용기 부스 (혜화관)",
       "subtitle": "다회용기 부스",
       "place_type": "BOOTH",
       "category": "ECO",
@@ -3623,7 +3623,7 @@
     },
     {
       "key": "X10",
-      "name": "다회용기 부스",
+      "name": "다회용기 부스 (팔정도)",
       "subtitle": "다회용기 부스",
       "place_type": "BOOTH",
       "category": "ECO",
@@ -3727,7 +3727,7 @@
       "map_x": -10,
       "map_y": 7,
       "map_elevation": 0.08,
-      "rotation": 90,
+      "rotation": 0,
       "description": "플리마켓",
       "event_description": null,
       "instagram_id": null,
@@ -3745,7 +3745,7 @@
               "map_x": -10,
               "map_y": 7,
               "map_elevation": 0.08,
-              "rotation": 90,
+              "rotation": 0,
               "booth_size": "BIG",
               "structure": "MARKET",
               "width": 21,
@@ -3764,7 +3764,7 @@
               "map_x": -10,
               "map_y": 7,
               "map_elevation": 0.08,
-              "rotation": 90,
+              "rotation": 0,
               "booth_size": "BIG",
               "structure": "MARKET",
               "width": 21,
@@ -3783,7 +3783,7 @@
               "map_x": -10,
               "map_y": 7,
               "map_elevation": 0.08,
-              "rotation": 90,
+              "rotation": 0,
               "booth_size": "BIG",
               "structure": "MARKET",
               "width": 21,
@@ -3802,7 +3802,7 @@
               "map_x": -10,
               "map_y": 7,
               "map_elevation": 0.08,
-              "rotation": 90,
+              "rotation": 0,
               "booth_size": "BIG",
               "structure": "MARKET",
               "width": 21,
@@ -3821,7 +3821,7 @@
               "map_x": -10,
               "map_y": 7,
               "map_elevation": 0.08,
-              "rotation": 90,
+              "rotation": 0,
               "booth_size": "BIG",
               "structure": "MARKET",
               "width": 21,
@@ -3840,7 +3840,7 @@
               "map_x": -10,
               "map_y": 7,
               "map_elevation": 0.08,
-              "rotation": 90,
+              "rotation": 0,
               "booth_size": "BIG",
               "structure": "MARKET",
               "width": 21,
@@ -3907,15 +3907,58 @@
     },
     {
       "key": "X13",
+      "name": "주류 판매 부스",
+      "subtitle": "주류 판매 부스",
+      "place_type": "FACILITY",
+      "category": "ALCOHOL",
+      "booth_size": "BIG",
+      "zone": "팔정도",
+      "location_detail": "만해관 옆(오르막길 끝)",
+      "map_x": 36,
+      "map_y": 23,
+      "map_elevation": 0.05,
+      "rotation": 0,
+      "description": "축제 기간 주류 판매 장소",
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": true,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "17:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "17:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "17:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "X28",
       "name": "푸드트럭",
       "subtitle": "푸드트럭 존",
       "place_type": "BOOTH",
       "category": "ETC",
       "booth_size": null,
       "zone": "만해광장",
-      "location_detail": "만해광장 (관람석 앞 · 광장 서쪽)",
+      "location_detail": "만해광장 (관람석 앞)",
       "map_x": 3.5,
-      "map_y": -8,
+      "map_y": -3,
       "map_elevation": 0.08,
       "rotation": 0,
       "description": "만해광장 푸드트럭 존에서 만날 수 있는 메뉴입니다.\n\n· 불초밥\n· 팟타이\n· 아츄/ 츄러스/ 아이스크림\n· 닭강정(중/대)\n· 에그와플/ 마카롱/ 오레오 아이스크림\n· 떡볶이/ 순대/ 어묵 3p/ 떡튀순set\n· 닭꼬치\n· 야채곱창(소/중)/ 곱창덮밥\n· 더블치즈 피자/ 페퍼로니 피자/ 까르보불닭 피자\n· 타코야끼/ 치즈스틱/ 소떡소떡\n· 흑돼지 덮밥/ 흑돼지 스테이크",
@@ -3933,90 +3976,68 @@
             {
               "unit_no": 1,
               "map_x": 3.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 2,
               "map_x": -16,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 3,
               "map_x": -9.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 4,
               "map_x": -3,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 5,
               "map_x": 10,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 6,
               "map_x": 16.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 7,
-              "map_x": 23,
-              "map_y": -8,
-              "map_elevation": 0.08,
-              "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 8,
-              "map_x": -22,
-              "map_y": -1,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 9,
-              "map_x": -22,
-              "map_y": 5.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 10,
-              "map_x": -22,
-              "map_y": 12,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 11,
-              "map_x": -22,
-              "map_y": 18.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             }
           ]
         },
@@ -4029,90 +4050,68 @@
             {
               "unit_no": 1,
               "map_x": 3.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 2,
               "map_x": -16,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 3,
               "map_x": -9.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 4,
               "map_x": -3,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 5,
               "map_x": 10,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 6,
               "map_x": 16.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 7,
-              "map_x": 23,
-              "map_y": -8,
-              "map_elevation": 0.08,
-              "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 8,
-              "map_x": -22,
-              "map_y": -1,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 9,
-              "map_x": -22,
-              "map_y": 5.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 10,
-              "map_x": -22,
-              "map_y": 12,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 11,
-              "map_x": -22,
-              "map_y": 18.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             }
           ]
         },
@@ -4125,90 +4124,68 @@
             {
               "unit_no": 1,
               "map_x": 3.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 2,
               "map_x": -16,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 3,
               "map_x": -9.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 4,
               "map_x": -3,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 5,
               "map_x": 10,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 6,
               "map_x": 16.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 7,
-              "map_x": 23,
-              "map_y": -8,
-              "map_elevation": 0.08,
-              "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 8,
-              "map_x": -22,
-              "map_y": -1,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 9,
-              "map_x": -22,
-              "map_y": 5.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 10,
-              "map_x": -22,
-              "map_y": 12,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 11,
-              "map_x": -22,
-              "map_y": 18.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             }
           ]
         },
@@ -4221,90 +4198,68 @@
             {
               "unit_no": 1,
               "map_x": 3.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 2,
               "map_x": -16,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 3,
               "map_x": -9.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 4,
               "map_x": -3,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 5,
               "map_x": 10,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 6,
               "map_x": 16.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 7,
-              "map_x": 23,
-              "map_y": -8,
-              "map_elevation": 0.08,
-              "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 8,
-              "map_x": -22,
-              "map_y": -1,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 9,
-              "map_x": -22,
-              "map_y": 5.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 10,
-              "map_x": -22,
-              "map_y": 12,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 11,
-              "map_x": -22,
-              "map_y": 18.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             }
           ]
         },
@@ -4317,90 +4272,68 @@
             {
               "unit_no": 1,
               "map_x": 3.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 2,
               "map_x": -16,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 3,
               "map_x": -9.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 4,
               "map_x": -3,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 5,
               "map_x": 10,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 6,
               "map_x": 16.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 7,
-              "map_x": 23,
-              "map_y": -8,
-              "map_elevation": 0.08,
-              "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 8,
-              "map_x": -22,
-              "map_y": -1,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 9,
-              "map_x": -22,
-              "map_y": 5.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 10,
-              "map_x": -22,
-              "map_y": 12,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 11,
-              "map_x": -22,
-              "map_y": 18.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             }
           ]
         },
@@ -4413,90 +4346,68 @@
             {
               "unit_no": 1,
               "map_x": 3.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 2,
               "map_x": -16,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 3,
               "map_x": -9.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 4,
               "map_x": -3,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 5,
               "map_x": 10,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             },
             {
               "unit_no": 6,
               "map_x": 16.5,
-              "map_y": -8,
+              "map_y": -3,
               "map_elevation": 0.08,
               "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 7,
-              "map_x": 23,
-              "map_y": -8,
-              "map_elevation": 0.08,
-              "rotation": 0,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 8,
-              "map_x": -22,
-              "map_y": -1,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 9,
-              "map_x": -22,
-              "map_y": 5.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 10,
-              "map_x": -22,
-              "map_y": 12,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
-            },
-            {
-              "unit_no": 11,
-              "map_x": -22,
-              "map_y": 18.5,
-              "map_elevation": 0.08,
-              "rotation": 90,
-              "structure": "TRUCK"
+              "booth_size": null,
+              "structure": "TRUCK",
+              "width": 5.2,
+              "depth": 3.2
             }
           ]
         }
