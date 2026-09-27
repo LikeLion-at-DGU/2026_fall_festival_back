@@ -109,8 +109,14 @@ def booth_detail(booth_id, user=None, festival_date=None):
     return queryset.first()
 
 
-def booth_search(keyword, festival_date=None, time_slot=None, user=None):
-    # 부스명/소속/위치/소개/메뉴명 부분 일치 OR 검색. 메뉴 매칭은 중복 제거
+def booth_search(
+    keyword, operation_filter_date=None, time_slot=None, user=None, *, lantern_scope_date
+):
+    # operation_filter_date: 검색 결과 범위(어떤 부스를 보여줄지)에만 쓰인다.
+    # None이면 날짜 무관 전체.
+    # lantern_scope_date: lantern_count/has_my_lantern 계산 기준 날짜.
+    # 호출부(뷰)가 항상 실제 날짜로 확정해서 넘긴다
+    # (date 미지정 요청이어도 서버 기본 날짜로 계산되어야 하기 때문).
     match = (
         Q(name__icontains=keyword)
         | Q(subtitle__icontains=keyword)
@@ -120,8 +126,10 @@ def booth_search(keyword, festival_date=None, time_slot=None, user=None):
     )
     queryset = Booth.objects.filter(match, deleted_at__isnull=True)
 
-    if festival_date:
-        operating = Q(operations__festival_date=festival_date, operations__deleted_at__isnull=True)
+    if operation_filter_date:
+        operating = Q(
+            operations__festival_date=operation_filter_date, operations__deleted_at__isnull=True
+        )
         if time_slot:
             operating &= Q(operations__time_slot=time_slot)
         queryset = queryset.filter(operating)
@@ -137,12 +145,9 @@ def booth_search(keyword, festival_date=None, time_slot=None, user=None):
     )
     if user is not None:
         queryset = queryset.annotate(
-            has_my_lantern=_my_lantern_exists(user, "pk", festival_date=festival_date)
+            has_my_lantern=_my_lantern_exists(user, "pk", festival_date=lantern_scope_date)
         )
-    # date 미지정 검색은 날짜 무관 전체이므로, 이때는 lantern_count를 누적값으로 둔다
-    # (BoothSearchItemSerializer가 daily_lantern_count 미존재 시 booth.lantern_count로 대체)
-    if festival_date:
-        queryset = queryset.annotate(daily_lantern_count=_lantern_count_on("pk", festival_date))
+    queryset = queryset.annotate(daily_lantern_count=_lantern_count_on("pk", lantern_scope_date))
     return queryset.distinct().order_by("match_rank", "name")
 
 

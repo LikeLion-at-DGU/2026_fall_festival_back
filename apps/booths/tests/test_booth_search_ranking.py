@@ -7,6 +7,7 @@ from django.core.cache import cache
 from rest_framework.test import APIClient
 
 from apps.accounts.models import User
+from apps.booths.constants import DEFAULT_FESTIVAL_DATE
 from apps.booths.models import Booth, BoothMenu, BoothOperation
 from apps.lanterns.models import Lantern
 
@@ -219,6 +220,9 @@ def test_search_rejects_time_slot_without_date(client, search_booths):
 
 @pytest.mark.django_db
 def test_search_marks_my_lantern(auth_client, me, search_booths):
+    # date 미지정 시 has_my_lantern은 서버 기본 날짜(DEFAULT_FESTIVAL_DATE) 기준으로 계산된다.
+    # DATE_1이 곧 DEFAULT_FESTIVAL_DATE라서 이 값으로 등불을 만든다.
+    assert DATE_1 == DEFAULT_FESTIVAL_DATE
     Lantern.objects.create(
         user=me, booth=search_booths["partial"], message="화이팅", festival_date=DATE_1
     )
@@ -253,14 +257,29 @@ def test_search_has_my_lantern_scoped_to_date_when_date_given(auth_client, me, s
 
 
 @pytest.mark.django_db
-def test_search_lantern_count_falls_back_to_cumulative_without_date(client, search_booths):
-    # date 미지정 검색은 날짜 무관 전체이므로 Booth.lantern_count 누적값을 그대로 보여준다
+def test_search_lantern_count_uses_server_default_date_when_date_omitted(client, search_booths):
+    # date를 안 보내도 검색 결과 범위(전체 부스)는 그대로지만, lantern_count는
+    # Booth.lantern_count 누적값이 아니라
+    # 서버 기본 날짜(DEFAULT_FESTIVAL_DATE) 기준으로 나와야 한다.
     exact = search_booths["exact"]
-    Booth.objects.filter(pk=exact.pk).update(lantern_count=7)
+    Booth.objects.filter(pk=exact.pk).update(lantern_count=999)  # 누적값은 무시돼야 함
+    watchers = [User.objects.create(kakao_id=930001 + i, nickname=f"관람객{i}") for i in range(2)]
+    Lantern.objects.create(
+        user=watchers[0],
+        booth=exact,
+        message="기본 날짜 등불0",
+        festival_date=DEFAULT_FESTIVAL_DATE,
+    )
+    Lantern.objects.create(
+        user=watchers[1],
+        booth=exact,
+        message="기본 날짜 등불1",
+        festival_date=DEFAULT_FESTIVAL_DATE,
+    )
 
     response = client.get("/api/booths/search/", {"keyword": "멋사"})
     item = next(item for item in response.json()["data"]["booths"] if item["name"] == "멋사")
-    assert item["lantern_count"] == 7
+    assert item["lantern_count"] == 2
 
 
 @pytest.mark.django_db
