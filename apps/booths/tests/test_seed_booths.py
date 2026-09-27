@@ -128,7 +128,26 @@ def test_seed_booths_only_liquor_facility_is_alcohol():
     assert list(alcohol.values_list("name", "place_type")) == [("주류 판매 부스", "FACILITY")]
     assert Booth.objects.get(name="문과대학").category == Booth.Category.ETC
     assert Booth.objects.get(name="경영학과").category == Booth.Category.COLLAB
-    assert not Booth.objects.filter(category=Booth.Category.TOILET).exists()
+
+
+@pytest.mark.django_db
+def test_seed_booths_adds_toilets_without_position(client):
+    """화장실은 건물 안이라 좌표 없이 들어가고, 목록 API는 좌표를 null로 내려준다."""
+    _seed()
+    _seed()
+
+    toilets = Booth.objects.filter(category=Booth.Category.TOILET)
+    assert toilets.count() == 14
+    assert not toilets.exclude(map_x__isnull=True).exists()
+    # 구역이 빈 화장실도 재실행 시 중복되지 않는다.
+    assert toilets.filter(zone__isnull=True).count() == 7
+
+    response = client.get(
+        "/api/booths/", {"date": "2026-09-29", "time_slot": "DAY", "category": "TOILET"}
+    )
+    booths = response.json()["data"]["booths"]
+    assert len(booths) == 14
+    assert {(b["map_x"], b["map_y"], tuple(b["placements"])) for b in booths} == {(None, None, ())}
 
 
 @pytest.mark.django_db
