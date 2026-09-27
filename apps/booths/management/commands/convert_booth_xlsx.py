@@ -23,6 +23,13 @@ DEFAULT_OUTPUT = Path(__file__).resolve().parents[2] / "data" / "booths.json"
 # 모든 데이터 시트는 1~3행이 제목/설명/빈 줄이고 4행이 헤더다.
 HEADER_ROW = 4
 
+# 엑셀에서는 이름이 같아 목록에서 구분이 안 되는 부스. DB에는 migration 0005로 이미
+# 바뀐 이름이 들어가 있어서, 엑셀 이름 그대로 넣으면 (name, zone)이 달라져 중복 부스가 생긴다.
+RENAMED_BOOTHS = {
+    ("다회용기 부스", "혜화관"): "다회용기 부스 (혜화관)",
+    ("다회용기 부스", "팔정도"): "다회용기 부스 (팔정도)",
+}
+
 # 구조물 열 예: "MARKET 21×12m" → placements에 structure/width/depth로 나간다.
 STRUCTURE_PATTERN = re.compile(r"^(?P<kind>[A-Z]+)\s+(?P<width>[\d.]+)\s*[×x]\s*(?P<depth>[\d.]+)")
 
@@ -142,20 +149,24 @@ class Command(BaseCommand):
                 continue
 
             category = row["category"]
-            # 총학 야간 주점은 지도 '주류' 필터 칩 값이라 ALCOHOL로 고정한다.
-            # 엑셀 v8부터 ETC로 제안됐지만 ETC로 바꾸면 프론트 필터가 깨진다.
-            if row["구분"] == "야간" and row["분류"] == "총학표" and category == "ETC":
-                category = "ALCOHOL"
+            # 지도 '주류'(ALCOHOL) 칩은 주류 판매 시설만 보여준다. 주·야간 부스(주점 포함)는
+            # 전부 '부스' 칩(COLLAB·ETC)으로 모은다.
+            if row["place_type"] == "BOOTH" and category == "ALCOHOL":
+                category = "ETC"
+
+            name = _text(row["name"])
+            zone = _text(row["zone"])
+            name = RENAMED_BOOTHS.get((name, zone), name)
 
             booths.append(
                 {
                     "key": key,
-                    "name": _text(row["name"]),
+                    "name": name,
                     "subtitle": _text(row["subtitle"]),
                     "place_type": row["place_type"],
                     "category": category,
                     "booth_size": row["booth_size"],
-                    "zone": _text(row["zone"]),
+                    "zone": zone,
                     "location_detail": _text(row["location_detail"]),
                     "map_x": _number(row["map_x"]),
                     "map_y": _number(row["map_y"]),
