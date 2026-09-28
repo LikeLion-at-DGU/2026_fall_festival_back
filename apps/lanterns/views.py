@@ -31,6 +31,8 @@ from .serializers import (
     AdminLanternDetailResponseSerializer,
     AdminLanternListQuerySerializer,
     AdminLanternListResponseSerializer,
+    LanternBoothOptionSerializer,
+    LanternBoothOptionsResponseSerializer,
     LanternCreateResponseSerializer,
     LanternCreateSerializer,
     LanternDeleteResponseSerializer,
@@ -60,7 +62,7 @@ class LanternViewSet(
     queryset = Lantern.objects.all()
 
     def get_permissions(self):
-        if self.action in ("list", "retrieve"):
+        if self.action in ("list", "retrieve", "booth_options"):
             return [AllowAny()]
         return [IsAuthenticated()]
 
@@ -122,6 +124,37 @@ class LanternViewSet(
             "등불을 성공적으로 남겼어요!",
             serializer.data,
             status=status.HTTP_201_CREATED,
+        )
+
+    @extend_schema(
+        tags=["lanterns"],
+        summary="등불 등록 가능 부스 목록",
+        description=(
+            "오늘 활성 운영 기록이 있는 부스를 시간대 구분 없이 조회합니다. "
+            "주간과 야간에 모두 운영하는 부스도 한 번만 반환합니다."
+        ),
+        operation_id="user_lantern_booth_options",
+        auth=[],
+        responses={200: LanternBoothOptionsResponseSerializer},
+    )
+    @action(
+        detail=False,
+        methods=["get"],
+        url_path="booth-options",
+        authentication_classes=[],
+        permission_classes=[AllowAny],
+    )
+    def booth_options(self, request):
+        festival_date = festival_localdate()
+        booths = selectors.lantern_booth_options_queryset(festival_date=festival_date)
+
+        return success_response(
+            "LANTERN_BOOTH_OPTIONS_SUCCESS",
+            "등불을 달 수 있는 부스 목록을 조회했습니다.",
+            {
+                "festival_date": festival_date.isoformat(),
+                "booths": LanternBoothOptionSerializer(booths, many=True).data,
+            },
         )
 
     @extend_schema(

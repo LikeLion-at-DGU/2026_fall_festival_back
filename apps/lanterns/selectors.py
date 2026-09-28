@@ -4,10 +4,34 @@ from collections import defaultdict
 
 from django.db.models import Count, Min, Q, QuerySet
 
+from apps.booths.models import Booth
 from apps.lanterns.models import Lantern, LanternReport
 
 
 # --- User Selectors ---
+def lantern_booth_options_queryset(*, festival_date) -> QuerySet[Booth]:
+    """등불을 달 수 있는 부스 목록을 반환한다.
+
+    해당 날짜에 활성 운영 기록이 하나라도 있으면 시간대와 관계없이 포함하며,
+    DAY/NIGHT 운영 기록이 모두 있는 부스는 한 번만 반환한다.
+    """
+    return (
+        Booth.objects.filter(
+            deleted_at__isnull=True,
+            place_type=Booth.PlaceType.BOOTH,
+            operations__festival_date=festival_date,
+            operations__deleted_at__isnull=True,
+        )
+        .distinct()
+        .order_by("name")
+    )
+
+
+def is_lantern_booth_available(*, booth_id, festival_date) -> bool:
+    """부스가 해당 날짜의 등불 등록 대상인지 확인한다."""
+    return lantern_booth_options_queryset(festival_date=festival_date).filter(id=booth_id).exists()
+
+
 def lantern_list_queryset(*, user, mine, booth_id=None, festival_date=None):
     if mine:
         queryset = Lantern.objects.filter(user=user)

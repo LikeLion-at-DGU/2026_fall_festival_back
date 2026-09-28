@@ -11,6 +11,7 @@ from common.clock import festival_localdate
 from common.exceptions import ApiError, InvalidInput, NotFound
 from common.pagination import DEFAULT_PAGE_SIZE, MAX_PAGE_SIZE
 
+from . import selectors
 from .models import Lantern, LanternReport
 from .validators import contains_forbidden_word
 
@@ -69,10 +70,7 @@ class LanternCreateSerializer(ForbiddenWordValidationMixin, serializers.ModelSer
             )
 
         booth_id = attrs["booth_id"]
-        booth_exists = Booth.objects.filter(
-            id=booth_id, deleted_at__isnull=True, place_type="BOOTH"
-        ).exists()
-        if not booth_exists:
+        if not selectors.is_lantern_booth_available(booth_id=booth_id, festival_date=today):
             raise NotFound(code="BOOTH_NOT_FOUND", message="존재하지 않는 부스입니다.")
 
         user = self.context["request"].user
@@ -295,6 +293,30 @@ class LanternDeleteResponseSerializer(serializers.Serializer):
     code = serializers.CharField(required=True, help_text="응답 코드 (LANTERN_DELETE_SUCCESS)")
     message = serializers.CharField(required=True, help_text="응답 메시지 (등불이 삭제되었습니다.)")
     data = serializers.JSONField(required=True, allow_null=True, help_text="응답 데이터 (null)")
+
+
+class LanternBoothOptionSerializer(serializers.Serializer):
+    booth_id = serializers.IntegerField(source="id", required=True, help_text="부스 고유 ID")
+    name = serializers.CharField(required=True, help_text="부스 이름")
+    category = serializers.ChoiceField(
+        choices=Booth.Category.choices,
+        required=True,
+        help_text="부스 카테고리",
+    )
+
+
+class LanternBoothOptionsDataSerializer(serializers.Serializer):
+    festival_date = serializers.DateField(required=True, help_text="등불 등록 기준 날짜")
+    booths = LanternBoothOptionSerializer(many=True, required=True, help_text="등불 등록 가능 부스")
+
+
+class LanternBoothOptionsResponseSerializer(serializers.Serializer):
+    success = serializers.BooleanField(required=True, help_text="성공 여부 (True)")
+    code = serializers.CharField(
+        required=True, help_text="응답 코드 (LANTERN_BOOTH_OPTIONS_SUCCESS)"
+    )
+    message = serializers.CharField(required=True, help_text="응답 메시지")
+    data = LanternBoothOptionsDataSerializer(required=True, help_text="응답 데이터")
 
 
 # --- Admin Serializers ---

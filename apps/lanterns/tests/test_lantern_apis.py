@@ -1,6 +1,6 @@
 """Lantern registration/update/delete API tests."""
 
-from datetime import date
+from datetime import date, time
 from types import SimpleNamespace
 from unittest.mock import patch
 
@@ -9,7 +9,7 @@ from django.utils import timezone
 from rest_framework.test import APIClient
 
 from apps.accounts.models import User
-from apps.booths.models import Booth
+from apps.booths.models import Booth, BoothOperation
 from apps.lanterns.models import Lantern
 from apps.lanterns.serializers import LanternCreateSerializer, LanternUpdateSerializer
 from apps.lanterns.views import LanternViewSet
@@ -36,11 +36,13 @@ def other_user(db):
 
 @pytest.fixture
 def booth(db):
-    return Booth.objects.create(
+    booth = Booth.objects.create(
         name="테스트 부스",
         place_type=Booth.PlaceType.BOOTH,
         category=Booth.Category.ETC,
     )
+    _add_operation(booth)
+    return booth
 
 
 @pytest.fixture
@@ -55,6 +57,93 @@ def _patch_today(target_date=FESTIVAL_DAY):
 
 def _patch_today_views(target_date=FESTIVAL_DAY):
     return patch("apps.lanterns.views.timezone.localdate", return_value=target_date)
+
+
+def _add_operation(
+    booth,
+    *,
+    festival_date=FESTIVAL_DAY,
+    time_slot=BoothOperation.TimeSlot.DAY,
+    deleted_at=None,
+):
+    return BoothOperation.objects.create(
+        booth=booth,
+        festival_date=festival_date,
+        time_slot=time_slot,
+        open_at=time(10, 0),
+        close_at=time(22, 0),
+        deleted_at=deleted_at,
+    )
+
+
+@pytest.mark.django_db
+class TestLanternBoothOptions:
+    def test_returns_all_booths_operating_today_regardless_of_time_slot(self, client):
+        day_booth = Booth.objects.create(
+            name="가 주간 부스",
+            place_type=Booth.PlaceType.BOOTH,
+            category=Booth.Category.ETC,
+        )
+        night_booth = Booth.objects.create(
+            name="나 야간 부스",
+            place_type=Booth.PlaceType.BOOTH,
+            category=Booth.Category.ALCOHOL,
+        )
+        both_booth = Booth.objects.create(
+            name="다 종일 부스",
+            place_type=Booth.PlaceType.BOOTH,
+            category=Booth.Category.COLLAB,
+        )
+        _add_operation(day_booth, time_slot=BoothOperation.TimeSlot.DAY)
+        _add_operation(night_booth, time_slot=BoothOperation.TimeSlot.NIGHT)
+        _add_operation(both_booth, time_slot=BoothOperation.TimeSlot.DAY)
+        _add_operation(both_booth, time_slot=BoothOperation.TimeSlot.NIGHT)
+
+        with patch("apps.lanterns.views.festival_localdate", return_value=FESTIVAL_DAY):
+            response = client.get("/api/lanterns/booth-options/")
+
+        assert response.status_code == 200
+        body = response.json()
+        assert body["code"] == "LANTERN_BOOTH_OPTIONS_SUCCESS"
+        assert body["data"]["festival_date"] == "2026-09-29"
+        assert body["data"]["booths"] == [
+            {"booth_id": day_booth.id, "name": "가 주간 부스", "category": "ETC"},
+            {"booth_id": night_booth.id, "name": "나 야간 부스", "category": "ALCOHOL"},
+            {"booth_id": both_booth.id, "name": "다 종일 부스", "category": "COLLAB"},
+        ]
+
+    def test_excludes_ineligible_booths(self, client):
+        other_day = Booth.objects.create(
+            name="다른 날짜 부스",
+            place_type=Booth.PlaceType.BOOTH,
+            category=Booth.Category.ETC,
+        )
+        deleted_operation = Booth.objects.create(
+            name="운영 삭제 부스",
+            place_type=Booth.PlaceType.BOOTH,
+            category=Booth.Category.ETC,
+        )
+        deleted_booth = Booth.objects.create(
+            name="삭제 부스",
+            place_type=Booth.PlaceType.BOOTH,
+            category=Booth.Category.ETC,
+            deleted_at=timezone.now(),
+        )
+        facility = Booth.objects.create(
+            name="화장실",
+            place_type=Booth.PlaceType.FACILITY,
+            category=Booth.Category.TOILET,
+        )
+        _add_operation(other_day, festival_date=date(2026, 9, 30))
+        _add_operation(deleted_operation, deleted_at=timezone.now())
+        _add_operation(deleted_booth)
+        _add_operation(facility)
+
+        with patch("apps.lanterns.views.festival_localdate", return_value=FESTIVAL_DAY):
+            response = client.get("/api/lanterns/booth-options/")
+
+        assert response.status_code == 200
+        assert response.json()["data"]["booths"] == []
 
 
 @pytest.mark.django_db
@@ -88,6 +177,7 @@ class TestLanternCreate:
         other_booth = Booth.objects.create(
             name="다른 부스", place_type=Booth.PlaceType.BOOTH, category=Booth.Category.ETC
         )
+        _add_operation(other_booth)
         with _patch_today():
             response = auth_client.post(
                 "/api/lanterns/",
@@ -147,6 +237,43 @@ class TestLanternCreate:
         assert response.status_code == 404
         assert response.json()["code"] == "BOOTH_NOT_FOUND"
 
+    def test_create_rejects_booth_not_operating_today(self, auth_client, db):
+        booth = Booth.objects.create(
+            name="오늘 미운영 부스",
+            place_type=Booth.PlaceType.BOOTH,
+            category=Booth.Category.ETC,
+        )
+        _add_operation(booth, festival_date=date(2026, 9, 30))
+
+        with _patch_today():
+            response = auth_client.post(
+                "/api/lanterns/",
+                {"booth_id": booth.id, "message": "화이팅!"},
+            )
+
+        assert response.status_code == 404
+        assert response.json()["code"] == "BOOTH_NOT_FOUND"
+
+    @pytest.mark.parametrize(
+        "time_slot",
+        [BoothOperation.TimeSlot.DAY, BoothOperation.TimeSlot.NIGHT],
+    )
+    def test_create_accepts_booth_with_any_time_slot(self, auth_client, db, time_slot):
+        operating_booth = Booth.objects.create(
+            name=f"{time_slot} 전용 부스",
+            place_type=Booth.PlaceType.BOOTH,
+            category=Booth.Category.ETC,
+        )
+        _add_operation(operating_booth, time_slot=time_slot)
+
+        with _patch_today():
+            response = auth_client.post(
+                "/api/lanterns/",
+                {"booth_id": operating_booth.id, "message": "시간대 무관"},
+            )
+
+        assert response.status_code == 201
+
     def test_create_rejects_duplicate_same_day(self, auth_client, user, booth):
         Lantern.objects.create(user=user, booth=booth, message="먼저", festival_date=FESTIVAL_DAY)
         with _patch_today():
@@ -182,6 +309,7 @@ class TestLanternCreate:
         extra_booth = Booth.objects.create(
             name="네번째 부스", place_type=Booth.PlaceType.BOOTH, category=Booth.Category.ETC
         )
+        _add_operation(extra_booth)
         with _patch_today():
             response = auth_client.post(
                 "/api/lanterns/",
