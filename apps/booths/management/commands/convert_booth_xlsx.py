@@ -42,9 +42,49 @@ CATEGORY_OVERRIDES = {
     ("오뚜기 진라면 서포터즈 진앤지니", "팔정도"): "ETC",
 }
 
-# 엑셀 이후 운영에서 확정된 입장료(원, 인당). (name, zone) 기준.
-ENTRANCE_FEE_OVERRIDES = {
-    ("열린전공학부", "혜화관"): 4000,
+# ── 엑셀(v10) 이후 부스에서 직접 받은 수정사항 ──────────────────────────────
+# 엑셀을 다시 변환해도 유지되도록 여기서 덮어쓴다. 키는 (name, zone).
+
+# 부스 필드 덮어쓰기. entrance_fee는 원(인당).
+BOOTH_OVERRIDES = {
+    ("열린전공학부", "혜화관"): {"entrance_fee": 4000},
+    ("광고홍보학과", "혜화관"): {"entrance_fee": 5000},
+    ("참사람봉사단", "팔정도"): {
+        "subtitle": "주식회사 한잔",
+        "description": (
+            "📢 주식회사 한잔 신입사원 채용공고\n"
+            "모집 부문: 오늘 밤 함께 마실 사람 (경력 무관)\n"
+            "근무 조건: 칼퇴 보장, 회식 필참, 야근은 안주로만\n"
+            "복리후생: 골뱅이소면, 통삼겹 부추무침, 나가사끼짬뽕 무제한 주문 가능\n"
+            "지원 방법: 빈 테이블에 착석 시 즉시 입사 처리"
+        ),
+        "event_description": (
+            "💝 자리값 할인 이벤트 : 생명나눔캠페인 참여시 자리값 5000원 할인\n\n"
+            "😈 몬스터 증정 이벤트 : 당신의 야근을 위한 에너지 음료 몬스터 1캔 무료\n\n"
+            "👩‍❤️‍👨 미팅 이벤트 : 사원들간의 시너지를 위해 미팅을 잡아드립니다\n\n"
+            "📸 우수사원 포토 이벤트 : 메인 메뉴 3개 이상 주문 시 폴라로이드로 사진 촬영"
+            " (40명 선착순)"
+        ),
+    },
+}
+
+# 운영일정 덮어쓰기. dates가 있으면 그 날짜만 남기고, open_at/close_at은 남은 운영일 전체에 적용.
+OPERATION_OVERRIDES = {
+    ("광고홍보학과", "혜화관"): {"dates": ["2026-09-30"], "close_at": "22:00"},
+    ("참사람봉사단", "팔정도"): {"open_at": "18:00"},
+}
+
+# 메뉴 통째로 교체. (메뉴명, 가격)
+MENU_OVERRIDES = {
+    ("참사람봉사단", "팔정도"): [
+        ("SET 메뉴1 (나가사끼짬뽕 + 골뱅이무침, 소면)", 30000),
+        ("SET 메뉴2 (나가사끼짬뽕 + 통삼겹 부추무침)", 33000),
+        ("SET 메뉴3 (나가사끼짬뽕 + 콘치즈 닭발)", 32000),
+        ("골뱅이무침 & 소면", 17000),
+        ("통삼겹부추무침", 20000),
+        ("나가사끼짬뽕", 17000),
+        ("콘치즈닭발", 19000),
+    ],
 }
 
 # 엑셀 원문 오타 수정. 메뉴명 원문 → 수정본.
@@ -207,34 +247,54 @@ class Command(BaseCommand):
             if restroom_type not in (None, "MALE", "FEMALE", "BOTH"):
                 raise CommandError(f"{key} restroom_type 값이 올바르지 않습니다: {restroom_type!r}")
 
-            booths.append(
-                {
-                    "key": key,
-                    "name": name,
-                    "subtitle": _text(row["subtitle"]),
-                    "place_type": row["place_type"],
-                    "category": category,
-                    "restroom_type": restroom_type,
-                    "booth_size": row["booth_size"],
-                    "zone": zone,
-                    "location_detail": _text(row["location_detail"]),
-                    "map_x": _number(row["map_x"]),
-                    "map_y": _number(row["map_y"]),
-                    "map_elevation": _number(row["map_elevation"]),
-                    "rotation": _number(row["rotation"]),
-                    "description": _text(row["description"]),
-                    "event_description": _text(row["event_description"]),
-                    "instagram_id": _text(row["instagram_id"]),
-                    "entrance_fee": ENTRANCE_FEE_OVERRIDES.get((name, zone), row["entrance_fee"]),
-                    "has_reusable_container": _bool(
-                        row["has_reusable_"],
-                        formula_booths[key]["has_reusable_"],
-                        f"{key} has_reusable_container",
-                    ),
-                    "operations": operations.pop(key, []),
-                    "menus": menus.pop(key, []),
-                }
-            )
+            booth_operations = operations.pop(key, [])
+            operation_override = OPERATION_OVERRIDES.get((name, zone), {})
+            if "dates" in operation_override:
+                booth_operations = [
+                    operation
+                    for operation in booth_operations
+                    if operation["festival_date"] in operation_override["dates"]
+                ]
+            for operation in booth_operations:
+                for field in ("open_at", "close_at"):
+                    if field in operation_override:
+                        operation[field] = operation_override[field]
+
+            booth_menus = menus.pop(key, [])
+            if (name, zone) in MENU_OVERRIDES:
+                booth_menus = [
+                    {"name": menu_name, "price": price}
+                    for menu_name, price in MENU_OVERRIDES[(name, zone)]
+                ]
+
+            booth = {
+                "key": key,
+                "name": name,
+                "subtitle": _text(row["subtitle"]),
+                "place_type": row["place_type"],
+                "category": category,
+                "restroom_type": restroom_type,
+                "booth_size": row["booth_size"],
+                "zone": zone,
+                "location_detail": _text(row["location_detail"]),
+                "map_x": _number(row["map_x"]),
+                "map_y": _number(row["map_y"]),
+                "map_elevation": _number(row["map_elevation"]),
+                "rotation": _number(row["rotation"]),
+                "description": _text(row["description"]),
+                "event_description": _text(row["event_description"]),
+                "instagram_id": _text(row["instagram_id"]),
+                "entrance_fee": row["entrance_fee"],
+                "has_reusable_container": _bool(
+                    row["has_reusable_"],
+                    formula_booths[key]["has_reusable_"],
+                    f"{key} has_reusable_container",
+                ),
+                "operations": booth_operations,
+                "menus": booth_menus,
+            }
+            booth.update(BOOTH_OVERRIDES.get((name, zone), {}))
+            booths.append(booth)
         if operations or menus:
             unknown = sorted({*operations, *menus})
             raise CommandError(f"부스 시트에 없는 임시키가 있습니다: {unknown}")
