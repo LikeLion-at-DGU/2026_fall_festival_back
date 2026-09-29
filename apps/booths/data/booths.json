@@ -68,19 +68,19 @@
     {
       "key": "N02",
       "name": "공과대학",
-      "subtitle": "공과대학",
+      "subtitle": "🎃🔥 공대 야간부스 「호박나이트」 🔥🎃",
       "place_type": "BOOTH",
       "category": "ETC",
       "restroom_type": null,
       "booth_size": "BIG",
       "zone": "원흥관",
-      "location_detail": null,
+      "location_detail": "1번(원흥관 주차장)",
       "map_x": 16,
       "map_y": 27,
       "map_elevation": -0.04,
       "rotation": 90,
-      "description": "동국대학교 제 48대 공과대학 학생회<CONNECT>",
-      "event_description": null,
+      "description": "안녕하세요! 동국대학교 공과대학 학생회 [CONNECT] 입니다.\n축제 둘째날인 9월 30일! 저희가 야간부스를 하게 되었습니다🎉\n\n호박나이트에서\n이 날 만큼은 과제 말고 안주에 집중하세요.\n그리고 잊지 못할 밤을 즐겨보세요! 🍻",
+      "event_description": "🎃 호박나이트 EVENT 🎃\n\n원흥관과 신공학관 복도에 붙어있는 포스터를 그냥 지나치지 마세요👀\n포스터 뒤에 숨겨진 메뉴 쿠폰권이 있다는 사실!\n\n🔎 원흥관 & 신공학관 복도에 붙어있는 이벤트 포스터를 찾아 숨겨진 메뉴 쿠폰권을 찾아주세요!\n\n🎟️ 쿠폰을 찾았다면?\n9월 30일(수) 오후 6시 30분 전까지 쿠폰을 지참하고\n📍 원흥관 주차장 공과대학 학생회 야간부스로 오면\n✨ 쿠폰에 적힌 해당 메뉴를 무료로 서비스! ✨",
       "instagram_id": null,
       "entrance_fee": null,
       "has_reusable_container": true,
@@ -126,7 +126,44 @@
           ]
         }
       ],
-      "menus": []
+      "menus": [
+        {
+          "name": "SET 1 부대주먹다리 (부대찌개 + 불닭닭다리구이 + 주먹밥)",
+          "price": 36900
+        },
+        {
+          "name": "SET 2 부대김치전찌개 (부대찌개 + 김치전)",
+          "price": 34900
+        },
+        {
+          "name": "부대찌개 (라면사리 포함)",
+          "price": 18900
+        },
+        {
+          "name": "불주먹다리 (순살 불닭닭다리구이 + 주먹밥)",
+          "price": 18900
+        },
+        {
+          "name": "장인의 김치지짐 (김치전)",
+          "price": 16900
+        },
+        {
+          "name": "아이스 불바나나 (바나나브륄레 + 바닐라아이스크림)",
+          "price": 10900
+        },
+        {
+          "name": "콘치즈",
+          "price": 9900
+        },
+        {
+          "name": "설탕토마토",
+          "price": 9900
+        },
+        {
+          "name": "춤초나쵸 (나쵸 + 치즈소스 + 야채토핑)",
+          "price": 9900
+        }
+      ]
     },
     {
       "key": "N03",
