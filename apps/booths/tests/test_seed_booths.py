@@ -249,3 +249,13 @@ def test_booth_chip_excludes_reusable_container_booths(client):
     )
     day_names = {b["name"] for b in response.json()["data"]["booths"]}
     assert {"축기단", "동국 108리더스"} <= day_names
+
+
+@pytest.mark.django_db
+def test_seed_booths_entrance_fee_and_menu_fixes():
+    _seed()
+
+    assert Booth.objects.get(name="열린전공학부").entrance_fee == 4000
+    law_menus = list(Booth.objects.get(name="법과대학").menus.values_list("name", flat=True))
+    assert "스파르타불닭 (치즈불닭볶음면)" in law_menus
+    assert "스파르타불닭 (치즈불닭볶음변)" not in law_menus
