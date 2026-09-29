@@ -932,14 +932,14 @@
       "description": "가을은 짧고, 광홍 띵구스에서의 밤은 길다 🔥⚾️",
       "event_description": "입장 시 컨디션 증정\n+입장비 룰렛 진행",
       "instagram_id": "dgu_adpr_official",
-      "entrance_fee": null,
+      "entrance_fee": 5000,
       "has_reusable_container": true,
       "operations": [
         {
           "festival_date": "2026-09-30",
           "time_slot": "NIGHT",
           "open_at": "18:00",
-          "close_at": "23:00",
+          "close_at": "22:00",
           "placements": [
             {
               "unit_no": 1,
@@ -963,30 +963,6 @@
               "map_y": -22,
               "map_elevation": 3.18,
               "rotation": 0,
-              "booth_size": "BIG"
-            }
-          ]
-        },
-        {
-          "festival_date": "2026-10-01",
-          "time_slot": "NIGHT",
-          "open_at": "18:00",
-          "close_at": "23:00",
-          "placements": [
-            {
-              "unit_no": 1,
-              "map_x": -18,
-              "map_y": -4,
-              "map_elevation": 0.1,
-              "rotation": 90,
-              "booth_size": "BIG"
-            },
-            {
-              "unit_no": 2,
-              "map_x": -18,
-              "map_y": 3,
-              "map_elevation": 0.1,
-              "rotation": 90,
               "booth_size": "BIG"
             }
           ]
@@ -2022,7 +1998,7 @@
     {
       "key": "N25",
       "name": "참사람봉사단",
-      "subtitle": "참사람봉사단 부스",
+      "subtitle": "주식회사 한잔",
       "place_type": "BOOTH",
       "category": "ETC",
       "restroom_type": null,
@@ -2033,8 +2009,8 @@
       "map_y": -29,
       "map_elevation": 0.08,
       "rotation": 0,
-      "description": "오늘 밤, 여러분의 행복을 '봉사'하러 왔습니다.\n맛있는 안주, 시원한 음료, 그리고 완벽한 분위기까지.\n참사람의 주점은 멈추지 않습니다!",
-      "event_description": "몬스터 1캔 무료제공, 자리비용 할인\n(참여 조건: 선착순 100명)",
+      "description": "📢 주식회사 한잔 신입사원 채용공고\n모집 부문: 오늘 밤 함께 마실 사람 (경력 무관)\n근무 조건: 칼퇴 보장, 회식 필참, 야근은 안주로만\n복리후생: 골뱅이소면, 통삼겹 부추무침, 나가사끼짬뽕 무제한 주문 가능\n지원 방법: 빈 테이블에 착석 시 즉시 입사 처리",
+      "event_description": "💝 자리값 할인 이벤트 : 생명나눔캠페인 참여시 자리값 5000원 할인\n\n😈 몬스터 증정 이벤트 : 당신의 야근을 위한 에너지 음료 몬스터 1캔 무료\n\n👩‍❤️‍👨 미팅 이벤트 : 사원들간의 시너지를 위해 미팅을 잡아드립니다\n\n📸 우수사원 포토 이벤트 : 메인 메뉴 3개 이상 주문 시 폴라로이드로 사진 촬영 (40명 선착순)",
       "instagram_id": "dongguk_chamsaram",
       "entrance_fee": null,
       "has_reusable_container": true,
@@ -2042,7 +2018,7 @@
         {
           "festival_date": "2026-10-01",
           "time_slot": "NIGHT",
-          "open_at": "17:30",
+          "open_at": "18:00",
           "close_at": "23:00",
           "placements": [
             {
@@ -2074,8 +2050,32 @@
       ],
       "menus": [
         {
-          "name": "대패삼겹 숙주 볶음",
-          "price": 25000
+          "name": "SET 메뉴1 (나가사끼짬뽕 + 골뱅이무침, 소면)",
+          "price": 30000
+        },
+        {
+          "name": "SET 메뉴2 (나가사끼짬뽕 + 통삼겹 부추무침)",
+          "price": 33000
+        },
+        {
+          "name": "SET 메뉴3 (나가사끼짬뽕 + 콘치즈 닭발)",
+          "price": 32000
+        },
+        {
+          "name": "골뱅이무침 & 소면",
+          "price": 17000
+        },
+        {
+          "name": "통삼겹부추무침",
+          "price": 20000
+        },
+        {
+          "name": "나가사끼짬뽕",
+          "price": 17000
+        },
+        {
+          "name": "콘치즈닭발",
+          "price": 19000
         }
       ]
     },
