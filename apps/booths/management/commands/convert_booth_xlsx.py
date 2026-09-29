@@ -42,6 +42,16 @@ CATEGORY_OVERRIDES = {
     ("오뚜기 진라면 서포터즈 진앤지니", "팔정도"): "ETC",
 }
 
+# 엑셀 이후 운영에서 확정된 입장료(원, 인당). (name, zone) 기준.
+ENTRANCE_FEE_OVERRIDES = {
+    ("열린전공학부", "혜화관"): 4000,
+}
+
+# 엑셀 원문 오타 수정. 메뉴명 원문 → 수정본.
+MENU_NAME_FIXES = {
+    "스파르타불닭 (치즈불닭볶음변)": "스파르타불닭 (치즈불닭볶음면)",
+}
+
 # 구조물 열 예: "MARKET 21×12m" → placements에 structure/width/depth로 나간다.
 STRUCTURE_PATTERN = re.compile(r"^(?P<kind>[A-Z]+)\s+(?P<width>[\d.]+)\s*[×x]\s*(?P<depth>[\d.]+)")
 
@@ -160,8 +170,12 @@ class Command(BaseCommand):
             if row["DB 반영"] != "포함":
                 skipped_menus += 1
                 continue
+            menu_name = _text(row["메뉴명(name)"])
             menus[row["임시키"]].append(
-                {"name": _text(row["메뉴명(name)"]), "price": int(row["price(원)"])}
+                {
+                    "name": MENU_NAME_FIXES.get(menu_name, menu_name),
+                    "price": int(row["price(원)"]),
+                }
             )
 
         booths = []
@@ -211,7 +225,7 @@ class Command(BaseCommand):
                     "description": _text(row["description"]),
                     "event_description": _text(row["event_description"]),
                     "instagram_id": _text(row["instagram_id"]),
-                    "entrance_fee": row["entrance_fee"],
+                    "entrance_fee": ENTRANCE_FEE_OVERRIDES.get((name, zone), row["entrance_fee"]),
                     "has_reusable_container": _bool(
                         row["has_reusable_"],
                         formula_booths[key]["has_reusable_"],
