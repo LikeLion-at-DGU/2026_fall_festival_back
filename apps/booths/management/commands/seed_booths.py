@@ -1,4 +1,7 @@
-"""apps/booths/data/booths.json(convert_booth_xlsx 결과)을 DB에 반영한다.
+"""부스·화장실 데이터를 DB에 반영한다.
+
+- apps/booths/data/booths.json: 부스·시설 (convert_booth_xlsx 결과)
+- apps/booths/data/toilets.json: 화장실 층 단위 목록 (직접 관리, 엑셀과 별개)
 
 부스는 (name, zone)으로 기존 행을 찾아 갱신하고, 없으면 새로 만든다.
 등불(Lantern)이 Booth를 CASCADE로 물고 있어서 부스는 절대 지웠다 다시
@@ -7,7 +10,9 @@
 부스에 딸린 운영일정·메뉴는 파일 내용으로 통째로 맞춘다(파일에 없는
 날짜/메뉴는 삭제). 여러 번 실행해도 결과가 같다 (멱등).
 
-파일에 없는 기존 부스(화장실 등)는 건드리지 않는다.
+파일에 없는 기존 부스는 건드리지 않는다. 단 화장실은 toilets.json이 전체 목록이라
+거기에 없는 화장실은 soft delete한다 (건물 단위 → 층 단위로 바꿀 때 옛 행 정리).
+화장실에는 등불을 달 수 없어서 soft delete해도 등불이 사라지지 않는다.
 썸네일·이미지·가는 길·등불 수는 엑셀에 없는 값이라 갱신하지 않는다.
 
     python manage.py seed_booths --dry-run   # 무엇이 바뀌는지만 확인
@@ -20,10 +25,13 @@ from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
+from django.utils import timezone
 
 from apps.booths.models import Booth, BoothMenu, BoothOperation
 
-DEFAULT_INPUT = Path(__file__).resolve().parents[2] / "data" / "booths.json"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data"
+DEFAULT_INPUT = DATA_DIR / "booths.json"
+DEFAULT_TOILETS_INPUT = DATA_DIR / "toilets.json"
 
 BOOTH_FIELDS = [
     "subtitle",
@@ -52,7 +60,10 @@ class Command(BaseCommand):
     help = "부스·운영일정·메뉴 데이터(booths.json)를 DB에 반영한다."
 
     def add_arguments(self, parser):
-        parser.add_argument("--input", default=str(DEFAULT_INPUT), help="입력 JSON 경로")
+        parser.add_argument("--input", default=str(DEFAULT_INPUT), help="부스 JSON 경로")
+        parser.add_argument(
+            "--toilets", default=str(DEFAULT_TOILETS_INPUT), help="화장실 JSON 경로"
+        )
         parser.add_argument(
             "--dry-run",
             action="store_true",
@@ -60,14 +71,21 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        path = Path(options["input"])
-        if not path.exists():
-            raise CommandError(f"입력 파일이 없습니다: {path}")
-        payload = json.loads(path.read_text(encoding="utf-8"))
+        payload = self._load(options["input"])
+        toilets = self._load(options["toilets"])
+
+        booth_rows = payload["booths"]
+        toilet_rows = toilets["booths"]
+        if any(row["category"] != Booth.Category.TOILET for row in toilet_rows):
+            raise CommandError("화장실 JSON에 화장실이 아닌 항목이 있습니다.")
+        if any(row["category"] == Booth.Category.TOILET for row in booth_rows):
+            raise CommandError(
+                "부스 JSON에 화장실이 있습니다. 화장실은 toilets.json에서 관리합니다."
+            )
 
         try:
             with transaction.atomic():
-                stats = self._apply(payload["booths"])
+                stats = self._apply(booth_rows + toilet_rows)
                 if options["dry_run"]:
                     raise DryRunRollback
         except DryRunRollback:
@@ -75,21 +93,41 @@ class Command(BaseCommand):
 
         self.stdout.write(
             self.style.SUCCESS(
-                f"{payload.get('source', path.name)} 반영 — "
-                f"부스 생성 {stats['created']} · 갱신 {stats['updated']} / "
-                f"운영일정 {stats['operations']} · 메뉴 {stats['menus']}"
+                f"{payload.get('source', 'booths.json')} + {toilets.get('source', 'toilets.json')}"
+                f" 반영 — 부스 생성 {stats['created']} · 갱신 {stats['updated']} / "
+                f"운영일정 {stats['operations']} · 메뉴 {stats['menus']} / "
+                f"목록에서 빠진 화장실 정리 {stats['retired_toilets']}"
             )
         )
+
+    def _load(self, path):
+        path = Path(path)
+        if not path.exists():
+            raise CommandError(f"입력 파일이 없습니다: {path}")
+        return json.loads(path.read_text(encoding="utf-8"))
 
     def _apply(self, booth_rows):
         stats = {"created": 0, "updated": 0, "operations": 0, "menus": 0}
 
+        seen_keys = set()
+        for row in booth_rows:
+            if (row["name"], row["zone"]) in seen_keys:
+                raise CommandError(f"'{row['name']}'({row['zone']})이 파일에 두 번 있습니다.")
+            seen_keys.add((row["name"], row["zone"]))
+
+        kept_ids = []
         for row in booth_rows:
             booth, created = self._upsert_booth(row)
+            kept_ids.append(booth.id)
             stats["created" if created else "updated"] += 1
             stats["operations"] += self._sync_operations(booth, row["operations"])
             stats["menus"] += self._sync_menus(booth, row["menus"])
 
+        stats["retired_toilets"] = (
+            Booth.objects.filter(category=Booth.Category.TOILET, deleted_at__isnull=True)
+            .exclude(id__in=kept_ids)
+            .update(deleted_at=timezone.now())
+        )
         return stats
 
     def _upsert_booth(self, row):

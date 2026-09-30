@@ -1,4 +1,4 @@
-"""seed_booths 커맨드 테스트 (레포에 커밋된 실제 booths.json 사용)."""
+"""seed_booths 커맨드 테스트 (레포에 커밋된 실제 booths.json·toilets.json 사용)."""
 
 import json
 from datetime import date, time
@@ -9,13 +9,16 @@ from django.core.management import call_command
 from django.core.management.base import CommandError
 
 from apps.booths.management.commands.convert_booth_xlsx import _bool
-from apps.booths.management.commands.seed_booths import DEFAULT_INPUT
+from apps.booths.management.commands.seed_booths import DEFAULT_INPUT, DEFAULT_TOILETS_INPUT
 from apps.booths.models import Booth, BoothMenu, BoothOperation
 
-DATA = json.loads(DEFAULT_INPUT.read_text(encoding="utf-8"))
-BOOTH_COUNT = len(DATA["booths"])
-OPERATION_COUNT = sum(len(b["operations"]) for b in DATA["booths"])
-MENU_COUNT = sum(len(b["menus"]) for b in DATA["booths"])
+ROWS = [
+    *json.loads(DEFAULT_INPUT.read_text(encoding="utf-8"))["booths"],
+    *json.loads(DEFAULT_TOILETS_INPUT.read_text(encoding="utf-8"))["booths"],
+]
+BOOTH_COUNT = len(ROWS)
+OPERATION_COUNT = sum(len(b["operations"]) for b in ROWS)
+MENU_COUNT = sum(len(b["menus"]) for b in ROWS)
 
 
 def _seed(*args):
@@ -134,21 +137,21 @@ def test_seed_booths_only_liquor_facility_is_alcohol():
 
 @pytest.mark.django_db
 def test_seed_booths_adds_toilets_without_position(client):
-    """화장실은 건물 안이라 좌표 없이 들어가고, 목록 API는 좌표를 null로 내려준다."""
+    """화장실은 층 단위 49곳이 좌표 없이 들어가고, 목록 API는 좌표를 null로 내려준다."""
     _seed()
     _seed()
 
     toilets = Booth.objects.filter(category=Booth.Category.TOILET)
-    assert toilets.count() == 14
+    assert toilets.count() == 49
     assert not toilets.exclude(map_x__isnull=True).exists()
     # 구역이 빈 화장실도 재실행 시 중복되지 않는다.
-    assert toilets.filter(zone__isnull=True).count() == 7
+    assert toilets.filter(zone__isnull=True).count() == 23
 
     response = client.get(
         "/api/booths/", {"date": "2026-09-29", "time_slot": "DAY", "category": "TOILET"}
     )
     booths = response.json()["data"]["booths"]
-    assert len(booths) == 14
+    assert len(booths) == 49
     assert {(b["map_x"], b["map_y"], tuple(b["placements"])) for b in booths} == {(None, None, ())}
 
 
@@ -206,14 +209,17 @@ def test_seed_booths_restroom_type_and_reusable_container():
     _seed()
 
     toilets = Booth.objects.filter(category=Booth.Category.TOILET)
-    assert set(toilets.values_list("restroom_type", flat=True)) == {Booth.RestroomType.BOTH}
+    assert toilets.filter(restroom_type=Booth.RestroomType.BOTH).count() == 42
+    assert toilets.filter(restroom_type=Booth.RestroomType.MALE).count() == 4
+    assert toilets.filter(restroom_type=Booth.RestroomType.FEMALE).count() == 3
     assert (
         not Booth.objects.exclude(category=Booth.Category.TOILET)
         .exclude(restroom_type__isnull=True)
         .exists()
     )
-    # 엑셀 v10: 다회용기 미사용 21곳만 False
-    assert Booth.objects.filter(has_reusable_container=False).count() == 21
+    # 엑셀 v10: 화장실을 뺀 장소 중 다회용기 미사용 21곳만 False
+    non_toilets = Booth.objects.exclude(category=Booth.Category.TOILET)
+    assert non_toilets.filter(has_reusable_container=False).count() == 21
     assert Booth.objects.get(name="문과대학").has_reusable_container is True
 
 
@@ -259,3 +265,47 @@ def test_seed_booths_entrance_fee_and_menu_fixes():
     law_menus = list(Booth.objects.get(name="법과대학").menus.values_list("name", flat=True))
     assert "스파르타불닭 (치즈불닭볶음면)" in law_menus
     assert "스파르타불닭 (치즈불닭볶음변)" not in law_menus
+
+
+@pytest.mark.django_db
+def test_seed_booths_retires_toilets_missing_from_file(client):
+    """건물 단위였던 옛 화장실은 toilets.json에 없으므로 soft delete된다."""
+    old = Booth.objects.create(
+        name="혜화관 화장실",
+        zone="혜화관",
+        place_type=Booth.PlaceType.FACILITY,
+        category=Booth.Category.TOILET,
+    )
+    BoothOperation.objects.create(
+        booth=old,
+        festival_date=date(2026, 9, 29),
+        time_slot=BoothOperation.TimeSlot.DAY,
+        open_at=time(11, 0),
+        close_at=time(16, 30),
+    )
+
+    _seed()
+
+    old.refresh_from_db()
+    assert old.deleted_at is not None
+    response = client.get(
+        "/api/booths/", {"date": "2026-09-29", "time_slot": "DAY", "category": "TOILET"}
+    )
+    names = {b["name"] for b in response.json()["data"]["booths"]}
+    assert "혜화관 화장실" not in names
+    assert "혜화관 화장실 1층" in names
+
+
+@pytest.mark.django_db
+def test_seed_booths_dry_run_keeps_old_toilets():
+    old = Booth.objects.create(
+        name="혜화관 화장실",
+        zone="혜화관",
+        place_type=Booth.PlaceType.FACILITY,
+        category=Booth.Category.TOILET,
+    )
+
+    _seed("--dry-run")
+
+    old.refresh_from_db()
+    assert old.deleted_at is None

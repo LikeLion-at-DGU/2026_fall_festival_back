@@ -256,10 +256,16 @@ class Command(BaseCommand):
         skipped_booths = []
         for row in _sheet_rows(workbook, "부스"):
             key = row["임시키"]
+            # 화장실은 층 단위 목록(data/toilets.json)을 따로 관리한다.
+            # 엑셀의 건물 단위 화장실 행은 쓰지 않는다.
+            if row["category"] == "TOILET":
+                operations.pop(key, None)
+                menus.pop(key, None)
+                continue
+
             # 좌표가 없으면 지도에 그릴 수 없으므로 좌표를 받을 때까지 넣지 않는다.
-            # 화장실은 건물 안이라 좌표 없이 바텀시트 목록에만 보여주므로 예외로 넣는다.
             has_position = row["map_x"] is not None and row["map_y"] is not None
-            if not has_position and row["category"] != "TOILET":
+            if not has_position:
                 skipped_booths.append(f"{key} {_text(row['name'])}")
                 operations.pop(key, None)
                 menus.pop(key, None)

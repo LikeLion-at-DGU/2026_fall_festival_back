@@ -1,0 +1,3190 @@
+{
+  "source": "화장실 층 단위 (A안, 2026-09-30) — 건물 14 → 층 49",
+  "booths": [
+    {
+      "key": "R01",
+      "name": "혜화관 화장실 1층",
+      "subtitle": "혜화관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "FEMALE",
+      "booth_size": null,
+      "zone": "혜화관",
+      "location_detail": "남자 화장실 공사중",
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R02",
+      "name": "혜화관 화장실 2층",
+      "subtitle": "혜화관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R03",
+      "name": "혜화관 화장실 3층",
+      "subtitle": "혜화관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R04",
+      "name": "혜화관 화장실 5층",
+      "subtitle": "혜화관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R05",
+      "name": "혜화관 화장실 6층",
+      "subtitle": "혜화관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R06",
+      "name": "경영관 화장실 1층",
+      "subtitle": "경영관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R07",
+      "name": "경영관 화장실 2층",
+      "subtitle": "경영관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R08",
+      "name": "경영관 화장실 3층",
+      "subtitle": "경영관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R09",
+      "name": "경영관 화장실 4층",
+      "subtitle": "경영관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R10",
+      "name": "경영관 화장실 5층",
+      "subtitle": "경영관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "혜화관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R11",
+      "name": "사회과학관 화장실 2층",
+      "subtitle": "사회과학관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R12",
+      "name": "사회과학관 화장실 3층",
+      "subtitle": "사회과학관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R13",
+      "name": "사회과학관 화장실 4층",
+      "subtitle": "사회과학관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R14",
+      "name": "사회과학관 화장실 5층",
+      "subtitle": "사회과학관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R15",
+      "name": "법학/만해관 화장실 1층",
+      "subtitle": "법학/만해관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "팔정도",
+      "location_detail": "법학관 내부 통로",
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R16",
+      "name": "명진관 화장실 B1층",
+      "subtitle": "명진관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "MALE",
+      "booth_size": null,
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R17",
+      "name": "명진관 화장실 2층",
+      "subtitle": "명진관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "FEMALE",
+      "booth_size": null,
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R18",
+      "name": "명진관 화장실 3층",
+      "subtitle": "명진관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R19",
+      "name": "정보문화관P 화장실 1층",
+      "subtitle": "정보문화관P 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": "실험실 구역",
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R20",
+      "name": "정보문화관P 화장실 2층",
+      "subtitle": "정보문화관P 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R21",
+      "name": "정보문화관P 화장실 3층",
+      "subtitle": "정보문화관P 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R22",
+      "name": "정보문화관P 화장실 4층",
+      "subtitle": "정보문화관P 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R23",
+      "name": "정보문화관P 화장실 5층",
+      "subtitle": "정보문화관P 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R24",
+      "name": "정보문화관P 화장실 6층",
+      "subtitle": "정보문화관P 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R25",
+      "name": "정보문화관Q 화장실 1층",
+      "subtitle": "정보문화관Q 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R26",
+      "name": "정보문화관Q 화장실 2층",
+      "subtitle": "정보문화관Q 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R27",
+      "name": "정보문화관Q 화장실 3층",
+      "subtitle": "정보문화관Q 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R28",
+      "name": "원흥관 화장실 1층",
+      "subtitle": "원흥관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "FEMALE",
+      "booth_size": null,
+      "zone": "원흥관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R29",
+      "name": "원흥관 화장실 2층",
+      "subtitle": "원흥관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "MALE",
+      "booth_size": null,
+      "zone": "원흥관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R30",
+      "name": "원흥관 화장실 4층",
+      "subtitle": "원흥관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "원흥관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R31",
+      "name": "원흥관 화장실 5층",
+      "subtitle": "원흥관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "원흥관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R32",
+      "name": "신공학관 화장실 9층",
+      "subtitle": "신공학관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": "그 외 층 미확인",
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R33",
+      "name": "학생회관 화장실 2층",
+      "subtitle": "학생회관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "MALE",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R34",
+      "name": "학생회관 화장실 3층",
+      "subtitle": "학생회관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": "4~6층 미확인",
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R35",
+      "name": "본관 화장실 2층",
+      "subtitle": "본관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "원흥관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R36",
+      "name": "본관 화장실 3층",
+      "subtitle": "본관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "원흥관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R37",
+      "name": "본관 화장실 4층",
+      "subtitle": "본관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "MALE",
+      "booth_size": null,
+      "zone": "원흥관",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R38",
+      "name": "중앙도서관 화장실 B2층",
+      "subtitle": "중앙도서관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R39",
+      "name": "중앙도서관 화장실 B1층",
+      "subtitle": "중앙도서관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R40",
+      "name": "중앙도서관 화장실 1층",
+      "subtitle": "중앙도서관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R41",
+      "name": "중앙도서관 화장실 2층",
+      "subtitle": "중앙도서관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "팔정도",
+      "location_detail": "팔정도에서 들어오는 층",
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R42",
+      "name": "중앙도서관 화장실 3층",
+      "subtitle": "중앙도서관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": "팔정도",
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R43",
+      "name": "상록원 화장실 2층",
+      "subtitle": "상록원 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": "1층 미확인",
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R44",
+      "name": "상록원 화장실 3층",
+      "subtitle": "상록원 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R45",
+      "name": "학술/문화관 화장실 1층",
+      "subtitle": "학술/문화관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R46",
+      "name": "학술/문화관 화장실 2층",
+      "subtitle": "학술/문화관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R47",
+      "name": "학술/문화관 화장실 3층",
+      "subtitle": "학술/문화관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": null,
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R48",
+      "name": "학술/문화관 화장실 4층",
+      "subtitle": "학술/문화관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": "4층 2곳 중 1",
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    },
+    {
+      "key": "R49",
+      "name": "학술/문화관 화장실 4층 (2)",
+      "subtitle": "학술/문화관 화장실",
+      "place_type": "FACILITY",
+      "category": "TOILET",
+      "restroom_type": "BOTH",
+      "booth_size": null,
+      "zone": null,
+      "location_detail": "4층 2곳 중 2",
+      "map_x": null,
+      "map_y": null,
+      "map_elevation": null,
+      "rotation": null,
+      "description": null,
+      "event_description": null,
+      "instagram_id": null,
+      "entrance_fee": null,
+      "has_reusable_container": false,
+      "operations": [
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-29",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-09-30",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "DAY",
+          "open_at": "11:00",
+          "close_at": "16:30",
+          "placements": []
+        },
+        {
+          "festival_date": "2026-10-01",
+          "time_slot": "NIGHT",
+          "open_at": "18:00",
+          "close_at": "23:00",
+          "placements": []
+        }
+      ],
+      "menus": []
+    }
+  ]
+}
