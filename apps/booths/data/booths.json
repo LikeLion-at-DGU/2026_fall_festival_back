@@ -1206,30 +1206,6 @@
               "booth_size": "BIG"
             }
           ]
-        },
-        {
-          "festival_date": "2026-10-01",
-          "time_slot": "NIGHT",
-          "open_at": "18:00",
-          "close_at": "23:00",
-          "placements": [
-            {
-              "unit_no": 1,
-              "map_x": -9,
-              "map_y": -4,
-              "map_elevation": 0.1,
-              "rotation": 90,
-              "booth_size": "BIG"
-            },
-            {
-              "unit_no": 2,
-              "map_x": -9,
-              "map_y": 3,
-              "map_elevation": 0.1,
-              "rotation": 90,
-              "booth_size": "BIG"
-            }
-          ]
         }
       ],
       "menus": [
@@ -1318,30 +1294,6 @@
               "map_x": 16,
               "map_y": -36,
               "map_elevation": 3.18,
-              "rotation": 0,
-              "booth_size": "BIG"
-            }
-          ]
-        },
-        {
-          "festival_date": "2026-10-01",
-          "time_slot": "NIGHT",
-          "open_at": "18:00",
-          "close_at": "23:00",
-          "placements": [
-            {
-              "unit_no": 1,
-              "map_x": -9,
-              "map_y": 10,
-              "map_elevation": 0.1,
-              "rotation": 90,
-              "booth_size": "BIG"
-            },
-            {
-              "unit_no": 2,
-              "map_x": -14,
-              "map_y": 12,
-              "map_elevation": 0.1,
               "rotation": 0,
               "booth_size": "BIG"
             }
@@ -2850,24 +2802,7 @@
       "instagram_id": null,
       "entrance_fee": null,
       "has_reusable_container": true,
-      "operations": [
-        {
-          "festival_date": "2026-10-01",
-          "time_slot": "NIGHT",
-          "open_at": "18:00",
-          "close_at": "23:00",
-          "placements": [
-            {
-              "unit_no": 1,
-              "map_x": -30,
-              "map_y": -20,
-              "map_elevation": 3.18,
-              "rotation": 0,
-              "booth_size": "BIG"
-            }
-          ]
-        }
-      ],
+      "operations": [],
       "menus": []
     },
     {
